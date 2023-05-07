@@ -35,8 +35,7 @@
   { "url": "https://ghproxy.com/https://raw.githubusercontent.com/xianyuyimu/TVBOX-/main/TVBox/%E4%B8%80%E6%9C%A8%E8%87%AA%E7%94%A8.json", "name": "??一木线路" }, 
   { "url": "https://agit.ai/kvymin/TV/raw/branch/master/Box.json", "name": "??kvymin线路" }, 
   { "url": "https://agit.ai/n/b/raw/branch/a/b/c.json", "name": "??agit/abc线路" }, 
-  { "url": "https://agit.ai/mmmgit/tvbox/raw/branch/main/zzz1.json", "name": "??zzz1线路" },
-  { "url": "http://tv.nxog.top/m/sapi.php?ou=%E6%AC%A7%E6%AD%8C", "name": "??-彩蛋线路-??"}
+  { "url": "https://agit.ai/mmmgit/tvbox/raw/branch/main/zzz1.json", "name": "??zzz1线路" }
  ], 
  "vip": [
   { "url": "http://tv.nxog.top/m/sapi.php?ou=%E6%AC%A7%E6%AD%8C", "name": "??-彩蛋随机线路-??", "time": "无名" }
