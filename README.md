@@ -12,9 +12,9 @@
 ### 4、IPTV
 
 # [GitHub 文件加速](https://yishijie.gitlab.io/ziyuan/)
-### 1、https://slink.ltd/
-### 2、https://ghp.ml1.one/
-### 3、https://gh-proxy.com/
-### 4、https://gh-proxy.ygxz.in/
-### 5、https://ghproxy.net/
-### 6、https://doget.nocsdn.com/
+##### 1、https://slink.ltd/
+##### 2、https://ghp.ml1.one/
+##### 3、https://gh-proxy.com/
+##### 4、https://gh-proxy.ygxz.in/
+##### 5、https://ghproxy.net/
+##### 6、https://doget.nocsdn.com/
