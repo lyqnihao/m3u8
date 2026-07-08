@@ -38,6 +38,12 @@
            "changeable": 1,
            "ext": "https://fastlink.cokey.xyz/f/1MOEc5/%E8%85%BE%E8%85%BE.js"
         },
+		{
+          "key": "txvm",
+          "name": "🐬腾讯视频.py",
+          "type": 3,
+          "api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/腾讯视频.py"
+        },
 		{"key":"MG",
         "name":"🐬芒果TV",
         "type":3,
