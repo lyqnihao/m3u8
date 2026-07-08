@@ -1,9 +1,20 @@
 # coding=utf-8
 # !/usr/bin/python
 import sys
+import base64
+import hashlib
 import requests
-sys.path.append('..')
+from typing import Tuple
 from base.spider import Spider
+from datetime import datetime, timedelta
+from urllib.parse import quote, unquote
+from requests.adapters import HTTPAdapter
+from urllib3.util.retry import Retry
+sys.path.append('..')
+
+# 搜索用户名，关键词格式为“类别+空格+关键词”
+# 类别在标签上已注明，比如“女主播g”，则搜索类别为“g”
+# 搜索“g per”，则在“女主播”中搜索“per”, 关键词不区分大小写，但至少3位，否则空结果
 
 class Spider(Spider):
 
@@ -12,6 +23,10 @@ class Spider(Spider):
         self.headers = {
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:142.0) Gecko/20100101 Firefox/142.0'
         }
+        self.stripchat_key = self.decode_key_compact()
+        # 缓存字典
+        self._hash_cache = {}
+        self.create_session_with_retry()
 
     def getName(self):
         pass
@@ -46,7 +61,7 @@ class Spider(Spider):
     def categoryContent(self, tid, pg, filter, extend):
         limit = 60
         offset = limit * (int(pg) - 1)
-        domain = f"{self.host}api/front/models?improveTs=false&removeShows=false&limit={limit}&offset={offset}&primaryTag={tid}&sortBy=viewersRating&rcmGrp=A&rbCnGr=true&prxCnGr=false&nic=false"
+        domain = f"{self.host}/api/front/models?improveTs=false&removeShows=false&limit={limit}&offset={offset}&primaryTag={tid}&sortBy=stripRanking&rcmGrp=A&rbCnGr=true&prxCnGr=false&nic=false"
         if 'tag' in extend:
             domain += "&filterGroupTags=%5B%5B%22" + extend['tag'] + "%22%5D%5D"
         rsp = requests.get(domain, headers=self.headers).json()
@@ -54,13 +69,16 @@ class Spider(Spider):
         videos = []
         for vod in vodList:
             id = str(vod['id'])
-            title = str(vod['username']).strip()
+            name = str(vod['username']).strip()
             stamp = vod['snapshotTimestamp']
+            country = str(vod['country']).strip()
+            flag = self.country_code_to_flag(country)
+            remark = "🎫" if vod['status'] == "groupShow" else ""
             videos.append({
-                "vod_id": title,
-                "vod_name": title,
+                "vod_id": name,
+                "vod_name": f"{flag}{name}",
                 "vod_pic": f"https://img.doppiocdn.net/thumbs/{stamp}/{id}",
-                "vod_remarks": "购票表演中" if vod['groupShowType'] else ""
+                "vod_remarks": "收费表演中" if vod['groupShowType'] else ""
             })
         total = int(rsp['filteredCount'])
         result = {}
@@ -73,29 +91,65 @@ class Spider(Spider):
 
     def detailContent(self, array):
         username = array[0]
-        domain = f"{self.host}api/front/v2/models/username/{username}/cam"
+        domain = f"{self.host}/api/front/v2/models/username/{username}/cam"
         rsp = requests.get(domain, headers=self.headers).json()
         info = rsp['cam']
         user = rsp['user']['user']
         id = str(user['id'])
-        vod = {
+        country = str(user['country']).strip()
+        isLive = "" if user['isLive'] else " 已下播"
+        flag = self.country_code_to_flag(country)
+        remark = ''
+        if info['show']:
+            show = info['show']['details']['groupShow']
+            BJtime = (datetime.strptime(show["startAt"], "%Y-%m-%dT%H:%M:%SZ") + timedelta(hours=8)).strftime("%m月%d日 %H:%M")
+            remark = f"🎫 始于 {BJtime}"
+        vod = [{
             "vod_id": id,
             "vod_name": str(info['topic']).strip(), 
             "vod_pic": str(user['avatarUrl']),
-            "vod_director": username,
-            "vod_area": str(user['country']),
-            'vod_play_from': '直播线路',
+            "vod_director": f"{flag}{username}{isLive}",
+            "vod_remarks": remark,
+            'vod_play_from': 'StripChat',
             'vod_play_url': f"{id}${id}"
-        }
-        result = {
-            'list': [
-                vod
-            ]
-        }
+        }]
+        result = {}
+        result['list'] = vod
         return result
 
+    def process_key(self, key: str) -> Tuple[str, str]:
+        tags = {'G': 'girls', 'C': 'couples', 'M': 'men', 'T': 'trans'}
+        parts = key.split(maxsplit=1)  # 仅分割第一个空格
+        if len(parts) > 1 and tags.get(parts[0].upper(), ''):
+            return tags[parts[0].upper()], parts[1].strip()
+        return 'girls', key.strip()
+
     def searchContent(self, key, quick, pg="1"):
-        pass
+        result = {}
+        if int(pg) > 1:
+            return result
+        tag, key = self.process_key(key)
+        domain = f"{self.host}/api/front/v4/models/search/group/username?query={key}&limit=900&primaryTag={tag}"
+        rsp = requests.get(domain, headers=self.headers).json()
+        users = rsp['models']
+        videos = []
+        for user in users:
+            if not user['isLive']:
+                continue
+            id = str(user['id'])
+            name = str(user['username']).strip()
+            stamp = user['snapshotTimestamp']
+            country = str(user['country']).strip()
+            flag = self.country_code_to_flag(country)
+            remark = "🎫" if user['status'] == "groupShow" else ""
+            videos.append({
+                "vod_id": name,
+                "vod_name": f"{flag}{name}",
+                "vod_pic": f"https://img.doppiocdn.net/thumbs/{stamp}/{id}",
+                "vod_remarks": remark
+            })
+        result['list'] = videos
+        return result
 
     def playerContent(self, flag, id, vipFlags):
         domain = f"https://edge-hls.growcdnssedge.com/hls/{id}/master/{id}_auto.m3u8?playlistType=lowLatency"
@@ -118,6 +172,7 @@ class Spider(Spider):
                 url_base = lines[i + 1]
                 # 组合最终的URL，并加上psch和pkey参数
                 full_url = f"{url_base}&psch={psch}&pkey={pkey}"
+                proxy_url = f"{self.getProxyUrl()}&url={quote(full_url)}"
                 # 将画质和URL添加到列表中
                 url.append(qn)
                 url.append(full_url)
@@ -129,4 +184,53 @@ class Spider(Spider):
         return result
 
     def localProxy(self, param):
-        pass
+        param
+        
+    def country_code_to_flag(self, country_code):
+        if len(country_code) != 2 or not country_code.isalpha():
+            return country_code
+        flag_emoji = ''.join([chr(ord(c.upper()) - ord('A') + 0x1F1E6) for c in country_code])
+        return flag_emoji
+
+    def decode_key_compact(self):
+        base64_str = "NTEgNzUgNjUgNjEgNmUgMzQgNjMgNjEgNjkgMzkgNjIgNmYgNGEgNjEgMzUgNjE="
+        decoded = base64.b64decode(base64_str).decode('utf-8')
+        key_bytes = bytes(int(hex_str, 16) for hex_str in decoded.split(" "))
+        return key_bytes.decode('utf-8')
+
+    def compute_hash(self, key: str) -> bytes:
+        """计算并缓存SHA-256哈希"""
+        if key not in self._hash_cache:
+            sha256 = hashlib.sha256()
+            sha256.update(key.encode('utf-8'))
+            self._hash_cache[key] = sha256.digest()
+        return self._hash_cache[key]
+
+    def decrypt(self, encrypted_b64: str, key: str) -> str:
+        """解密Base64编码的密文"""
+        # 修复Base64填充
+        padding = len(encrypted_b64) % 4
+        if padding:
+            encrypted_b64 += '=' * (4 - padding)
+    
+        # 计算哈希并解密
+        hash_bytes = self.compute_hash(key)
+        encrypted_data = base64.b64decode(encrypted_b64)
+
+        # 异或解密
+        decrypted_bytes = bytearray()
+        for i, cipher_byte in enumerate(encrypted_data):
+            key_byte = hash_bytes[i % len(hash_bytes)]
+            decrypted_bytes.append(cipher_byte ^ key_byte)
+        return decrypted_bytes.decode('utf-8')
+
+    def create_session_with_retry(self, retries=3, backoff_factor=0.3):
+        self.session = requests.Session()
+        retry_strategy = Retry(
+            total=retries,
+            backoff_factor=backoff_factor,
+            status_forcelist=[429, 500, 502, 503, 504]  # 需要重试的状态码
+        )
+        adapter = HTTPAdapter(max_retries=retry_strategy)
+        self.session.mount("http://", adapter)
+        self.session.mount("https://", adapter)
