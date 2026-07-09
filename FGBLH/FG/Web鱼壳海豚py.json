@@ -108,6 +108,12 @@
 			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/优视频.py"
 		},
 		{
+          "key": "ayf",
+          "name": "🐬爱壹帆影视.py[追剧]",
+          "type": 3,
+          "api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/爱壹帆.py"
+        },
+		{
           "key": "MH",
           "name": "🐬麻花影视.py[追剧]",
           "type": 3,
@@ -384,6 +390,18 @@
 			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/Pornhub.py"
 		},
 		{
+			"key": "xhamster",
+			"name": "🐬xhamster.py｜🔞[成人]",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/xhamster.py"
+		},
+		{
+			"key": "eporner",
+			"name": "🐬EPORNER.py｜🔞[成人]",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/EPORNER.py"
+		},
+		{
 			"key": "91porn",
 			"name": "🐬91porn.py｜🔞[成人]",
 			"type": 3,
@@ -638,7 +656,20 @@
             "type": 0,
             "ua": "okhttp",
             "url": "http://xtvantsc.xyz/欧美2160.m3u"
+        }, 
+		{
+            "name": "🐬欧美主播直播🔞",
+            "type": 0,
+            "ua": "okhttp",
+            "url": "https://chaturbate.xvideos4.tk/api5.php?m3u&all"
         },
+		 {
+            "name": "🐬亚洲主播直播🔞",
+            "type": 0,
+            "ua": "okhttp",
+            "url": "https://chaturbate.xvideos4.tk/api6.php?m3u"
+        },
+		
 	    {
             "name": "🐬EVILANGEL🔞",
             "type": 0,
