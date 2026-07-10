@@ -126,6 +126,24 @@
 			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/优视频.py"
 		},
 		{
+          "key": "yl",
+          "name": "🐬永乐视频.py",
+          "type": 3,
+          "api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/永乐视频.py"
+        },
+		{
+          "key": "mtyy",
+          "name": "🐬麦田影院.py",
+          "type": 3,
+          "api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/麦田影院.py"
+        },
+		{
+          "key": "xhvm",
+          "name": "🐬骚火影视.py",
+          "type": 3,
+          "api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/骚火影视.py"
+        },
+		{
           "key": "ayf",
           "name": "🐬爱壹帆影视.py",
           "type": 3,
@@ -638,6 +656,12 @@
 			"name": "🐬黑料不打烊.py｜🔞",
 			"type": 3,
 			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/黑料不打烊.py"
+		},
+		{
+			"key": "jptt",
+			"name": "🐬禁片天堂.py｜🔞",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/禁片天堂.py"
 		},
 		{
 			"key": "hgsq",
