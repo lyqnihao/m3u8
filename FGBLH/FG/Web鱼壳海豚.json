@@ -32,7 +32,7 @@
         },
 		{
           "key": "YK",
-          "name": "🐬优酷视频.py",
+          "name": "🐬优酷视频.py[追剧]",
           "type": 3,
           "api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/优酷视频.py"
         },
@@ -101,12 +101,19 @@
 			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/聚合直播.py"
 		},
 		{
-      "key": "ppx",
-      "name": "🐬皮皮虾.py[追剧]",
-      "type": 3,
-      "api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/皮皮虾.py",
-      "ext": "http://43.248.117.123:4680"
-       },
+        "key":"youtube",
+        "name":"🐬油管[其他]",
+        "type":3,
+        "api":"csp_yt",
+        "homePage":"https://fgblh.github.io/uhuj.github.io/youtube.html"
+        },
+		{
+            "key": "ppx",
+            "name": "🐬皮皮虾.py[追剧]",
+            "type": 3,
+            "api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/皮皮虾.py",
+            "ext": "http://43.248.117.123:4680"
+        },
 		{
 			"key": "ww",
 			"name": "🐬哇哇APP.py(关梯)[追剧]",
@@ -2195,12 +2202,6 @@
         }
     ],
     "lives": [
-    {
-            "name": "🐬各大源合集 海豚影视永久免费如有收费的都是骗子",
-            "type": 0,
-            "ua": "okhttp/5.3.2",
-            "url": "https://gh-proxy.org/https://raw.githubusercontent.com/807080747/zv/refs/heads/main/sese.txt"
-        }, 
 	     {
             "name": "🐬综合直播 海豚影视交流群 TG：@hshsjk9",
             "type": 0,
@@ -2208,6 +2209,12 @@
             "ua": "okhttp",
 			"url": "https://raw.githubusercontent.com/fleung49/star/refs/heads/main/mit"
          },
+		{
+            "name": "🐬各大源合集 海豚影视永久免费如有收费的都是骗子",
+            "type": 0,
+            "ua": "okhttp/5.3.2",
+            "url": "https://gh-proxy.org/https://raw.githubusercontent.com/807080747/zv/refs/heads/main/sese.txt"
+        }, 
 	     {
             "name": "🐬电视家",
             "type": 0,
@@ -2298,6 +2305,18 @@
             "type": 0,
             "ua": "okhttp",
             "url": "https://gh-proxy.org/https://raw.githubusercontent.com/Jsnzkpg/Jsnzkpg/Jsnzkpg/Jsnzkpg1.m3u"
+        },
+		{
+            "name": "🐬裤佬TV2",
+            "type": 0,
+            "ua": "okhttp",
+            "url": "https://tv.tmxk.kdns.fr/ex64181y"
+        },
+		{
+            "name": "🐬live.m3u",
+            "type": 0,
+            "ua": "okhttp",
+            "url": "https://live.445569.xyz/live.m3u"
         },
         {
             "name": "🐬Gather",
@@ -2405,7 +2424,7 @@
             "name": "🐬海豚佬xxx视频资源🔞",
             "type": 0,
             "ua": "okhttp",
-            "url": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/xxx视频资源"
+            "url": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/xxx视频资源.txt"
         },
         {
             "name": "🐬欧美大片🔞",

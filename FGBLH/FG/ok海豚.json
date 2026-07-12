@@ -1032,12 +1032,6 @@
         "static-mozai.4gtv.tv"
     ],	
 		"lives": [
-         {
-            "name": "🐬各大源合集 海豚影视永久免费如有收费的都是骗子",
-            "type": 0,
-            "ua": "okhttp/5.3.2",
-            "url": "https://gh-proxy.org/https://raw.githubusercontent.com/807080747/zv/refs/heads/main/sese.txt"
-        }, 
 	     {
             "name": "🐬综合直播 海豚影视交流群 TG：@hshsjk9",
             "type": 0,
@@ -1045,6 +1039,12 @@
             "ua": "okhttp",
 			"url": "https://raw.githubusercontent.com/fleung49/star/refs/heads/main/mit"
          },
+		{
+            "name": "🐬各大源合集 海豚影视永久免费如有收费的都是骗子",
+            "type": 0,
+            "ua": "okhttp/5.3.2",
+            "url": "https://gh-proxy.org/https://raw.githubusercontent.com/807080747/zv/refs/heads/main/sese.txt"
+        }, 	
 	     {
             "name": "🐬电视家",
             "type": 0,
@@ -1135,6 +1135,18 @@
             "type": 0,
             "ua": "okhttp",
             "url": "https://gh-proxy.org/https://raw.githubusercontent.com/Jsnzkpg/Jsnzkpg/Jsnzkpg/Jsnzkpg1.m3u"
+        },
+		{
+            "name": "🐬裤佬TV2",
+            "type": 0,
+            "ua": "okhttp",
+            "url": "https://tv.tmxk.kdns.fr/ex64181y"
+        },
+		{
+            "name": "🐬live.m3u",
+            "type": 0,
+            "ua": "okhttp",
+            "url": "https://live.445569.xyz/live.m3u"
         },
         {
             "name": "🐬Gather",
@@ -1242,7 +1254,7 @@
             "name": "🐬海豚佬xxx视频资源🔞",
             "type": 0,
             "ua": "okhttp",
-            "url": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/xxx视频资源"
+            "url": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/xxx视频资源.txt"
         },
         {
             "name": "🐬欧美大片直播🔞",
