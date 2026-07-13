@@ -108,6 +108,32 @@
         "homePage":"https://fgblh.github.io/uhuj.github.io/youtube.html"
         },
 		{
+            "key":"youtube2",
+            "name":"🐬油管直播,py[其他]",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/油管.py"
+		},
+		{
+        "key":"youtube",
+        "name":"🐬油管[其他]",
+        "type":3,
+        "api":"csp_yt",
+        "homePage":"https://fgblh.github.io/uhuj.github.io/youtube.html"
+        },
+		{
+            "key": "ppx",
+            "name": "🐬皮皮虾.py[追剧]",
+            "type": 3,
+            "api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/皮皮虾.py",
+            "ext": "http://43.248.117.123:4680"
+        },
+		{
+			"key": "ww",
+			"name": "🐬哇哇APP.py(关梯)[追剧]",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/哇哇APP.py"
+		},
+		{
             "key": "ppx",
             "name": "🐬皮皮虾.py[追剧]",
             "type": 3,
@@ -2275,12 +2301,6 @@
             "type": 0,
             "ua": "okhttp",
             "url": "https://ha.msbot.dpdns.org/wall.php"
-        }, 
-        {
-            "name": "🐬港台",
-            "type": 0,
-            "ua": "okhttp",
-            "url": "https://feer-cdn-bp.xpnb.qzz.io/xnkl.txt"
         },
 	    {
             "name": "🐬台湾台",
