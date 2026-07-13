@@ -109,9 +109,15 @@
         },
 		{
             "key":"youtube2",
-            "name":"🐬油管直播,py[其他]",
+            "name":"🐬油管,py[其他]",
 			"type": 3,
 			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/油管.py"
+		},
+		{
+            "key":"youtube3",
+            "name":"🐬油管直播,py[直播]",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/油管直播.py"
 		},
 		{
         "key":"youtube",

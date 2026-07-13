@@ -24,7 +24,7 @@
         },
 		{
             "key":"youtube",
-            "name":"🐬油管直播,py",
+            "name":"🐬油管,py",
 			"type": 3,
 			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/油管.py"
 		},
@@ -208,6 +208,12 @@
 			"name": "🐬聚合直播.py",
 			"type": 3,
 			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/聚合直播.py"
+		},
+		{
+            "key":"youtube",
+            "name":"🐬油管直播,py",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/油管直播.py"
 		},
 		{
 			"key": "MiFun",

@@ -1,3 +1,21 @@
+TV电影台,#genre#
+CCTV6电影,http://107.150.60.122/live/cctv6hd.m3u8
+中国电影频道,http://iptv.4666888.xyz/iptv2A.php?id=61
+NOW爆谷台,http://173.208.234.146/live/nowbg.m3u8
+NOW星影台,http://173.208.234.146/live/nowxy.m3u8
+美亚电影HD,http://173.208.234.146/live/mymovie.m3u8
+天映频道,http://173.208.234.146/live/typd.m3u8
+
+TV直播台,#genre#
+CCTV5体育1080p,http://173.208.212.130:8181/1080p/cctv5.m3u8
+CCTV5体育1080p,https://php.jdshipin.com:2096/TVOD/iptv.php?id=cctv5
+CCTV5+体育赛事1080p,https://php.jdshipin.com:2096/TVOD/iptv.php?id=cctv5p
+CCTV16奥林匹克1080p,http://207.56.13.146:81/cdnlive/cctv16.m3u8
+CCTV16奥林匹克1080p,https://php.jdshipin.com:2096/TVOD/iptv.php?id=cctv16
+纬来体育,rtmp://f13h.mine.nu/sat/tv721
+广东珠江1080p,http://m.061899.xyz/mg/gdzj
+中天新闻http://173.208.234.146/live/ctinews.m3u8
+
 18+直播台,#genre#
 资源永久免费如有收费的都是骗子,http://ef90a6cd.rossteleccom.net/iptv/2TBC4G2WWDG6RSUSN5SXSQEC/14158/index.m3u8
 俄罗斯极限电影台(免翻),http://ef90a6cd.rossteleccom.net/iptv/2TBC4G2WWDG6RSUSN5SXSQEC/14158/index.m3u8
@@ -36,17 +54,6 @@ realitykings,http://88.212.7.11/live/test_realitykings_sd_hevc/playlist.m3u8
 Barely Legal,http://94.228.166.20:8000/play/a02r/index.m3u8 
 Exxo,http://94.228.166.20:8000/play/a077/index.m3u8 
 Dorcel Tv,http://212.70.131.37:8000/play/a080
-
-电视直播台,#genre#
-CCTV6电影,http://107.150.60.122/live/cctv6hd.m3u8
-中国电影频道,http://iptv.4666888.xyz/iptv2A.php?id=61
-CCTV5体育1080p,http://173.208.212.130:8181/1080p/cctv5.m3u8
-CCTV5体育1080p,https://php.jdshipin.com:2096/TVOD/iptv.php?id=cctv5
-CCTV5+体育赛事1080p,https://php.jdshipin.com:2096/TVOD/iptv.php?id=cctv5p
-CCTV16奥林匹克1080p,http://207.56.13.146:81/cdnlive/cctv16.m3u8
-CCTV16奥林匹克1080p,https://php.jdshipin.com:2096/TVOD/iptv.php?id=cctv16
-纬来体育,rtmp://f13h.mine.nu/sat/tv721
-广东珠江1080p,http://m.061899.xyz/mg/gdzj
 
 港台三级(142部),#genre#
 1色降2之血玫瑰,https://vip1.lz-cdn1.com/20220331/733_58b741b7/index.m3u8
