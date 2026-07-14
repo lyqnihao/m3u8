@@ -44,7 +44,7 @@
         },
         {
            "key": "hajim-腾讯备",
-           "name": "🐬腾讯备用[追剧]",
+           "name": "🐬腾讯视频备用[追剧]",
            "type": 3,
            "api": "https://ghfast.top/https://raw.githubusercontent.com/IY-CPU/IY/main/lib/drpy2.min.js",
            "searchable": 1,
@@ -127,23 +127,16 @@
         "homePage":"https://fgblh.github.io/uhuj.github.io/youtube.html"
         },
 		{
-			"key": "cbh",
-			"name": "🐬茶杯狐.py[追剧]",
+			"key": "ddvm",
+			"name": "🐬低端影视.py[追剧]",
 			"type": 3,
-			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/茶杯狐.py"
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/低端影视.py"
 		},
 		{
-            "key": "ppx",
-            "name": "🐬皮皮虾.py[追剧]",
-            "type": 3,
-            "api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/皮皮虾.py",
-            "ext": "http://43.248.117.123:4680"
-        },
-		{
-			"key": "ww",
-			"name": "🐬哇哇APP.py(关梯)[追剧]",
+			"key": "cbh",
+			"name": "🐬茶杯狐.py(关梯)[追剧]",
 			"type": 3,
-			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/哇哇APP.py"
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/茶杯狐.py"
 		},
 		{
             "key": "ppx",
@@ -285,10 +278,28 @@
 			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/毒舌影视.py"
 		},
 		{
+           "key": "456dy",
+           "name": "🐬456电影网.py[追剧]",
+           "type": 3,
+           "api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/456电影网.py"
+        },
+		{
            "key": "qw",
            "name": "🐬七味.py(关梯)[追剧]",
            "type": 3,
            "api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/七味.py"
+        },
+		{
+           "key": "8tdy",
+           "name": "🐬八天电影.py[追剧]",
+           "type": 3,
+           "api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/八天电影.py"
+        },
+		{
+           "key": "ysxq",
+           "name": "🐬映像星球.py(关梯)[追剧]",
+           "type": 3,
+           "api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/映像星球.py"
         },
 		{
 			"key": "cjjh",
@@ -664,13 +675,6 @@
 			"name": "🐬河马剧场.py[短剧]",
 			"type": 3,
 			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/河马剧场.py"
-		},
-		
-		{
-			"key": "hgdj",
-			"name": "🐬红果短剧.py[短剧]",
-			"type": 3,
-			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/红果短剧.py"
 		},
 		{
 			"key": "djjh",

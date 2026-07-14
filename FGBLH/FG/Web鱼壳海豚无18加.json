@@ -44,7 +44,7 @@
         },
         {
            "key": "hajim-腾讯备",
-           "name": "🐬腾讯备用",
+           "name": "🐬腾讯视频备用",
            "type": 3,
            "api": "https://ghfast.top/https://raw.githubusercontent.com/IY-CPU/IY/main/lib/drpy2.min.js",
            "searchable": 1,
@@ -127,8 +127,14 @@
            "ext": "http://43.248.117.123:4680"
        },
 		{
+			"key": "ddvm",
+			"name": "🐬低端影视.py",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/低端影视.py"
+		},
+		{
 			"key": "cbh",
-			"name": "🐬茶杯狐.py",
+			"name": "🐬茶杯狐.py(关梯)",
 			"type": 3,
 			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/茶杯狐.py"
 		},
@@ -259,10 +265,22 @@
 			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/毒舌影视.py"
 		},
 		{
+           "key": "456dy",
+           "name": "🐬456电影网.py",
+           "type": 3,
+           "api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/456电影网.py"
+        },
+		{
            "key": "qw",
            "name": "🐬七味.py(关梯)",
            "type": 3,
            "api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/七味.py"
+        },
+		{
+           "key": "8tdy",
+           "name": "🐬八天电影.py",
+           "type": 3,
+           "api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/八天电影.py"
         },
 		{
 			"key": "fY",
@@ -605,12 +623,6 @@
 			"name": "🐬河马剧场.py",
 			"type": 3,
 			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/河马剧场.py"
-		},
-		{
-			"key": "hgdj",
-			"name": "🐬红果短剧.py",
-			"type": 3,
-			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/红果短剧.py"
 		},
 		{
 			"key": "djjh",
