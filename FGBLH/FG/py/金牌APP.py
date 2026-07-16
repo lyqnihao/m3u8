@@ -1,7 +1,4 @@
 # -*- coding: utf-8 -*-
-# @Author  : Doubebly
-# @Time    : 2025/5/29 22:07
-
 
 import sys
 import hashlib
@@ -73,6 +70,8 @@ class Spider(Spider):
         {'key': 'year',
          'name': '年份',
          'value': [{'n': '全部', 'v': ''},
+                   {'n': '2026', 'v': '/year/2026'},
+                   {'n': '2025', 'v': '/year/2025'},
                    {'n': '2024', 'v': '/year/2024'},
                    {'n': '2023', 'v': '/year/2023'},
                    {'n': '2022', 'v': '/year/2022'},
@@ -140,6 +139,8 @@ class Spider(Spider):
         {'key': 'year',
          'name': '时间',
          'value': [{'n': '全部', 'v': ''},
+                   {'n': '2026', 'v': '/year/2026'},
+                   {'n': '2025', 'v': '/year/2025'},
                    {'n': '2024', 'v': '/year/2024'},
                    {'n': '2023', 'v': '/year/2023'},
                    {'n': '2022', 'v': '/year/2022'},

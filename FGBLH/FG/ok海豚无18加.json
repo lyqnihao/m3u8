@@ -63,6 +63,24 @@
           "type": 3,
           "api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/芒果TV.py"
         },
+		
+		{
+            "name": "弹幕",
+            "key": "弹幕豆瓣",
+            "type": 3,
+            "api": "csp_SecureDanmu",
+            "searchable": 1,
+            "jar": "https://ghfast.top/https://raw.githubusercontent.com/goodcommunication/mydm/main/danmu-spider-native.jar",
+            "ext": {
+            "apiUrls": [
+            "https://danmu.iyo.us.ci/theft-dastardly-prognosis-hula-agenda2-dropkick|公益源",
+            "https://logo.saodu.work:8888/87654321|公益源1",
+            "https://dm.ljiaovm.com/luosen|公益源2"
+            ],
+            "titleMappingsUrl": "https://ghfast.top/https://raw.githubusercontent.com/goodcommunication/mydm/main/yins.json",
+            "filter": "./lib/douban.json"
+         }
+		},
 		{
             "key":"youtube",
             "name":"🐬油管,py",
@@ -213,6 +231,12 @@
 			"name": "🐬蛋挞TV.py",
 			"type": 3,
 			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/蛋挞TV.py"
+		},
+		{
+			"key": "wstv",
+			"name": "🐬威视TV.py",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/威视TV.py"
 		},
 		{
 			"key": "dsys",
@@ -687,7 +711,13 @@
 			"url": "https://raw.githubusercontent.com/fleung49/star/refs/heads/main/mit"
          },
 		{
-            "name": "🐬各大源合集 海豚影视永久免费如有收费的都是骗子",
+            "name": "🐬风云源 海豚影视永久免费如有收费的都是骗子",
+            "type": 0,
+            "ua": "okhttp",
+            "url": "http://iptv.4666888.xyz/FYTV.txt"
+        },
+		{
+            "name": "🐬各大源合集",
             "type": 0,
             "ua": "okhttp/5.3.2",
             "url": "https://gh-proxy.org/https://raw.githubusercontent.com/807080747/zv/refs/heads/main/sese.txt"
