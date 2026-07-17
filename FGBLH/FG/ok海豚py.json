@@ -46,6 +46,12 @@
 			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/油管.py"
 		},
 		{
+			"key": "fY",
+			"name": "🐬枫叶影院.py(关梯子使用)",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/枫叶影院.py"
+		},
+		{
       "key": "ppx",
       "name": "🐬皮皮虾.py",
       "type": 3,
@@ -53,10 +59,10 @@
       "ext": "http://43.248.117.123:4680"
        },
 		{
-			"key": "fY",
-			"name": "🐬枫叶影院.py(关梯子使用)",
+			"key": "bbzj",
+			"name": "🐬布布追剧.py",
 			"type": 3,
-			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/枫叶影院.py"
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/布布追剧.py"
 		},
 		{
 			"key": "ddvm",

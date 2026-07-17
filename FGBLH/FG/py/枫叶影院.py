@@ -8,7 +8,7 @@ from base.spider import Spider as BaseSpider
 
 class Spider(BaseSpider):
     def init(self, extend=""):
-        self.host = "https://www.ht10010.com"
+        self.host = "https://maihaolian.com"
         self.headers = {
             "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.0 Mobile/15E148 Safari/604.1",
             "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
@@ -23,11 +23,11 @@ class Spider(BaseSpider):
             {'type_id': "/label/qq", 'type_name': "腾讯VIP精选"},
             {'type_id': "/label/bli", 'type_name': "B站VIP精选"},
             {'type_id': "/label/youku", 'type_name': "优酷VIP精选"},
+            {"type_id": "5", "type_name": "红果短剧"},
             {"type_id": "2", "type_name": "电视剧"},
             {"type_id": "1", "type_name": "电影"},
             {"type_id": "4", "type_name": "动漫"},
             {"type_id": "3", "type_name": "综艺"},
-            {"type_id": "5", "type_name": "热门短剧"},
         ], "filters": self._build_filters()}
 
     def _build_filters(self):
