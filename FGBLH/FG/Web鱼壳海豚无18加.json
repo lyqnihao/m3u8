@@ -127,6 +127,24 @@
            "ext": "http://43.248.117.123:4680"
        },
 		{
+			"key": "kkvm",
+			"name": "🐬可可影视.py",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/可可影视.py"
+		},
+		{
+			"key": "wkvm",
+			"name": "🐬悟空影视.py(关梯)",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/悟空影视.py"
+		},
+		{
+			"key": "xmvm",
+			"name": "🐬神马影视.py(关梯)",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/神马影视.py"
+		},
+		{
 			"key": "ddvm",
 			"name": "🐬低端影视.py",
 			"type": 3,
