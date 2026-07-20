@@ -29,7 +29,12 @@
 
  - [欧歌多仓](https://raw.githubusercontent.com/lyqnihao/m3u8/refs/heads/master/collect/欧歌多仓.json)：<br>https://raw.githubusercontent.com/lyqnihao/m3u8/refs/heads/master/collect/欧歌多仓.json
 
-####  1.2、单仓
+#### 1.2、单仓
+
+#### *、相关在线工具
+
+ - TVBox配置生成器 - 在线制作TVBox接口配置文件 | 17NAS
+https://17nas.com/tvbox-config.php
 
 ### 2、FongMi/影视/OK影视
 
@@ -41,11 +46,6 @@
  - https://raw.githubusercontent.com/YYDS678/uzVideo/main/video_sources_default.json
 
 ### 4、调试助手
-
-### *、其它在线工具
-
-#### TVBox配置生成器 - 在线制作TVBox接口配置文件 | 17NAS
-https://17nas.com/tvbox-config.php
 
 ## 在线播放
 
