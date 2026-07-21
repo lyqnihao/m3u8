@@ -113,6 +113,30 @@
 			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/可可影视.py"
 		},
 		{
+			"key": "qqvm",
+			"name": "🐬千千影视.py(关梯)(羊壳观看)",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/千千影视.py"
+		},
+		{
+			"key": "808yr",
+			"name": "🐬808影院.py(关梯)",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/808影院.py"
+		},
+		{
+			"key": "gqc",
+			"name": "🐬共青春影院.py(关梯)",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/共青春影院.py"
+		},
+		{
+			"key": "qlys",
+			"name": "🐬麒麟影视.py",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/麒麟影视.py"
+		},
+		{
 			"key": "wkvm",
 			"name": "🐬悟空影视.py(关梯)",
 			"type": 3,

@@ -133,6 +133,24 @@
 			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/可可影视.py"
 		},
 		{
+			"key": "808yr",
+			"name": "🐬808影院.py(关梯)[追剧]",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/808影院.py"
+		},
+		{
+			"key": "gqc",
+			"name": "🐬共青春影院.py(关梯)[追剧]",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/共青春影院.py"
+		},
+		{
+			"key": "qlys",
+			"name": "🐬麒麟影视.py[追剧]",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/麒麟影视.py"
+		},
+		{
 			"key": "wkvm",
 			"name": "🐬悟空影视.py(关梯)[追剧]",
 			"type": 3,
@@ -2479,6 +2497,12 @@
             "type": 0,
             "ua": "okhttp",
             "url": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/xxx视频资源.txt"
+        },
+		{
+            "name": "🐬至尊🔞",
+            "type": 0,
+            "ua": "okhttp",
+            "url": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/至尊.m3u"
         },
         {
             "name": "🐬欧美大片🔞",
