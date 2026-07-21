@@ -107,6 +107,12 @@
            "ext": "http://43.248.117.123:4680"
        },
 		{
+			"key": "ddvm",
+			"name": "🐬嘀嗒影视.py(关梯)",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/嘀嗒影视.py"
+		},
+		{
 			"key": "kkvm",
 			"name": "🐬可可影视.py",
 			"type": 3,
@@ -658,6 +664,23 @@
 			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/短剧聚合.py"
 		},
 		{
+			"key": "kwms",
+			"name": "🐬酷我音乐.py",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/酷我音乐.py"
+		},
+		{
+            "key": "捡的音乐",
+            "name": "🐬爱听音乐",
+            "type": 3,
+            "api": "csp_Music1",
+            "searchable": 1,
+            "quickSearch": 1,
+            "ext": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/jar_js/Music1.json",
+            "jar": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/jar_js/so.jar",
+            "filterable": 1
+        },
+		{
 			"key": "shjb",
 			"name": "🐬色播聚合.py｜🔞",
 			"type": 3,
@@ -806,6 +829,12 @@
 			"name": "🐬四虎视频.py｜🔞",
 			"type": 3,
 			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/四虎视频.py"
+		},
+		{
+			"key": "lyt",
+			"name": "🐬撸一天.py｜🔞",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/撸一天.py"
 		},
 		{
 			"key": "scpd",

@@ -52,6 +52,12 @@
 			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/枫叶影院.py"
 		},
 		{
+			"key": "ddvm",
+			"name": "🐬嘀嗒影视.py(关梯)",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/嘀嗒影视.py"
+		},
+		{
 			"key": "kkvm",
 			"name": "🐬可可影视.py",
 			"type": 3,
@@ -341,6 +347,12 @@
 			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/短剧聚合.py"
 		},
 		{
+			"key": "kwms",
+			"name": "🐬酷我音乐.py",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/酷我音乐.py"
+		},
+		{
 			"key": "shjb",
 			"name": "🐬色播聚合.py｜🔞",
 			"type": 3,
@@ -483,6 +495,12 @@
 			"name": "🐬四虎视频.py｜🔞",
 			"type": 3,
 			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/四虎视频.py"
+		},
+		{
+			"key": "lyt",
+			"name": "🐬撸一天.py｜🔞",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/撸一天.py"
 		},
 		{
 			"key": "scpd",
