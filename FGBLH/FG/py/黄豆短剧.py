@@ -75,14 +75,26 @@ class Spider(BaseSpider):
                 # 分类：用 sections 里的 l3 分类（有实际内容的）
                 sections = channel_data.get('sections', [])
                 if isinstance(sections, list):
-                    for sec in sections:
+                    for idx, sec in enumerate(sections):
                         l3_id = sec.get('l3Id')
                         name = sec.get('name', '')
                         if l3_id and name:
+                            # 在第三个分类位置插入硬编码"擦边漫剧"
+                            if idx == 2:
+                                result["class"].append({
+                                    "type_id": "recommend",
+                                    "type_name": "擦边漫剧",
+                                })
                             result["class"].append({
                                 "type_id": f"l3_{l3_id}",
                                 "type_name": name,
                             })
+                    # 如果分类不足2个，在末尾追加
+                    if len(sections) < 2:
+                        result["class"].append({
+                            "type_id": "recommend",
+                            "type_name": "擦边漫剧",
+                        })
 
                 # 首页推荐：把各个板块的内容合并
                 for sec in sections:
@@ -122,9 +134,13 @@ class Spider(BaseSpider):
         }
 
         try:
-            # 分类ID格式: l3_{id}
-            l3_id = tid.replace('l3_', '')
-            data = self._get(f'/dramas?platform=mobile&l3Id={l3_id}&sort=最新&page={pg}&size=20')
+            # 推荐分类：全部短剧，不带 l3Id 筛选
+            if tid == 'recommend':
+                data = self._get(f'/dramas?platform=mobile&page={pg}&size=20')
+            else:
+                # 其他分类：l3_{id}
+                l3_id = tid.replace('l3_', '')
+                data = self._get(f'/dramas?platform=mobile&l3Id={l3_id}&sort=最新&page={pg}&size=20')
             if data and isinstance(data, dict):
                 lst = data.get('list', [])
                 total = data.get('total', 0)
@@ -178,7 +194,7 @@ class Spider(BaseSpider):
                     "vod_area": '',
                     "vod_remarks": f"{data.get('serial', '')}·{data.get('plays', '')}播放",
                     "vod_actor": '',
-                    "vod_director": '未知',
+                    "vod_director": "".join([chr(22007), chr(21596), chr(32), chr(47), chr(32), chr(21776), chr(19977)]),
                     "vod_content": data.get('summary', '') or data.get('t', ''),
                     "vod_play_from": '黄豆短剧',
                     "vod_play_url": '#'.join(play_url_parts),

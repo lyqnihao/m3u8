@@ -647,10 +647,15 @@
             }
         },
 		{
-      "name": "极速",
-      "type": 0,
-      "url": "https://jiexi.789jiexi.net:4433/?url="
-      },
+           "name": "789解析1",
+           "type": 0,
+           "url": "https://jiexi.789jiexi.icu:4433/?url="
+        },
+		{
+           "name": "789解析2",
+           "type": 0,
+           "url": "https://jiexi.789jiexi.com/?url="
+        },
 		{
             "name": "虾米解析",
             "type": 0,
