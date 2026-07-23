@@ -1,278 +1,224 @@
 # -*- coding: utf-8 -*-
-import json,re,sys,base64,requests,threading,time,random,colorsys
-from Crypto.Cipher import AES
-from pyquery import PyQuery as pq
+import base64, html, json, re
 from urllib.parse import quote, unquote
-sys.path.append('..')
-from base.spider import Spider
+import requests
+from lxml import etree
+try:
+    from Crypto.Cipher import AES
+except Exception:
+    AES = None
+try:
+    from base.spider import Spider as BaseSpider
+except Exception:
+    BaseSpider = object
 
-class Spider(Spider):
-    SELECTORS=['.video-item','.video-list .item','.list-item','.post-item']
-    def getName(self):return"黑料不打烊"
-    def init(self,extend=""):pass
-    def homeContent(self,filter):
-        cateManual={"最新黑料":"hlcg","今日热瓜":"jrrs","每日TOP10":"mrrb","反差女友":"fczq","校园黑料":"xycg","网红黑料":"whhl","明星丑闻":"mxcw","原创社区":"ycsq","推特社区":"ttsq","社会新闻":"shxw","官场爆料":"gchl","影视短剧":"ysdj","全球奇闻":"qqqw","黑料课堂":"hlkt","每日大赛":"mrds","激情小说":"jqxs","桃图杂志":"ttzz","深夜综艺":"syzy","独家爆料":"djbl"}
-        return{'class':[{'type_name':k,'type_id':v}for k,v in cateManual.items()]}
-    def homeVideoContent(self):return{}
-    def categoryContent(self,tid,pg,filter,extend):
-        url=f'https://heiliao.com/{tid}/'if int(pg)==1 else f'https://heiliao.com/{tid}/page/{pg}/'
-        videos=self.get_list(url)
-        return{'list':videos,'page':pg,'pagecount':9999,'limit':90,'total':999999}
-    def fetch_and_decrypt_image(self,url):
+class Spider(BaseSpider):
+    def getName(self): return "黑料不打烊"
+    def init(self, extend=""):
+        self.host = "https://badly.okttbipbu.cc"
+        self.headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0 Safari/537.36", "Referer": self.host + "/", "Accept": "*/*", "Accept-Language": "zh-CN,zh;q=0.9"}
+        self.session = requests.Session()
+        self.session.headers.update(self.headers)
+        self.last_error = ""
+        self.categories = [{"type_id": "/", "type_name": "首页"}, {"type_id": "/category/24hcg/", "type_name": "今日看料"}, {"type_id": "/category/rgtj/", "type_name": "热门吃瓜"}, {"type_id": "/category/mrrg/", "type_name": "每日热瓜"}, {"type_id": "/category/hlda/", "type_name": "黑料大事"}, {"type_id": "/category/whhl/", "type_name": "网红吃瓜"}, {"type_id": "/category/mxbg/", "type_name": "明星吃瓜"}, {"type_id": "/category/fcns/", "type_name": "反差女神"}, {"type_id": "/category/xyrg/", "type_name": "学院热瓜"}, {"type_id": "/category/mrds/", "type_name": "每日大赛"}, {"type_id": "/category/swdj/", "type_name": "AI短剧"}, {"type_id": "/category/lydt/", "type_name": "撸友看片"}, {"type_id": "/category/avjs/", "type_name": "AV解说"}, {"type_id": "/category/mrst/", "type_name": "禁播动漫"}, {"type_id": "/category/pmv/", "type_name": "PMV混剪"}]
+    def _client(self): return getattr(self, "session", requests)
+    def _error(self, msg):
+        self.last_error = msg
+        try: self.log(msg)
+        except Exception: pass
+    def _get(self, url):
         try:
-            if url.startswith('//'):url='https:'+url
-            elif url.startswith('/'):url='https://heiliao.com'+url
-            r=requests.get(url,headers={'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.7049.96 Safari/537.36','Referer':'https://heiliao.com/'},timeout=15,verify=False)
-            if r.status_code!=200:return b''
-            return AES.new(b'f5d965df75336270',AES.MODE_CBC,b'97b60394abc2fbe1').decrypt(r.content)
-        except: return b''
-    def _extract_img_from_onload(self,node):
-        try:
-            m=re.search(r"load(?:Share)?Img\s*\([^,]+,\s*['\"]([^'\"]+)['\"]",(node.attr('onload')or''))
-            return m.group(1)if m else''
-        except:return''
-    def _should_decrypt(self,url:str)->bool:
-        u=(url or'').lower();return any(x in u for x in['pic.gylhaa.cn','new.slfpld.cn','/upload_01/','/upload/'])
-    def _abs(self,u:str)->str:
-        if not u:return''
-        if u.startswith('//'):return'https:'+u
-        if u.startswith('/'):return'https://heiliao.com'+u
-        return u
-    def e64(self,s:str)->str:
-        try:return base64.b64encode((s or'').encode()).decode()
-        except:return''
-    def d64(self,s:str)->str:
-        try:return base64.b64decode((s or'').encode()).decode()
-        except:return''
-    def _img(self,img_node):
-        u=''if img_node is None else(img_node.attr('src')or img_node.attr('data-src')or'')
-        enc=''if img_node is None else self._extract_img_from_onload(img_node)
-        t=enc or u
-        return f"{self.getProxyUrl()}&url={self.e64(t)}&type=hlimg"if t and(enc or self._should_decrypt(t))else self._abs(t)
-    def _parse_items(self,root):
-        vids=[]
-        for sel in self.SELECTORS:
-            for it in root(sel).items():
-                title=it.find('.title, h3, h4, .video-title').text()
-                if not title:continue
-                link=it.find('a').attr('href')
-                if not link:continue
-                vids.append({'vod_id':self._abs(link),'vod_name':title,'vod_pic':self._img(it.find('img')),'vod_remarks':it.find('.date, .time, .remarks, .duration').text()or''})
-            if vids:break
-        return vids
-    def detailContent(self,array):
-        tid=array[0];url=tid if tid.startswith('http')else f'https://heiliao.com{tid}'
-        rsp=self.fetch(url)
-        if not rsp:return{'list':[]}
-        rsp.encoding='utf-8';html_text=rsp.text
-        try:root_text=pq(html_text)
-        except:root_text=None
-        try:root_content=pq(rsp.content)
-        except:root_content=None
-        title=(root_text('title').text()if root_text else'')or''
-        if' - 黑料网'in title:title=title.replace(' - 黑料网','')
-        pic=''
-        if root_text:
-            og=root_text('meta[property="og:image"]').attr('content')
-            if og and(og.endswith('.png')or og.endswith('.jpg')or og.endswith('.jpeg')):pic=og
-            else:pic=self._img(root_text('.video-item-img img'))
-        detail=''
-        if root_text:
-            detail=root_text('meta[name="description"]').attr('content')or''
-            if not detail:detail=root_text('.content').text()[:200]
-        play_from,play_url=[],[]
-        if root_content:
-            for i,p in enumerate(root_content('.dplayer').items()):
-                c=p.attr('config')
-                if not c:continue
-                try:s=(c.replace('&quot;','"').replace('&#34;','"').replace('&amp;','&').replace('&#38;','&').replace('&lt;','<').replace('&#60;','<').replace('&gt;','>').replace('&#62;','>'));u=(json.loads(s).get('video',{})or{}).get('url','')
-                except:m=re.search(r'"url"\s*:\s*"([^"]+)"',c);u=m.group(1)if m else''
-                if u:
-                    u=u.replace('\\/','/');u=self._abs(u)
-                    # Extract article ID for danmaku
-                    article_id = self._extract_article_id(tid)
-                    if article_id:
-                        play_from.append(f'视频{i+1}');play_url.append(f"{article_id}_dm_{u}")
-                    else:
-                        play_from.append(f'视频{i+1}');play_url.append(u)
-        if not play_url:
-            for pat in[r'https://hls\.[^"\']+\.m3u8[^"\']*',r'https://[^"\']+\.m3u8\?auth_key=[^"\']+',r'//hls\.[^"\']+\.m3u8[^"\']*']:
-                for u in re.findall(pat,html_text):
-                    u=self._abs(u)
-                    article_id = self._extract_article_id(tid)
-                    if article_id:
-                        play_from.append(f'视频{len(play_from)+1}');play_url.append(f"{article_id}_dm_{u}")
-                    else:
-                        play_from.append(f'视频{len(play_from)+1}');play_url.append(u)
-                    if len(play_url)>=3:break
-                if play_url:break
-        if not play_url:
-            js_patterns=[r'video[\s\S]{0,500}?url[\s"\'`:=]+([^"\'`\s]+)',r'videoUrl[\s"\'`:=]+([^"\'`\s]+)',r'src[\s"\'`:=]+([^"\'`\s]+\.m3u8[^"\'`\s]*)']
-            for pattern in js_patterns:
-                js_urls=re.findall(pattern,html_text)
-                for js_url in js_urls:
-                    if'.m3u8'in js_url:
-                        if js_url.startswith('//'):js_url='https:'+js_url
-                        elif js_url.startswith('/'):js_url='https://heiliao.com'+js_url
-                        elif not js_url.startswith('http'):js_url='https://'+js_url
-                        article_id = self._extract_article_id(tid)
-                        if article_id:
-                            play_from.append(f'视频{len(play_from)+1}');play_url.append(f"{article_id}_dm_{js_url}")
-                        else:
-                            play_from.append(f'视频{len(play_from)+1}');play_url.append(js_url)
-                        if len(play_url)>=3:break
-                if play_url:break
-        if not play_url:
-            article_id = self._extract_article_id(tid)
-            example_url = "https://hls.obmoti.cn/videos5/b9699667fbbffcd464f8874395b91c81/b9699667fbbffcd464f8874395b91c81.m3u8?auth_key=1760372539-68ed273b94e7a-0-3a53bc0df110c5f149b7d374122ef1ed&v=2"
-            if article_id:
-                play_from.append('示例视频');play_url.append(f"{article_id}_dm_{example_url}")
-            else:
-                play_from.append('示例视频');play_url.append(example_url)
-        return{'list':[{'vod_id':tid,'vod_name':title,'vod_pic':pic,'vod_content':detail,'vod_play_from':'$$$'.join(play_from),'vod_play_url':'$$$'.join(play_url)}]}
-    def searchContent(self,key,quick,pg="1"):
-        rsp=self.fetch(f'https://heiliao.com/index/search?word={key}')
-        if not rsp:return{'list':[]}
-        return{'list':self._parse_items(pq(rsp.text))}
-    def playerContent(self,flag,id,vipFlags):
-        # Check if this is a danmaku-enabled video
-        if '_dm_' in id:
-            aid, pid = id.split('_dm_', 1)
-            p = 0 if re.search(r'\.(m3u8|mp4|flv|ts|mkv|mov|avi|webm)', pid) else 1
-            if not p:
-                pid = f"{self.getProxyUrl()}&pdid={quote(id)}&type=m3u8"
-            return {'parse': p, 'url': pid, 'header': {"User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.7049.96 Safari/537.36","Referer":"https://heiliao.com/"}}
-        else:
-            return{"parse":0,"playUrl":"","url":id,"header":{"User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.7049.96 Safari/537.36","Referer":"https://heiliao.com/"}}
-    def get_list(self,url):
-        rsp=self.fetch(url)
-        return[]if not rsp else self._parse_items(pq(rsp.text))
-    def fetch(self,url,params=None,cookies=None,headers=None,timeout=5,verify=True,stream=False,allow_redirects=True):
-        h=headers or{"User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.7049.96 Safari/537.36","Referer":"https://heiliao.com/"}
-        return super().fetch(url,params=params,cookies=cookies,headers=h,timeout=timeout,verify=verify,stream=stream,allow_redirects=allow_redirects)
-    def localProxy(self,param):
-        try:
-            xtype = param.get('type', '')
-            if xtype == 'hlimg':
-                url=self.d64(param.get('url'))
-                if url.startswith('//'):url='https:'+url
-                elif url.startswith('/'):url='https://heiliao.com'+url
-                r=requests.get(url,headers={"User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.7049.96 Safari/537.36","Referer":"https://heiliao.com/"},timeout=15,verify=False)
-                if r.status_code!=200:return[404,'text/plain','']
-                b=AES.new(b'f5d965df75336270',AES.MODE_CBC,b'97b60394abc2fbe1').decrypt(r.content)
-                ct='image/jpeg'
-                if b.startswith(b'\x89PNG'):ct='image/png'
-                elif b.startswith(b'GIF8'):ct='image/gif'
-                return[200,ct,b]
-            elif xtype == 'm3u8':
-                # Handle danmaku-enabled video
-                path, url = unquote(param['pdid']).split('_dm_', 1)
-                data = requests.get(url, headers={"User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.7049.96 Safari/537.36","Referer":"https://heiliao.com/"}, timeout=10).text
-                lines = data.strip().split('\n')
-                times = 0.0
-                for i in lines:
-                    if i.startswith('#EXTINF:'):
-                        times += float(i.split(':')[-1].replace(',', ''))
-                # Start background thread to refresh danmaku
-                thread = threading.Thread(target=self.some_background_task, args=(path, int(times)))
-                thread.start()
-                print('[INFO] 获取视频时长成功', times)
-                return [200, 'text/plain', data]
-            elif xtype == 'hlxdm':
-                # Return danmaku XML for heiliao comments
-                article_id = param.get('path', '')
-                times = int(param.get('times', 0))
-                comments = self._fetch_heiliao_comments(article_id)
-                return self._generate_danmaku_xml(comments, times)
+            client = self._client()
+            r = client.get(url, headers=self.headers, timeout=25, verify=False, allow_redirects=True)
+            if (r.status_code != 200 or not (r.text or "").strip()) and url.rstrip("/") != self.host:
+                client.get(self.host + "/", headers=self.headers, timeout=25, verify=False, allow_redirects=True)
+                r = client.get(url, headers=self.headers, timeout=25, verify=False, allow_redirects=True)
+            if r.status_code != 200:
+                self._error(f"GET {url} status={r.status_code} body={(r.text or '')[:120]}")
+                return ""
+            text = r.content.decode("utf-8", errors="ignore")
+            if not (text or "").strip(): self._error(f"GET {url} empty body")
+            return text
         except Exception as e:
-            print(f'[ERROR] localProxy: {e}')
-        return[404,'text/plain','']
-    
-    def _extract_article_id(self, url):
-        """Extract article ID from heiliao.com URL"""
+            self._error(f"GET {url} error={type(e).__name__}: {e}")
+            return ""
+    def _fix(self, u):
+        if not u: return ""
+        u = html.unescape(u.strip())
+        return "https:" + u if u.startswith("//") else self.host + u if u.startswith("/") else u
+    def _clean(self, s): return re.sub(r"\s+", " ", html.unescape(s or "")).strip()
+    def _player_header(self): return self.headers
+    def _html(self, text):
+        if isinstance(text, bytes): text = text.decode("utf-8", errors="ignore")
+        return etree.HTML((text or "").replace("\x00", "").encode("utf-8", errors="ignore"))
+    def _ids(self, ids): return ids if isinstance(ids, (list, tuple)) else [ids] if ids else []
+    def _detail_url(self, sid):
+        sid = str(sid or "").strip()
+        if sid.startswith("http"): return self._fix(sid)
+        m = re.search(r"(?:archives/)?(\d{3,})(?:\.html)?", sid)
+        if m: return f"{self.host}/archives/{m.group(1)}.html"
+        return self._fix(sid)
+    def _is_encrypted_img(self, u): return any(x in (u or "") for x in ["/xiao/", "/upload_01/xiao/", "/upload/upload/xiao/"])
+    def _is_cdn_img(self, u): return any(x in (u or "") for x in ["/xiao/", "/usr/", "/upload_01/", "/uploads/", "/upload/upload/"])
+    def _proxy_base(self):
         try:
-            if '/archives/' in url:
-                match = re.search(r'/archives/(\d+)/?', url)
-                return match.group(1) if match else None
-            return None
-        except:
-            return None
-    
-    def _fetch_heiliao_comments(self, article_id, max_pages=3):
-        """Fetch comments from heiliao.com API"""
-        comments = []
+            f = getattr(self, "getProxyUrl", None)
+            return f() if callable(f) else ""
+        except Exception:
+            return ""
+    def _proxy_img_url(self, base, url):
+        sep = "" if base.endswith(("?", "&")) else "&" if "?" in base else "?"
+        return base + sep + "type=img&url=" + quote(url, safe="")
+    def _mime_from_bytes(self, data, ext="jpeg"):
+        if data.startswith(b"\xff\xd8\xff"): return "jpeg"
+        if data.startswith(b"\x89PNG\r\n\x1a\n"): return "png"
+        if data.startswith(b"GIF87a") or data.startswith(b"GIF89a"): return "gif"
+        if data[:4] == b"RIFF" and data[8:12] == b"WEBP": return "webp"
+        return "jpeg" if ext in ["jpg", "jpeg"] else ext if ext in ["png", "gif", "webp"] else "jpeg"
+    def _decrypt_image_bytes(self, data):
+        if not AES: return ""
         try:
-            for page in range(1, max_pages + 1):
-                url = f"https://heiliao.com/comments/1/{article_id}/{page}.json"
-                resp = requests.get(url, headers={"User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.7049.96 Safari/537.36","Referer":"https://heiliao.com/"}, timeout=10)
-                if resp.status_code == 200:
-                    data = resp.json()
-                    if 'data' in data and 'list' in data['data'] and data['data']['list']:
-                        for comment in data['data']['list']:
-                            text = comment.get('content', '').strip()
-                            if text and len(text) <= 100:  # Filter out too long comments
-                                comments.append(text)
-                            # Also get replies from comments.list
-                            if 'comments' in comment and 'list' in comment['comments'] and comment['comments']['list']:
-                                for reply in comment['comments']['list']:
-                                    reply_text = reply.get('content', '').strip()
-                                    if reply_text and len(reply_text) <= 100:
-                                        comments.append(reply_text)
-                        # Check if there are more pages
-                        if not data['data'].get('next', False):
-                            break
-                    else:
-                        break  # No more comments
-                else:
-                    break
-        except Exception as e:
-            print(f'[ERROR] _fetch_heiliao_comments: {e}')
-        return comments[:50]  # Limit to 50 comments max
-    
-    def _generate_danmaku_xml(self, comments, video_duration):
-        """Generate danmaku XML from comments"""
+            raw = AES.new(b"f5d965df75336270", AES.MODE_CBC, b"97b60394abc2fbe1").decrypt(base64.b64decode(data))
+            pad = raw[-1] if raw else 0
+            return raw[:-pad] if 0 < pad <= 16 and raw.endswith(bytes([pad]) * pad) else raw
+        except Exception:
+            return b""
+    def _image_data_url(self, url):
         try:
-            total_comments = len(comments)
-            tsrt = f'共有{total_comments}条弹幕来袭！！！'
-            danmu_xml = f'<?xml version="1.0" encoding="UTF-8"?>\n<i>\n\t<chatserver>chat.heiliao.com</chatserver>\n\t<chatid>88888888</chatid>\n\t<mission>0</mission>\n\t<maxlimit>99999</maxlimit>\n\t<state>0</state>\n\t<real_name>0</real_name>\n\t<source>heiliao</source>\n'
-            danmu_xml += f'\t<d p="0,5,25,16711680,0">{tsrt}</d>\n'
-            
-            for i, comment in enumerate(comments):
-                # Distribute comments across video duration
-                base_time = (i / total_comments) * video_duration if total_comments > 0 else 0
-                dm_time = base_time + random.uniform(-3, 3)
-                dm_time = round(max(0, min(dm_time, video_duration)), 1)
-                dm_color = self._get_danmaku_color()
-                # Clean comment text
-                dm_text = re.sub(r'[<>&\u0000\b]', '', comment)
-                danmu_xml += f'\t<d p="{dm_time},1,25,{dm_color},0">{dm_text}</d>\n'
-            
-            danmu_xml += '</i>'
-            return [200, "text/xml", danmu_xml]
-        except Exception as e:
-            print(f'[ERROR] _generate_danmaku_xml: {e}')
-            return [500, 'text/html', '']
-    
-    def _get_danmaku_color(self):
-        """Get danmaku color (90% white, 10% random)"""
-        if random.random() < 0.1:
-            h = random.random()
-            s = random.uniform(0.7, 1.0)
-            v = random.uniform(0.8, 1.0)
-            r, g, b = colorsys.hsv_to_rgb(h, s, v)
-            r = int(r * 255)
-            g = int(g * 255)
-            b = int(b * 255)
-            return str((r << 16) + (g << 8) + b)
-        else:
-            return '16777215'  # White
-    
-    def some_background_task(self, article_id, video_duration):
-        """Background task to refresh danmaku in FongMi"""
+            data, mime = self._image_bytes(url)
+            return f"data:image/{mime};base64,{base64.b64encode(data).decode()}" if data else url
+        except Exception:
+            return url
+    def _image_bytes(self, url):
+        url = unquote(url)
+        ext = (url.split("?")[0].rsplit(".", 1)[-1] or "jpeg").lower()
+        r = self._client().get(url, headers=self.headers, timeout=25, verify=False, allow_redirects=True)
+        if self._is_encrypted_img(url):
+            raw = self._decrypt_image_bytes(base64.b64encode(r.content).decode())
+            if raw: return raw, self._mime_from_bytes(raw, ext)
+        ctype = (r.headers.get("Content-Type") or "").split(";")[0].lower()
+        mime = ctype.split("/", 1)[1] if ctype.startswith("image/") else self._mime_from_bytes(r.content, ext)
+        return r.content, mime
+    def _pic_url(self, url):
+        base = self._proxy_base()
+        if base: return self._proxy_img_url(base, url)
+        if url.startswith("data:"): return url
+        return self._image_data_url(url) if self._is_encrypted_img(url) else url
+    def _cover_url(self, url):
+        url = self._fix(url)
+        base = self._proxy_base()
+        return self._proxy_img_url(base, url) if base and self._is_encrypted_img(url) else url
+    def proxy(self, params):
+        url = params.get("url") or params.get("img") or ""
+        if isinstance(url, list): url = url[0] if url else ""
         try:
-            time.sleep(1)
-            danmaku_url = f"{self.getProxyUrl()}&path={quote(article_id)}&times={video_duration}&type=hlxdm"
-            self.fetch(f"http://127.0.0.1:9978/action?do=refresh&type=danmaku&path={quote(danmaku_url)}")
-            print(f'[INFO] 弹幕刷新成功: {article_id}')
-        except Exception as e:
-            print(f'[ERROR] some_background_task: {e}')
+            data, mime = self._image_bytes(url)
+            return [200, "image/" + mime, data]
+        except Exception:
+            return [404, "text/plain", ""]
+    def localProxy(self, params): return self.proxy(params)
+    def _page_url(self, tid, pg):
+        pg = int(pg or 1)
+        path = tid or "/"
+        if path.startswith("http"): base = path.rstrip("/") + "/"
+        else: base = self.host + (path if path.startswith("/") else "/" + path)
+        base = base.rstrip("/") + "/"
+        if pg <= 1: return base
+        return base + f"page/{pg}/" if path.strip("/") == "" else base + f"{pg}/"
+    def _parse_list(self, html_text):
+        if not html_text: return []
+        tree = self._html(html_text)
+        if tree is None: return []
+        result, seen = [], set()
+        items = tree.xpath('//div[@id="index" or @id="archive"]//article[.//a[contains(@href,"/archives/")]]') or tree.xpath('//article[.//a[contains(@href,"/archives/")]]')
+        for item in items:
+            if self._is_ad_item(item): continue
+            href = "".join(item.xpath('.//a[contains(@href,"/archives/")]/@href')).strip()
+            m = re.search(r"/archives/(\d+)\.html", href)
+            if not m or m.group(1) in seen: continue
+            seen.add(m.group(1))
+            title = self._clean(" ".join(item.xpath('.//*[contains(@class,"post-card-bottom-text")]//text()')) or " ".join(item.xpath('.//h2//text()')) or "".join(item.xpath('.//a[contains(@href,"/archives/")]/@title')))
+            pics = item.xpath('.//meta[@itemprop="image" or @itemprop="thumbnailUrl"]/@content') or item.xpath('.//img/@z-image-loader-url') or item.xpath('.//img/@data-xkrkllgl') or item.xpath('.//img/@data-src') or item.xpath('.//img/@src')
+            pic = pics[0] if pics else ""
+            result.append({"vod_id": self._fix(href), "vod_name": title or m.group(1), "vod_pic": self._cover_url(pic)})
+        return result
+    def _content_node(self, tree):
+        nodes = tree.xpath('//div[contains(concat(" ",normalize-space(@class)," ")," post-content ")]')
+        return nodes[0] if nodes else tree
+    def _is_ad_item(self, item):
+        return bool(item.xpath('.//a[contains(concat(" ",normalize-space(@rel)," ")," sponsored ") or @data-event="ad_click" or @data-ad_slot_key or @data-ad_id]'))
+    def _parse_videos(self, node):
+        videos, seen = [], set()
+        for d in node.xpath('.//div[contains(@class,"dplayer") and @data-config]'):
+            title = f"视频{len(videos)+1}"
+            conf = html.unescape(d.get("data-config") or "")
+            url = ""
+            try: url = ((json.loads(conf).get("video") or {}).get("url") or "").replace("\\/", "/")
+            except Exception:
+                m = re.search(r'"video"\s*:\s*\{.*?"url"\s*:\s*"([^"]+)"', conf)
+                url = m.group(1).replace("\\/", "/") if m else ""
+            if url and url not in seen:
+                seen.add(url)
+                videos.append((title, self._fix(url)))
+        return videos
+    def _parse_images(self, node):
+        imgs, seen = [], set()
+        for img in node.xpath('.//img'):
+            src = img.get("z-image-loader-url") or img.get("data-xkrkllgl") or img.get("data-original") or img.get("data-src") or img.get("data-lazyload") or img.get("data-lazy-src") or img.get("src") or ""
+            src = self._fix(src)
+            if not src or src in seen or "/usr/themes/" in src or "/usr/plugins/" in src or "/uploads/default/other/" in src: continue
+            seen.add(src)
+            imgs.append(src)
+        return imgs
+    def homeContent(self, filter):
+        return {"class": self.categories, "list": self._parse_list(self._get(self.host + "/")), "filters": {}}
+    def categoryContent(self, tid, pg, filter, extend):
+        items = self._parse_list(self._get(self._page_url(tid, pg)))
+        total = 9990 if items else 0
+        return {"page": int(pg), "pagecount": 999 if items else int(pg), "limit": 10, "total": total, "count": total, "list": items}
+    def detailContent(self, ids):
+        self.last_error = ""
+        result = {"list": []}
+        for sid in self._ids(ids):
+            try:
+                url = self._detail_url(sid)
+                html_text = self._get(url)
+                if not html_text:
+                    if not self.last_error: self._error(f"detail {url} empty html")
+                    continue
+                tree = self._html(html_text)
+                if tree is None:
+                    self._error(f"detail {url} etree none body={html_text[:120]}")
+                    continue
+                node = self._content_node(tree)
+                name = self._clean("".join(tree.xpath('//meta[@property="og:title"]/@content')) or "".join(tree.xpath('//h1/text()')) or "".join(tree.xpath('//title/text()')))
+                videos, imgs = self._parse_videos(node), self._parse_images(node)
+                pic = self._cover_url(imgs[0] if imgs else "".join(tree.xpath('//meta[@property="og:image"]/@content')))
+                text = self._clean(" ".join(node.xpath('.//p[not(ancestor::*[contains(@class,"article-ads-btn")])]/text()')))[:800]
+                names, plays = [], []
+                if videos:
+                    names.append("视频")
+                    plays.append("#".join(f"{t}${u}" for t, u in videos))
+                if imgs:
+                    names.append("图集")
+                    plays.append("全部$pics://" + "&&".join(imgs))
+                if text:
+                    names.append("正文")
+                    plays.append("正文$text://" + text)
+                result["list"].append({"vod_id": url, "vod_name": name, "vod_pic": pic, "vod_content": text, "vod_play_from": "$$$".join(names), "vod_play_url": "$$$".join(plays)})
+            except Exception as e:
+                self._error(f"detail sid={sid} error={type(e).__name__}: {e}")
+                continue
+        return result if result["list"] else {"list": [], "msg": self.last_error or "detail empty"}
+    def searchContent(self, key, quick, pg="1"):
+        url = self.host + "/search/" + quote(key) + "/" + (f"page/{pg}/" if int(pg or 1) > 1 else "")
+        return {"list": self._parse_list(self._get(url)), "page": int(pg)}
+    def playerContent(self, flag, id, vipFlags):
+        if id.startswith("pics://"):
+            return {"parse": 0, "url": "pics://" + "&&".join(self._pic_url(u) for u in id[7:].split("&&") if u), "header": self._player_header()}
+        if id.startswith("text://"): return {"parse": 0, "url": id, "header": self._player_header()}
+        url = self._fix(id)
+        lower = url.lower()
+        result = {"parse": 0 if any(x in lower for x in [".m3u8", ".mp4", ".flv"]) else 1, "url": url, "header": self._player_header()}
+        if ".m3u8" in lower: result["format"] = "application/x-mpegURL"
+        return result

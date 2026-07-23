@@ -175,18 +175,24 @@
 			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/低端影视.py"
 		},
 		{
-			"key": "cbh",
-			"name": "🐬茶杯狐.py(关梯)[追剧]",
-			"type": 3,
-			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/茶杯狐.py"
-		},
-		{
             "key": "ppx",
             "name": "🐬皮皮虾.py[追剧]",
             "type": 3,
             "api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/皮皮虾.py",
             "ext": "http://43.248.117.123:4680"
         },
+		{
+			"key": "cbh",
+			"name": "🐬茶杯狐.py(关梯)[追剧]",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/茶杯狐.py"
+		},
+		{
+			"key": "hxq",
+			"name": "🐬韩小圈.py(关梯)[追剧]",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/韩小圈.py"
+		},
 		{
 			"key": "ww",
 			"name": "🐬哇哇APP.py(关梯)[追剧]",
@@ -756,21 +762,21 @@
 		},
 		{
 			"key": "wddj",
-			"name": "🐬黄豆短剧.py[短剧]",
+			"name": "🐬黄豆短剧.py 有🔞[短剧]",
 			"type": 3,
 			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/黄豆短剧.py"
-		},
-		{
-			"key": "wddj18",
-			"name": "🐬黄豆短剧(魔改).py｜🔞[短剧]",
-			"type": 3,
-			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/黄豆短剧(魔改).py"
 		},
 		{
 			"key": "djjh",
 			"name": "🐬短剧聚合.py[短剧]",
 			"type": 3,
 			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/短剧聚合.py"
+		},
+		{
+			"key": "ytb",
+			"name": "🐬悦听吧.py[听书]",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/悦听吧.py"
 		},
 		{
 			"key": "kwms",
@@ -884,6 +890,24 @@
 			"name": "🐬黑料不打烊.py｜🔞[吃瓜]",
 			"type": 3,
 			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/黑料不打烊.py"
+		},
+		{
+			"key": "hlw",
+			"name": "🐬黑料网.py｜🔞[吃瓜]",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/黑料网.py"
+		},
+		{
+			"key": "prsd",
+			"name": "🐬怦然心动.py｜🔞[成人]",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/怦然心动.py"
+		},
+		{
+			"key": "hsck",
+			"name": "🐬黄色仓库.py｜🔞[成人]",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/黄色仓库.py"
 		},
 		{
 			"key": "wyt",

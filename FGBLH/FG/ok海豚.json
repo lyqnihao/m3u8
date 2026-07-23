@@ -167,6 +167,12 @@
 			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/枫叶影院.py"
 		},
 		{
+			"key": "hxq",
+			"name": "🐬韩小圈.py(关梯)",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/韩小圈.py"
+		},
+		{
 			"key": "ww",
 			"name": "🐬哇哇APP.py(关梯)",
 			"type": 3,
@@ -689,21 +695,21 @@
 		},
 		{
 			"key": "wddj",
-			"name": "🐬黄豆短剧.py",
+			"name": "🐬黄豆短剧.py 有🔞",
 			"type": 3,
 			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/黄豆短剧.py"
-		},
-		{
-			"key": "wddj18",
-			"name": "🐬黄豆短剧(魔改).py｜🔞",
-			"type": 3,
-			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/黄豆短剧(魔改).py"
 		},
 		{
 			"key": "djjh",
 			"name": "🐬短剧聚合.py",
 			"type": 3,
 			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/短剧聚合.py"
+		},
+		{
+			"key": "ytb",
+			"name": "🐬悦听吧.py",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/悦听吧.py"
 		},
 		{
 			"key": "kwms",
@@ -819,10 +825,28 @@
 			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/黑料不打烊.py"
 		},
 		{
+			"key": "hlw",
+			"name": "🐬黑料网.py｜🔞",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/黑料网.py"
+		},
+		{
 			"key": "mtvm",
 			"name": "🐬蜜桃视频.py(羊壳观看)｜🔞",
 			"type": 3,
 			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/蜜桃视频.py"
+		},
+		{
+			"key": "prsd",
+			"name": "🐬怦然心动.py｜🔞",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/怦然心动.py"
+		},
+		{
+			"key": "hsck",
+			"name": "🐬黄色仓库.py｜🔞",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/黄色仓库.py"
 		},
 		{
 			"key": "wyt",
