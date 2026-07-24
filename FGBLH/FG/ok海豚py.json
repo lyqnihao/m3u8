@@ -88,6 +88,30 @@
 			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/麒麟影视.py"
 		},
 		{
+			"key": "qdvm",
+			"name": "🐬奇点影视.py",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/奇点影视.py"
+		},
+		{
+			"key": "zzvm",
+			"name": "🐬枝枝影视.py(关梯)",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/枝枝影视.py"
+		},
+		{
+			"key": "knvm",
+			"name": "🐬柯南影视.py(关梯)",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/柯南影视.py"
+		},
+		{
+			"key": "teys",
+			"name": "🐬太乙影视.py(关梯)",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/太乙影视.py"
+		},
+		{
 			"key": "wkvm",
 			"name": "🐬悟空影视.py(关梯)",
 			"type": 3,
@@ -159,6 +183,12 @@
 			"name": "🐬努努影院.py",
 			"type": 3,
 			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/努努影院.py"
+		},
+		{
+			"key": "dnyy",
+			"name": "🐬多瑙影院.py",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/多瑙影院.py"
 		},
 		{
 			"key": "nvm",
@@ -395,10 +425,22 @@
 			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/悦听吧.py"
 		},
 		{
+			"key": "275ts",
+			"name": "🐬275听书.py",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/275听书.py"
+		},
+		{
 			"key": "kwms",
 			"name": "🐬酷我音乐.py",
 			"type": 3,
 			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/酷我音乐.py"
+		},
+		{
+			"key": "djyy",
+			"name": "🐬DJ呦呦.py",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/DJ呦呦.py"
 		},
 		{
 			"key": "shjb",
@@ -585,6 +627,12 @@
 			"name": "🐬萝莉AV.py｜🔞",
 			"type": 3,
 			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/萝莉AV.py"
+		},
+		{
+			"key": "clspq",
+			"name": "🐬草榴视频区.py｜🔞",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/草榴视频区.py"
 		},
 		{
 			"key": "123av",

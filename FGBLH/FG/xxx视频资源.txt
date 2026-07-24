@@ -14,7 +14,7 @@ CCTV16奥林匹克1080p,http://207.56.13.146:81/cdnlive/cctv16.m3u8
 CCTV16奥林匹克1080p,https://php.jdshipin.com:2096/TVOD/iptv.php?id=cctv16
 纬来体育,rtmp://f13h.mine.nu/sat/tv721
 广东珠江1080p,http://m.061899.xyz/mg/gdzj
-中天新闻http://173.208.234.146/live/ctinews.m3u8
+中天新闻,http://173.208.234.146/live/ctinews.m3u8
 
 18+直播台,#genre#
 资源永久免费如有收费的都是骗子,http://ef90a6cd.rossteleccom.net/iptv/2TBC4G2WWDG6RSUSN5SXSQEC/14158/index.m3u8
