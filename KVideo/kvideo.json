@@ -9,13 +9,22 @@
             "priority": 1
       },
       {
+            "id": "dbzy.tv",
+            "name": "🎬豆瓣资源",
+            "baseUrl": "https://caiji.dbzy5.com/api.php/provide/vod",
+            "searchPath": "",
+            "detailPath": "",
+            "enabled": true,
+            "priority": 2
+      },
+      {
             "id": "mtzy.me",
             "name": "🎬茅台资源",
             "baseUrl": "https://caiji.maotaizy.cc/api.php/provide/vod",
             "searchPath": "",
             "detailPath": "",
             "enabled": true,
-            "priority": 2
+            "priority": 3
       },
       {
             "id": "wolongzyw.com",
@@ -24,7 +33,7 @@
             "searchPath": "",
             "detailPath": "",
             "enabled": true,
-            "priority": 3
+            "priority": 4
       },
       {
             "id": "ikunzy.com",
@@ -33,7 +42,7 @@
             "searchPath": "",
             "detailPath": "",
             "enabled": true,
-            "priority": 4
+            "priority": 5
       },
       {
             "id": "dyttzyapi.com",
@@ -42,7 +51,7 @@
             "searchPath": "",
             "detailPath": "",
             "enabled": true,
-            "priority": 5
+            "priority": 6
       },
       {
             "id": "www.maoyanzy.com",
@@ -51,7 +60,7 @@
             "searchPath": "",
             "detailPath": "",
             "enabled": true,
-            "priority": 6
+            "priority": 7
       },
       {
             "id": "cj.lzcaiji.com",
@@ -60,7 +69,7 @@
             "searchPath": "",
             "detailPath": "",
             "enabled": true,
-            "priority": 7
+            "priority": 8
       },
       {
             "id": "360zy.com",
@@ -69,7 +78,7 @@
             "searchPath": "",
             "detailPath": "",
             "enabled": true,
-            "priority": 8
+            "priority": 9
       },
       {
             "id": "jszyapi.com",
@@ -78,7 +87,7 @@
             "searchPath": "",
             "detailPath": "",
             "enabled": true,
-            "priority": 9
+            "priority": 10
       },
       {
             "id": "www.moduzy.net",
@@ -87,7 +96,7 @@
             "searchPath": "",
             "detailPath": "",
             "enabled": true,
-            "priority": 10
+            "priority": 11
       },
       {
             "id": "ffzyapi.com",
@@ -96,7 +105,7 @@
             "searchPath": "",
             "detailPath": "",
             "enabled": true,
-            "priority": 11
+            "priority": 12
       },
       {
             "id": "bfzy.tv",
@@ -105,7 +114,7 @@
             "searchPath": "",
             "detailPath": "",
             "enabled": true,
-            "priority": 12
+            "priority": 13
       },
       {
             "id": "zuida.xyz",
@@ -114,7 +123,7 @@
             "searchPath": "",
             "detailPath": "",
             "enabled": true,
-            "priority": 13
+            "priority": 14
       },
       {
             "id": "wujinzy.me",
@@ -123,7 +132,7 @@
             "searchPath": "",
             "detailPath": "",
             "enabled": true,
-            "priority": 14
+            "priority": 15
       },
       {
             "id": "xinlangapi.com",
@@ -132,7 +141,7 @@
             "searchPath": "",
             "detailPath": "",
             "enabled": true,
-            "priority": 15
+            "priority": 16
       },
       {
             "id": "api.wwzy.tv",
@@ -141,7 +150,7 @@
             "searchPath": "",
             "detailPath": "",
             "enabled": true,
-            "priority": 16
+            "priority": 17
       },
       {
             "id": "www.subozy.com",
@@ -150,7 +159,7 @@
             "searchPath": "",
             "detailPath": "",
             "enabled": true,
-            "priority": 17
+            "priority": 18
       },
       {
             "id": "jinyingzy.com",
@@ -159,7 +168,7 @@
             "searchPath": "",
             "detailPath": "",
             "enabled": true,
-            "priority": 18
+            "priority": 19
       },
       {
             "id": "p2100.net",
@@ -168,7 +177,7 @@
             "searchPath": "",
             "detailPath": "",
             "enabled": true,
-            "priority": 19
+            "priority": 20
       },
       {
             "id": "api.ukuapi88.com",
@@ -177,7 +186,7 @@
             "searchPath": "",
             "detailPath": "",
             "enabled": true,
-            "priority": 20
+            "priority": 21
       },
       {
             "id": "api.guangsuapi.com",
@@ -186,7 +195,7 @@
             "searchPath": "",
             "detailPath": "",
             "enabled": true,
-            "priority": 21
+            "priority": 22
       },
       {
             "id": "www.hongniuzy.com",
@@ -195,7 +204,7 @@
             "searchPath": "",
             "detailPath": "",
             "enabled": true,
-            "priority": 22
+            "priority": 23
       },
       {
             "id": "caiji.moduapi.cc",
@@ -204,7 +213,7 @@
             "searchPath": "",
             "detailPath": "",
             "enabled": true,
-            "priority": 23
+            "priority": 24
       },
       {
             "id": "www.ryzyw.com",
@@ -213,7 +222,7 @@
             "searchPath": "",
             "detailPath": "",
             "enabled": true,
-            "priority": 24
+            "priority": 25
       },
       {
             "id": "www.haohuazy.com",
@@ -222,7 +231,7 @@
             "searchPath": "",
             "detailPath": "",
             "enabled": true,
-            "priority": 25
+            "priority": 26
       },
       {
             "id": "bdzy1.com",
@@ -231,7 +240,7 @@
             "searchPath": "",
             "detailPath": "",
             "enabled": true,
-            "priority": 26
+            "priority": 27
       },
       {
             "id": "lovedan.net",
@@ -240,7 +249,7 @@
             "searchPath": "",
             "detailPath": "",
             "enabled": true,
-            "priority": 27
+            "priority": 28
       },
       {
             "id": "91md.me",
@@ -249,7 +258,7 @@
             "searchPath": "",
             "detailPath": "",
             "enabled": true,
-            "priority": 28
+            "priority": 29
       },
       {
             "id": "lbapiby.com",
@@ -258,7 +267,7 @@
             "searchPath": "",
             "detailPath": "",
             "enabled": true,
-            "priority": 29
+            "priority": 30
       },
       {
             "id": "155zy2.com",
@@ -267,7 +276,7 @@
             "searchPath": "",
             "detailPath": "",
             "enabled": true,
-            "priority": 30
+            "priority": 31
       },
       {
             "id": "apiyutu.com",
@@ -276,7 +285,7 @@
             "searchPath": "",
             "detailPath": "",
             "enabled": true,
-            "priority": 31
+            "priority": 32
       },
       {
             "id": "fhapi9.com",
@@ -285,7 +294,7 @@
             "searchPath": "",
             "detailPath": "",
             "enabled": true,
-            "priority": 32
+            "priority": 33
       },
       {
             "id": "apilsbzy1.com",
@@ -294,7 +303,7 @@
             "searchPath": "",
             "detailPath": "",
             "enabled": true,
-            "priority": 33
+            "priority": 34
       },
       {
             "id": "xiaojizy.live",
@@ -303,7 +312,7 @@
             "searchPath": "",
             "detailPath": "",
             "enabled": true,
-            "priority": 34
+            "priority": 35
       },
       {
             "id": "hsckzy.xyz",
@@ -312,7 +321,7 @@
             "searchPath": "",
             "detailPath": "",
             "enabled": true,
-            "priority": 35
+            "priority": 36
       },
       {
             "id": "apidanaizi.com",
@@ -321,7 +330,7 @@
             "searchPath": "",
             "detailPath": "",
             "enabled": true,
-            "priority": 36
+            "priority": 37
       },
       {
             "id": "jkunzyapi.com",
@@ -330,7 +339,7 @@
             "searchPath": "",
             "detailPath": "",
             "enabled": true,
-            "priority": 37
+            "priority": 38
       },
       {
             "id": "lbapi9.com",
@@ -339,7 +348,7 @@
             "searchPath": "",
             "detailPath": "",
             "enabled": true,
-            "priority": 38
+            "priority": 39
       },
       {
             "id": "Naixxzy.com",
@@ -348,7 +357,7 @@
             "searchPath": "",
             "detailPath": "",
             "enabled": true,
-            "priority": 39
+            "priority": 40
       },
       {
             "id": "slapibf.com",
@@ -357,7 +366,7 @@
             "searchPath": "",
             "detailPath": "",
             "enabled": true,
-            "priority": 40
+            "priority": 41
       },
       {
             "id": "apilj.com",
@@ -366,7 +375,7 @@
             "searchPath": "",
             "detailPath": "",
             "enabled": true,
-            "priority": 41
+            "priority": 42
       },
       {
             "id": "shayuapi.com",
@@ -375,7 +384,7 @@
             "searchPath": "",
             "detailPath": "",
             "enabled": true,
-            "priority": 42
+            "priority": 43
       },
       {
             "id": "didizy.com",
@@ -384,7 +393,7 @@
             "searchPath": "",
             "detailPath": "",
             "enabled": true,
-            "priority": 43
+            "priority": 44
       },
       {
             "id": "heiliaozy.cc",
@@ -393,7 +402,7 @@
             "searchPath": "",
             "detailPath": "",
             "enabled": true,
-            "priority": 44
+            "priority": 45
       },
       {
             "id": "api.bwzym3u8.com",
@@ -402,7 +411,7 @@
             "searchPath": "",
             "detailPath": "",
             "enabled": true,
-            "priority": 45
+            "priority": 46
       },
       {
             "id": "thzy8.me",
@@ -411,7 +420,7 @@
             "searchPath": "",
             "detailPath": "",
             "enabled": true,
-            "priority": 46
+            "priority": 47
       },
       {
             "id": "www.jingpinx.com",
@@ -420,7 +429,7 @@
             "searchPath": "",
             "detailPath": "",
             "enabled": true,
-            "priority": 47
+            "priority": 48
       },
       {
             "id": "souavzyw.com",
@@ -429,6 +438,6 @@
             "searchPath": "",
             "detailPath": "",
             "enabled": true,
-            "priority": 48
+            "priority": 49
       }
 ]
