@@ -156,6 +156,12 @@
 			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/韩小圈.py"
 		},
 		{
+			"key": "美剧天堂",
+			"name": "🐬美剧天堂.py(关梯)[追剧]",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/美剧天堂.py"
+		},
+		{
 			"key": "ww",
 			"name": "🐬哇哇APP.py(关梯)[追剧]",
 			"type": 3,
@@ -526,6 +532,12 @@
 			"name": "🐬黑料网.py｜🔞[吃瓜]",
 			"type": 3,
 			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/黑料网.py"
+		},
+		{
+			"key": "采集聚合成人",
+			"name": "🐬采集聚合成人.py｜🔞[成人]",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/采集聚合成人.py"
 		},
 		{
 			"key": "prsd",
