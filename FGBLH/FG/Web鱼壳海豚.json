@@ -215,6 +215,12 @@
 			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/神马影视.py"
 		},
 		{
+			"key": "4K影视",
+			"name": "🐬4K影视.py[追剧]",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/4K影视.py"
+		},
+		{
 			"key": "ddyy",
 			"name": "🐬低端影视.py[追剧]",
 			"type": 3,
