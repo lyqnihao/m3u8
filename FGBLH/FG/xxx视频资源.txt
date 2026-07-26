@@ -1,6 +1,6 @@
 TV电影台,#genre#
-CCTV6电影,http://107.150.60.122/live/cctv6hd.m3u8
 CCTV6电影,https://cdn16.123.rr.kg/163189/cctv6
+CCTV6电影,http://107.150.60.122/live/cctv6hd.m3u8
 中国电影频道(北美)(挂梯),https://dfe3-6a12-2f81-6b56.kylintv.tv/live/chinamovie_iphone.m3u8
 NOW爆谷台,http://173.208.234.146/live/nowbg.m3u8
 NOW星影台,http://173.208.234.146/live/nowxy.m3u8

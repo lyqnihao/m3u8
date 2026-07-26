@@ -34,6 +34,13 @@ class Spider(Spider):
         's21': {'name': '番号资源', 'api': 'http://fhapi9.com/api.php/provide/vod/'},
         's22': {'name': '精品X资源', 'api': 'https://www.jingpinx.com/api.php/provide/vod/'},
         's23': {'name': 'jkun资源', 'api': 'https://jkunzyapi.com/api.php/provide/vod/'},
+        's24': {'name': '湿乐园', 'api': 'https://xxavs.com/api.php/provide/vod/'},
+        's25': {'name': '越南资源', 'api': 'https://www.vnzyz.com/api.php/provide/vod/'},
+        's26': {'name': '红桃视频', 'api': 'https://apidanaizi.com/api.php/provide/vod/'},
+        's27': {'name': '鸡坤资源', 'api': 'https://jkunzyapi.com/api.php/provide/vod/'},
+        's28': {'name': 'AIvin', 'api': 'http://lbapiby.com/api.php/provide/vod/'},
+        's29': {'name': 'lsb资源', 'api': 'https://apilsbzy1.com/api.php/provide/vod/'},
+        's30': {'name': '91麻豆', 'api': 'https://91md.me/api.php/provide/vod/'},
     }
 
     headers = {

@@ -94,6 +94,12 @@
 			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/4K影视.py"
 		},
 		{
+			"key": "蝶卡影视",
+			"name": "🐬蝶卡影视.py(关梯)",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/蝶卡影视.py"
+		},
+		{
 			"key": "ddyy",
 			"name": "🐬低端影视.py",
 			"type": 3,
@@ -136,6 +142,13 @@
 			"name": "🐬片库.js(关梯)",
 			"type": 3,
 			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/jar_js/片库.js",
+			"changeable": 0
+		},
+		{
+			"key": "枫叶影院",
+			"name": "🐬枫叶影院.js(关梯)",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/jar_js/枫叶影院.js",
 			"changeable": 0
 		},
 		{
@@ -918,6 +931,13 @@
              "ua": "okhttp",
 			 "url": "https://gh-proxy.org/https://github.com/bang359/dsj/raw/main/dsjcs.txt"
          },
+		{
+            "name": "🐬Nettv",
+            "type": 0,
+            "playerType": 2,
+             "ua": "okhttp",
+			 "url": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/Nettv.txt"
+         },	
          {
             "name": "🐬地方直播",
             "type": 0,
@@ -966,12 +986,6 @@
             "ua": "okhttp/5.3.2",
             "url": "https://d.kstore.dev/download/9565/小新TV.txt"
         },
-        {
-            "name": "🐬北美长城源",
-            "type": 0,
-            "ua": "okhttp",
-            "url": "https://ha.msbot.dpdns.org/wall.php"
-        }, 
 	    {
             "name": "🐬台湾台",
             "type": 0,
