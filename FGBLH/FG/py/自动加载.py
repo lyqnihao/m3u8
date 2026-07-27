@@ -14,33 +14,37 @@ class Spider(Spider):
     # ==========================================================================
     # 📂 【配置区】
     # ==========================================================================
-    PY_DIR    = "/storage/emulated/0/TV/小百合/py"
-    JS_DIR    = "/storage/emulated/0/TV/小百合/js"
-    JAR_DIR   = "/storage/emulated/0/TV/小百合/jar"
-    SAVE_PATH = "/storage/emulated/0/TV/小百合/自动接口.json"
-    LOGO_PATH = "/storage/emulated/0/TV/小百合/jar/头像.gif"
+    PY_DIR    = "/storage/emulated/0/海豚影视/海豚/py"
+    JS_DIR    = "/storage/emulated/0/海豚影视/海豚/js"
+    JAR_DIR   = "/storage/emulated/0/海豚影视/海豚/jar"
+    SAVE_PATH = "/storage/emulated/0/海豚影视/海豚/自动接口.json"
+    LOGO_PATH = "/https://img.freepik.com/free-vector/cute-dolphin-swimming-cartoon-vector-icon-illustration-animal-nature-icon-isolated-flat-vector_138676-12582.jpg?semt=ais_hybrid&w=740&q=80"
 
     # 🔒 锁定在 sites 第 0、1 位的配置，无论扫描结果如何始终存在
     _LOCKED_SITES = [
         {
-            "key": "FishConfig",
-            "name": "🍼┆设置┆中心[工具]",
+          "key": "🐬自动加载 海豚影视完全免费，如有收费的都是骗子",
+          "name": "自动加载",
+          "type": 3,
+          "api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/自动加载.py"
+       },
+		{
+            "name": "弹幕",
+            "key": "🐬弹幕豆瓣 海豚影视交流群 TG：@hshsjk9",
             "type": 3,
-            "api": "csp_FishConfig"
-        },
-        {
-            "key": "Local",
-            "name": "📁┆文件┆浏览[工具]",
-            "type": 3,
-            "api": "csp_Local",
-            "searchable": 0,
-            "changeable": 0,
-            "indexs": 0,
-            "style": {
-                "type": "list"
-            },
-            "ext": "https://6800.kstore.vip/share.json"
-        }
+            "api": "csp_SecureDanmu",
+            "searchable": 1,
+            "jar": "https://ghfast.top/https://raw.githubusercontent.com/goodcommunication/mydm/main/danmu-spider-native.jar",
+            "ext": {
+            "apiUrls": [
+            "https://danmu.iyo.us.ci/theft-dastardly-prognosis-hula-agenda2-dropkick|公益源",
+            "https://logo.saodu.work:8888/87654321|公益源1",
+            "https://dm.ljiaovm.com/luosen|公益源2"
+            ],
+            "titleMappingsUrl": "https://ghfast.top/https://raw.githubusercontent.com/goodcommunication/mydm/main/yins.json",
+            "filter": "./lib/douban.json"
+         }
+		}
     ]
     _LOCKED_KEYS = {"FishConfig", "Local"}
     # ==========================================================================

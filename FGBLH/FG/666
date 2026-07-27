@@ -5,10 +5,10 @@
     "warningText": "注意:如果别人倒卖海豚影视接口收费的都是骗子,没有qq群微信群，只有tg官方交流群 TG：@hshsjk",
     "sites": [
     {
-          "key": "智能接口[工具]",
-          "name": "🐬智能接口[工具].py",
+          "key": "自动加载",
+          "name": "🐬自动加载.py",
           "type": 3,
-          "api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/智能接口[工具].py"
+          "api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/自动加载.py"
     },
     {
           "key": "hanime1",
