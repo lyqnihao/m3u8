@@ -482,70 +482,70 @@
 		},
 		{
         "key":"FY",
-        "name":"🐬枫叶影院(关梯子使用)[追剧]",
+        "name":"🐬枫叶影院(关梯子使用)[追剧][html]",
         "type":3,
         "api":"csp_fy",
         "homePage":"https://fgblh.github.io/uhuj.github.io/枫叶🍁.html"
         },
 		 {
         "key":"6v",
-        "name":"🐬6V影视[追剧]",
+        "name":"🐬6V影视[追剧][html]",
         "type":3,
         "api":"csp_6v",
         "homePage":"https://fgblh.github.io/uhuj.github.io/6v.html"
       },
        {
         "key":"CZ",
-        "name":"🐬厂长资源(关梯子使用)[追剧]",
+        "name":"🐬厂长资源(关梯子使用)[追剧][html]",
         "type":3,
         "api":"csp_czjy",
         "homePage":"https://fgblh.github.io/uhuj.github.io/厂长.html"
       },
       {
         "key":"WB",
-        "name":"🐬歪比巴卜影视[追剧]",
+        "name":"🐬歪比巴卜影视[追剧][html]",
         "type":3,
         "api":"csp_wbbb",
         "homePage":"https://fgblh.github.io/uhuj.github.io/歪比巴卜.html"
       },
       {
         "key":"PTT",
-        "name":"🐬PTT视频[追剧]",
+        "name":"🐬PTT视频[追剧][html]",
         "type":3,
         "api":"csp_ptt",
         "homePage":"https://fgblh.github.io/uhuj.github.io/ptt.html"
       },
       {
         "key":"LIBVIO",
-        "name":"🐬LIBVIO影视[追剧]",
+        "name":"🐬LIBVIO影视[追剧][html]",
         "type":3,
         "api":"csp_libvio",
         "homePage":"https://fgblh.github.io/uhuj.github.io/libvio.html"
       },
       {
         "key":"PPN",
-        "name":"🐬ppnix影视[追剧]",
+        "name":"🐬ppnix影视[追剧][html]",
         "type":3,
         "api":"csp_ppnix",
         "homePage":"https://fgblh.github.io/uhuj.github.io/ppnix.html"
       },
 	  {
         "key":"360JH",
-        "name":"🐬360影视(关梯子使用)[追剧]",
+        "name":"🐬360影视(关梯子使用)[追剧][html]",
         "type":3,
         "api":"csp_360jh",
         "homePage":"https://fgblh.github.io/uhuj.github.io/360聚合.html"
       },
 	  {
         "key":"WOJH",
-        "name":"🐬玩偶聚合(关梯子使用)[追剧]",
+        "name":"🐬玩偶聚合(关梯子使用)[追剧][html]",
         "type":3,
         "api":"csp_wojh",
         "homePage":"https://fgblh.github.io/uhuj.github.io/玩偶聚合.html"
       },
 	  {
         "key":"GY",
-        "name":"🐬观影(关梯子使用)[追剧]",
+        "name":"🐬观影(关梯子使用)[追剧][html]",
         "type":3,
         "api":"csp_gy",
         "homePage":"https://fgblh.github.io/uhuj.github.io/观影.html"
@@ -803,10 +803,22 @@
 			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/黑料网.py"
 		},
 		{
-			"key": "采集聚合成人",
-			"name": "🐬采集聚合成人.py｜🔞[成人]",
+          "key": "hanime1",
+          "name": "🐬hanime1动漫.py🔞[成人动漫]",
+          "type": 3,
+          "api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/hanime1.py"
+        },
+		{
+			"key": "MoTV",
+			"name": "🐬MoTV.py｜🔞[成人]",
 			"type": 3,
-			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/采集聚合成人.py"
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/MoTV.py"
+		},
+		{
+			"key": "真实人妻",
+			"name": "🐬真实人妻.py｜🔞[成人]",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/真实人妻.py"
 		},
 		{
 			"key": "猫咪TV",
@@ -1012,9 +1024,15 @@
 			"type": 3,
 			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/麻豆免费在线播放.py"
 		},
+		{
+			"key": "采集聚合成人",
+			"name": "🐬采集聚合成人.py｜🔞[采集成人]",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/采集聚合成人.py"
+		},
 	{
       "key": "大地采集",
-      "name": "🐬大地av｜🔞[成人]",
+      "name": "🐬大地av｜🔞[采集成人]",
       "type": 0,
       "api": "https://dadiapi.com/apple_m3u8.php",
       "playUrl": "https://play.dadiapi.com/watch?url=",

@@ -546,10 +546,22 @@
 			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/黑料网.py"
 		},
 		{
-			"key": "采集聚合成人",
-			"name": "🐬采集聚合成人.py｜🔞[成人]",
+          "key": "hanime1",
+          "name": "🐬hanime1动漫.py🔞[成人动漫]",
+          "type": 3,
+          "api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/hanime1.py"
+        },
+		{
+			"key": "MoTV",
+			"name": "🐬MoTV.py｜🔞[成人]",
 			"type": 3,
-			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/采集聚合成人.py"
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/MoTV.py"
+		},
+		{
+			"key": "真实人妻",
+			"name": "🐬真实人妻.py｜🔞[成人]",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/真实人妻.py"
 		},
 		{
 			"key": "猫咪TV",
@@ -754,6 +766,12 @@
 			"name": "🐬麻豆免费在线播放.py｜🔞[成人]",
 			"type": 3,
 			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/麻豆免费在线播放.py"
+		},
+		{
+			"key": "采集聚合成人",
+			"name": "🐬采集聚合成人.py｜🔞[采集成人]",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/采集聚合成人.py"
 		}
     ],
     "lives": [
