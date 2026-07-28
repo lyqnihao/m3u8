@@ -44,7 +44,7 @@ class Spider(Spider):
             "titleMappingsUrl": "https://ghfast.top/https://raw.githubusercontent.com/goodcommunication/mydm/main/yins.json",
             "filter": "./lib/douban.json"
          }
-		}
+	   }
     ]
     _LOCKED_KEYS = {"FishConfig", "Local"}
     # ==========================================================================
