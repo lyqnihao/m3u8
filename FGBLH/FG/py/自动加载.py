@@ -17,20 +17,20 @@ class Spider(Spider):
     PY_DIR    = "/storage/emulated/0/海豚影视/海豚/py"
     JS_DIR    = "/storage/emulated/0/海豚影视/海豚/js"
     JAR_DIR   = "/storage/emulated/0/海豚影视/海豚/jar"
-    SAVE_PATH = "/storage/emulated/0/海豚影视/海豚/自动接口.json"
+    SAVE_PATH = "/storage/emulated/0/海豚影视/海豚/海豚影视.json"
     LOGO_PATH = "/https://img.freepik.com/free-vector/cute-dolphin-swimming-cartoon-vector-icon-illustration-animal-nature-icon-isolated-flat-vector_138676-12582.jpg?semt=ais_hybrid&w=740&q=80"
 
     # 🔒 锁定在 sites 第 0、1 位的配置，无论扫描结果如何始终存在
     _LOCKED_SITES = [
         {
-          "key": "🐬自动加载 海豚影视完全免费，如有收费的都是骗子",
-          "name": "自动加载",
+          "key": "自动加载",
+          "name": "🐬自动加载 海豚影视完全免费，如有收费的都是骗子",
           "type": 3,
           "api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/自动加载.py"
        },
 		{
-            "name": "弹幕",
-            "key": "🐬弹幕豆瓣 海豚影视交流群 TG：@hshsjk9",
+            "name": "🐬弹幕 海豚影视交流群 TG：@hshsjk9",
+            "key": "弹幕豆瓣",
             "type": 3,
             "api": "csp_SecureDanmu",
             "searchable": 1,

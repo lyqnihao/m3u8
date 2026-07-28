@@ -270,6 +270,12 @@
           "api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/追光影视.py"
         },
 		{
+			"key": "bbzj",
+			"name": "🐬布布追剧.py[追剧]",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/布布追剧.py"
+		},
+		{
           "key": "xhvm",
           "name": "🐬骚火影视.py[追剧]",
           "type": 3,

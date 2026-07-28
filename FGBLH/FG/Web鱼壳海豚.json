@@ -349,6 +349,19 @@
           "api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/追光影视.py"
         },
 		{
+			"key": "bbzj",
+			"name": "🐬布布追剧.py[追剧]",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/布布追剧.py"
+		},
+		{
+			"key": "布布追剧",
+			"name": "🐬布布追剧.js[追剧]",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/jar_js/布布追剧.js",
+			"changeable": 0
+		},
+		{
           "key": "ikbot",
           "name": "🐬爱看机器人.py[追剧]",
           "type": 3,
@@ -480,13 +493,6 @@
 			"type": 3,
 			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/枫叶影院.py"
 		},
-		{
-        "key":"FY",
-        "name":"🐬枫叶影院(关梯子使用)[追剧][html]",
-        "type":3,
-        "api":"csp_fy",
-        "homePage":"https://fgblh.github.io/uhuj.github.io/枫叶🍁.html"
-        },
 		 {
         "key":"6v",
         "name":"🐬6V影视[追剧][html]",
@@ -808,6 +814,13 @@
           "type": 3,
           "api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/hanime1.py"
         },
+		{
+			"key": "麻豆",
+			"name": "🐬麻豆.js｜🔞[成人]",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/jar_js/麻豆.js",
+			"changeable": 0
+		},
 		{
           "key": "亚色影库",
           "name": "🐬亚色影库.py🔞[成人]",
