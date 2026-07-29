@@ -815,6 +815,18 @@
 			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/黑料网.py"
 		},
 		{
+          "key": "catemby",
+          "name": "🐬catemby.py🔞[成人][磁力]",
+          "type": 3,
+          "api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/教授.py"
+        },
+		{
+			"key": "妈妈自拍",
+			"name": "🐬妈妈自拍.py｜🔞[成人]",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/妈妈自拍.py"
+		},
+		{
           "key": "教授",
           "name": "🐬教授.py🔞[成人]",
           "type": 3,
@@ -1091,6 +1103,13 @@
             "type":3,
             "api":"csp_wbbb",
             "homePage":"https://fgblh.github.io/uhuj.github.io/missav.html"
+        },
+		{
+            "key":"javdb.",
+            "name":"🐬javdb｜🔞[成人][磁力][html]",
+            "type":3,
+            "api":"csp_wbbb",
+            "homePage":"https://fgblh.github.io/uhuj.github.io/javdb.html"
         },
 		{
 			"key": "采集聚合成人",
@@ -2467,12 +2486,6 @@
             "type": 0,
             "ua": "okhttp",
             "url": "http://xtvantsc.xyz/4gtv.txt"
-        },
-	    {
-            "name": "🐬4GTV(梯子任何节点)1080p",
-            "type": 0,
-            "ua": "okhttp",
-            "url": "https://ha.msbot.dpdns.org/4gtv_api.php"
         },
 		{
             "name": "🐬4GTV(免梯子)1080p",

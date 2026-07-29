@@ -7,6 +7,7 @@
 import sys
 import re
 import json
+import html
 import requests
 import urllib3
 import time
@@ -106,7 +107,9 @@ class Spider(BaseSpider):
                 if attempt > 0:
                     time.sleep(random.uniform(0.5, 1.5))
                 r = self.session.get(url, headers=self._get_headers(referer), timeout=(10, 20), verify=False)
-                r.encoding = 'utf-8'
+                # 不再强制 UTF-8；优先使用响应头/meta声明，否则自动探测
+                if not r.encoding or r.encoding.lower() in ('iso-8859-1', 'latin-1'):
+                    r.encoding = r.apparent_encoding
                 if r.status_code == 200:
                     return r.text
                 else:
@@ -143,7 +146,8 @@ class Spider(BaseSpider):
                 ajax_headers['X-Requested-With'] = 'XMLHttpRequest'
                 
                 r2 = self.session.get(ajax_url, headers=ajax_headers, timeout=10, verify=False)
-                r2.encoding = 'utf-8'
+                if not r2.encoding or r2.encoding.lower() in ('iso-8859-1', 'latin-1'):
+                    r2.encoding = r2.apparent_encoding
                 
                 try:
                     data = r2.json()
@@ -199,7 +203,7 @@ class Spider(BaseSpider):
             if not m:
                 continue
             type_prefix, tid = m.groups()
-            name = re.sub(r'<[^>]+>', '', text).strip()
+            name = self._clean_text(text)
             if not name or len(name) > 15:
                 continue
             if name in ('首页', '搜索', '全部', '更多', '排行', '留言', '帮助', '返回首页', '发布页', '传送门'):
@@ -257,8 +261,8 @@ class Spider(BaseSpider):
         
         # 硬编码兜底（仅保留视频分类）
         self._categories = [
-            {'type_id': '1', 'type_name': '国产传媒', 'type': 'vod'},
-            {'type_id': '2', 'type_name': '国产剧情', 'type': 'vod'},
+            {'type_id': '1', 'type_name': '劲爆推荐', 'type': 'vod'},
+            {'type_id': '2', 'type_name': '精品爆料', 'type': 'vod'},
             {'type_id': '58', 'type_name': '网曝黑料', 'type': 'vod'},
             {'type_id': '3', 'type_name': '特色仓库', 'type': 'vod'},
             {'type_id': '69', 'type_name': '精品资源', 'type': 'vod'},
@@ -268,6 +272,13 @@ class Spider(BaseSpider):
         self._log('使用硬编码分类（仅视频）')
 
     # ========== 视频列表解析 ==========
+    def _clean_text(self, text):
+        if not text:
+            return ''
+        text = re.sub(r'<[^>]+>', '', text)
+        text = html.unescape(text)
+        return text.strip()
+
     def _parse_video_list(self, html):
         items = []
         dl_pattern = r'<dl>\s*<dt[^>]*>.*?<a[^>]*href="/voddetail/(\d+)\.html"[^>]*>.*?<img[^>]*data-original="([^"]*)"[^>]*>.*?</a>.*?</dt>\s*<dd>\s*<a[^>]*href="/voddetail/\d+\.html"[^>]*>(.*?)</a>\s*</dd>\s*</dl>'
@@ -275,7 +286,7 @@ class Spider(BaseSpider):
             vid, img, title_block = m.groups()
             if not img.startswith('http'):
                 img = urljoin(self.host, img)
-            title = re.sub(r'<[^>]+>', '', title_block).strip()
+            title = self._clean_text(title_block)
             items.append({
                 'vod_id': vid,
                 'vod_name': title if title else '未知标题',
@@ -297,7 +308,7 @@ class Spider(BaseSpider):
             vid, img, title_block = m.groups()
             if not img.startswith('http'):
                 img = urljoin(self.host, img)
-            title = re.sub(r'<[^>]+>', '', title_block).strip()
+            title = self._clean_text(title_block)
             items.append({
                 'vod_id': vid,
                 'vod_name': title if title else '未知标题',
@@ -317,9 +328,9 @@ class Spider(BaseSpider):
                 title = ''
                 alt_match = re.search(r'<img[^>]*alt="([^"]*)"', block)
                 if alt_match:
-                    title = alt_match.group(1).strip()
+                    title = self._clean_text(alt_match.group(1))
                 if not title:
-                    title = re.sub(r'<[^>]+>', '', block).strip()
+                    title = self._clean_text(block)
                 items.append({
                     'vod_id': vid,
                     'vod_name': title if title else '未知标题',
@@ -334,7 +345,7 @@ class Spider(BaseSpider):
                 vid, img, title_block = m.groups()
                 if not img.startswith('http'):
                     img = urljoin(self.host, img)
-                title = re.sub(r'<[^>]+>', '', title_block).strip()
+                title = self._clean_text(title_block)
                 items.append({
                     'vod_id': vid,
                     'vod_name': title if title else '未知标题',
@@ -438,11 +449,11 @@ class Spider(BaseSpider):
         cover = ''
         m = re.search(r'<h1[^>]*>(.*?)</h1>', html, re.S)
         if m:
-            title = re.sub(r'<[^>]+>', '', m.group(1)).strip()
+            title = self._clean_text(m.group(1))
         if not title:
             m = re.search(r'<title>(.*?)</title>', html)
             if m:
-                title = m.group(1).strip()
+                title = self._clean_text(m.group(1))
         m = re.search(r'<img[^>]*data-original="([^"]*)"[^>]*>', html)
         if m:
             cover = m.group(1)
@@ -471,7 +482,7 @@ class Spider(BaseSpider):
         cache = {}
 
         for href, btn_name in buttons:
-            btn_name = re.sub(r'<[^>]+>', '', btn_name).strip() or '播放'
+            btn_name = self._clean_text(btn_name) or '播放'
             play_url = urljoin(self.host, href)
 
             if href not in cache:
@@ -548,7 +559,8 @@ class Spider(BaseSpider):
             headers['Referer'] = referer
             resp = requests.get(url, headers=headers, timeout=15)
             if resp.status_code == 200:
-                resp.encoding = 'utf-8'
+                if not resp.encoding or resp.encoding.lower() in ('iso-8859-1', 'latin-1'):
+                    resp.encoding = resp.apparent_encoding
                 return resp.text
         except Exception as e:
             self._log(f'下载 m3u8 失败: {e}')
@@ -773,11 +785,11 @@ class Spider(BaseSpider):
         title = ''
         m = re.search(r'<h1[^>]*>(.*?)</h1>', html, re.S)
         if m:
-            title = re.sub(r'<[^>]+>', '', m.group(1)).strip()
+            title = self._clean_text(m.group(1))
         if not title:
             m = re.search(r'<title>(.*?)</title>', html)
             if m:
-                title = m.group(1).strip()
+                title = self._clean_text(m.group(1))
 
         # 图片提取（增强）
         imgs = []

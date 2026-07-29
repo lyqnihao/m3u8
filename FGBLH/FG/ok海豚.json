@@ -749,6 +749,18 @@
 			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/蜜桃视频.py"
 		},
 		{
+			"key": "妈妈自拍",
+			"name": "🐬妈妈自拍.py｜🔞",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/妈妈自拍.py"
+		},
+		{
+          "key": "catemby",
+          "name": "🐬catemby.py 磁力观看🔞",
+          "type": 3,
+          "api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/教授.py"
+        },
+		{
           "key": "教授",
           "name": "🐬教授.py🔞",
           "type": 3,
@@ -1350,12 +1362,6 @@
             "type": 0,
             "ua": "okhttp",
             "url": "http://4gtv.cnlive.club/4gtv.m3u"
-        },
-	    {
-            "name": "🐬4GTV(梯子任何节点)1080p",
-            "type": 0,
-            "ua": "okhttp",
-            "url": "https://ha.msbot.dpdns.org/4gtv_api.php"
         },
         {
             "name": "🐬安博(梯子)卡顿 有🔞",

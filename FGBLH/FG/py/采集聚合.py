@@ -48,6 +48,7 @@ class Spider(Spider):
         's35': {'name': '📺西瓜资源', 'api': 'https://caiji.xgzyapi.com/api.php/provide/vod/'},
         's36': {'name': '📺98资源', 'api': 'https://98zy.vip/api.php/provide/vod/'},
         's37': {'name': '🦊火狐影视', 'api': 'https://hhzyapi.com/api.php/provide/vod/'},
+        's38': {'name': '📺大众资源', 'api': 'https://cdn.dzzyapi.com/api.php/provide/vod/'},
     }
 
     headers = {

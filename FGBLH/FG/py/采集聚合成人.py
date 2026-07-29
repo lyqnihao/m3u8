@@ -42,6 +42,8 @@ class Spider(Spider):
         's29': {'name': 'lsb资源', 'api': 'https://apilsbzy1.com/api.php/provide/vod/'},
         's30': {'name': '91麻豆', 'api': 'https://91md.me/api.php/provide/vod/'},
         's31': {'name': '老色逼资源', 'api': 'https://apilsbzy1.com/api.php/provide/vod/'},
+        's32': {'name': '火速论理资源', 'api': 'https://api.huosuapi.cc/api.php/provide/vod/'},
+        's33': {'name': '嘿嘿资源', 'api': 'https://api.heiapi.cc/api.php/provide/vod/'},
     }
 
     headers = {
