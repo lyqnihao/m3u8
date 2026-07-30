@@ -135,6 +135,18 @@
         "homePage":"https://fgblh.github.io/uhuj.github.io/youtube.html"
         },
 		{
+			"key": "视觉影院",
+			"name": "🐬视觉影院.py[追剧]",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/视觉影院.py"
+		},
+		{
+			"key": "袋鼠影视",
+			"name": "🐬袋鼠影视.py[追剧]",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/袋鼠影视.py"
+		},
+		{
 			"key": "ddvm",
 			"name": "🐬嘀嗒影视.py(关梯)[追剧]",
 			"type": 3,
@@ -487,12 +499,6 @@
            "type": 3,
            "api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/小鸭子看看.py"
         },
-         {
-			"key": "fY",
-			"name": "🐬枫叶影院.py(关梯)[追剧]",
-			"type": 3,
-			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/枫叶影院.py"
-		},
 		 {
         "key":"6v",
         "name":"🐬6V影视[追剧][html]",
@@ -647,6 +653,12 @@
         "成长逆袭"
       ]
     },
+		{
+			"key": "喜福网",
+			"name": "🐬喜福短剧.py[短剧]",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/喜福短剧.py"
+		},
 		{
 			"key": "smdj",
 			"name": "🐬星芽短剧.py[短剧]",
@@ -1128,6 +1140,13 @@
             "type":3,
             "api":"csp_wbbb",
             "homePage":"https://fgblh.github.io/uhuj.github.io/javdb.html"
+        },
+		{
+            "key":"WhoStv.",
+            "name":"🐬WhoStv｜🔞[成人][html]",
+            "type":3,
+            "api":"csp_wbbb",
+            "homePage":"https://fgblh.github.io/uhuj.github.io/WhoStv.html"
         },
 		{
 			"key": "采集聚合成人",
@@ -2468,12 +2487,6 @@
             "type": 0,
             "ua": "okhttp",
             "url": "https://gh-proxy.org/https://raw.githubusercontent.com/fafa002/yf2025/refs/heads/main/yiyifafa.txt"
-        },
-        {
-            "name": "🐬俄罗斯源 有🔞",
-            "type": 0,
-            "ua": "okhttp",
-            "url": "https://ilook.epg.one/EDTZN7ANS84N86"
         },
        {
             "name": "🐬飞扬源",

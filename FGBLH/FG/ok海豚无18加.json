@@ -88,6 +88,18 @@
 			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/油管.py"
 		},
 		{
+			"key": "视觉影院",
+			"name": "🐬视觉影院.py",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/视觉影院.py"
+		},
+		{
+			"key": "袋鼠影视",
+			"name": "🐬袋鼠影视.py",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/袋鼠影视.py"
+		},
+		{
 			"key": "4K影视",
 			"name": "🐬4K影视.py",
 			"type": 3,
@@ -223,12 +235,6 @@
 			"type": 3,
 			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/jar_js/布布追剧.js",
 			"changeable": 0
-		},
-		{
-			"key": "fY",
-			"name": "🐬枫叶影院(关梯子使用)",
-			"type": 3,
-			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/枫叶影院.py"
 		},
 		{
 			"key": "hxq",
@@ -732,6 +738,12 @@
         "成长逆袭"
       ]
     },
+		{
+			"key": "喜福网",
+			"name": "🐬喜福短剧.py",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/喜福短剧.py"
+		},
 		{
 			"key": "smdj",
 			"name": "🐬星芽短剧.py",
