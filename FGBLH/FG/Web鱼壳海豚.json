@@ -405,7 +405,7 @@
         },
 		{
           "key": "XH",
-          "name": "🐬星河影视.py",
+          "name": "🐬星河影视.py[追剧]",
           "type": 3,
           "api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/星河影视.py"
         },
@@ -653,6 +653,12 @@
         "成长逆袭"
       ]
     },
+		{
+			"key": "悟圣短剧",
+			"name": "🐬悟圣短剧.py[短剧]",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/悟圣短剧.py"
+		},
 		{
 			"key": "喜福网",
 			"name": "🐬喜福短剧.py[短剧]",
@@ -958,6 +964,12 @@
 			"name": "🐬黄色仓库.py｜🔞[成人]",
 			"type": 3,
 			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/黄色仓库.py"
+		},
+		{
+			"key": "黄色仓库动态版",
+			"name": "🐬黄色仓库动态版.py｜🔞[成人]",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/黄色仓库动态版.py"
 		},
 		{
 			"key": "wyt",

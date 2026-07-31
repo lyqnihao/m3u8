@@ -8,7 +8,6 @@ NOW星影台,http://173.208.234.146/live/nowxy.m3u8
 天映频道,http://173.208.234.146/live/typd.m3u8
 龙华电影(挂梯),https://cdn8.123.rr.kg/163189/lhdy
 澳门莲花,http://rihou.cc:555/tv/澳门莲花
-东森电影HD,https://cdn.qd.je/163189.php?id=dsdy
 
 TV直播台,#genre#
 CCTV5体育1080p,http://173.208.212.130:8181/1080p/cctv5.m3u8
@@ -22,8 +21,8 @@ CCTV16奥林匹克1080p,https://php.jdshipin.com:2096/TVOD/iptv.php?id=cctv16
 
 港台,#genre#
 翡翠台,http://183.62.8.58:50085/tsfile/live/0017_1.m3u8?key=txiptv&playlive=1&authid=0
-翡翠台,https://cdn.qd.je/163189.php?id=fct
-翡翠台4K,https://cdn3.indevs.in/stream/tvb/fct4k/
+翡翠台(挂梯),https://cdn.qd.je/163189.php?id=fct
+翡翠台4K(挂梯),https://cdn3.indevs.in/stream/tvb/fct4k/
 
 18+直播台,#genre#
 资源永久免费如有收费的都是骗子,http://ef90a6cd.rossteleccom.net/iptv/2TBC4G2WWDG6RSUSN5SXSQEC/14158/index.m3u8
