@@ -1,0 +1,1108 @@
+{
+    "spider": "https://cnb.cool/fish2035/xs/-/git/raw/main/spider.jar",
+    "wallpaper": "http://127.0.0.1:9978/proxy?do=wallpaper",
+    "logo": "https://img.freepik.com/free-vector/cute-dolphin-swimming-cartoon-vector-icon-illustration-animal-nature-icon-isolated-flat-vector_138676-12582.jpg?semt=ais_hybrid&w=740&q=80",
+	"sites": [
+        {
+        "key": "海豚影视",
+        "name": "🐬海豚影视公告",
+        "type": 3,
+        "api": "csp_海豚影视",
+        "homePage": "https://fgblh.github.io/uhuj.github.io/海豚影视.html"
+        },
+		{
+			"key": "UVOD",
+			"name": "🐬优视频.py 有🔞[追剧]",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/优视频.py"
+		},
+		{
+           "key": "xyzkk",
+           "name": "🐬小鸭子看看.py 有🔞[追剧]",
+           "type": 3,
+           "api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/小鸭子看看.py"
+        },
+		{"key": "aidan", "name": "🐬艾旦影视┃伦理🔞[追剧]", "type": 1, "api": "https://lovedan.net/api.php/provide/vod/", "searchable": 1, "quickSearch": 1, "filterable": 1},
+        {"key": "U酷資源", "name": "🐬U酷資源┃伦理🔞[追剧]", "type": 1, "api": "https://api.ukuapi.com/api.php/provide/vod/", "searchable": 1, "quickSearch": 1, "filterable": 1},
+		{"key": "虎牙资源", "name": "🐬虎牙资源┃伦理🔞[追剧]", "type": 1, "api": "https://www.huyaapi.com/api.php/provide/vod/", "searchable": 1, "quickSearch": 1, "filterable": 1},
+		{"key": "ttzy", "name": "🐬天天影视┃伦理🔞[追剧]", "type": 1, "api": "https://api.1080zyku.com/inc/apijson.php", "searchable": 1, "quickSearch": 1, "filterable": 1},
+	{
+      "key": "天涯资源",
+      "name": "🐬天涯资源┃伦理🔞[追剧]",
+      "type": 0,
+      "api": "https://tyyszyapi.com/api.php/provide/vod/at/xml/?ac=list",
+      "searchable": 1,
+      "quickSearch": 1
+    },
+	{
+      "key": "iKun资源",
+      "name": "🐬iKun资源┃伦理🔞[追剧]",
+      "type": 0,
+      "api": "https://ikunzyapi.com/api.php/provide/vod/at/xml",
+      "searchable": 1,
+      "quickSearch": 1
+    },
+		{
+			"key": "wddj",
+			"name": "🐬黄豆短剧.py 有🔞[短剧]",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/黄豆短剧.py"
+		},
+		{
+			"key": "shjb",
+			"name": "🐬色播聚合.py｜🔞[成人直播]",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/色播聚合.py"
+		},
+		{
+			"key": "stripchat",
+			"name": "🐬stripchat直播.py｜🔞[成人直播]",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/stripchat.py"
+		},
+		{
+			"key": "Cam4",
+			"name": "🐬Cam4直播.py｜🔞[成人直播]",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/Cam4直播.py"
+		},
+		{
+			"key": "Pandalive",
+			"name": "🐬韩国Pandalive直播.py｜🔞[成人直播]",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/Pandalive直播.py"
+		},
+		{
+			"key": "007qg",
+			"name": "🐬007吃瓜.py｜🔞[吃瓜]",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/007吃瓜.py"
+		},
+		{
+			"key": "51qg",
+			"name": "🐬51吃瓜.py｜🔞[吃瓜]",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/51吃瓜.py"
+		},
+		{
+			"key": "51dc",
+			"name": "🐬51大赛.py｜🔞[吃瓜]",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/51大赛.py"
+		},
+		{
+			"key": "51bl",
+			"name": "🐬51爆料.py｜🔞[吃瓜]",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/51爆料.py"
+		},
+		{
+			"key": "51vm",
+			"name": "🐬51视频.py｜🔞[吃瓜]",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/51视频.py"
+		},
+		{
+			"key": "818hlw",
+			"name": "🐬818黑料网.py｜🔞[吃瓜]",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/818黑料网.py"
+		},
+		{
+			"key": "91bl",
+			"name": "🐬91爆料.py｜🔞[吃瓜]",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/91爆料.py"
+		},
+		{
+			"key": "91qgzx",
+			"name": "🐬91吃瓜中心.py｜🔞[吃瓜]",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/91吃瓜中心.py"
+		},
+		{
+			"key": "91大赛",
+			"name": "🐬91大赛(无封面).py｜🔞[吃瓜]",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/91大赛.py"
+		},
+		{
+			"key": "mrds",
+			"name": "🐬每日大赛.py｜🔞[吃瓜]",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/每日大赛.py"
+		},
+		{
+			"key": "mrdld",
+			"name": "🐬每日大乱斗.py｜🔞[吃瓜]",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/每日大乱斗.py"
+		},
+		{
+			"key": "jrkl",
+			"name": "🐬今日看料.py｜🔞[吃瓜]",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/今日看料.py"
+		},
+		{
+			"key": "hl",
+			"name": "🐬黑料不打烊.py｜🔞[吃瓜]",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/黑料不打烊.py"
+		},
+		{
+			"key": "hlw",
+			"name": "🐬黑料网.py｜🔞[吃瓜]",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/黑料网.py"
+		},
+		{
+          "key": "catemby",
+          "name": "🐬catemby.py🔞[成人][磁力]",
+          "type": 3,
+          "api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/catemby.py"
+        },
+		{
+			"key": "大屌视频",
+			"name": "🐬大屌视频.py｜🔞[成人]",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/大屌视频.py"
+		},
+		{
+			"key": "高端视频",
+			"name": "🐬高端视频.py｜🔞[成人]",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/高端视频.py"
+		},
+		{
+			"key": "猫咪AV",
+			"name": "🐬猫咪AV.py｜🔞[成人]",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/猫咪AV.py"
+		},
+		{
+			"key": "妈妈自拍",
+			"name": "🐬妈妈自拍.py｜🔞[成人]",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/妈妈自拍.py"
+		},
+		{
+          "key": "教授",
+          "name": "🐬教授.py🔞[成人]",
+          "type": 3,
+          "api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/教授.py"
+        },
+		{
+          "key": "91Porn蝌蚪窝",
+          "name": "🐬91Porn蝌蚪窝.py🔞[成人]",
+          "type": 3,
+          "api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/91Porn蝌蚪窝.py"
+        },
+		{
+          "key": "爆片库",
+          "name": "🐬爆片库.py🔞[成人]",
+          "type": 3,
+          "api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/爆片库.py"
+        },
+		{
+          "key": "悟空传媒",
+          "name": "🐬悟空传媒.py🔞[成人]",
+          "type": 3,
+          "api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/悟空传媒.py"
+        },
+		{
+          "key": "2048核基地",
+          "name": "🐬2048核基地.py🔞[成人]",
+          "type": 3,
+          "api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/2048核基地.py"
+        },
+		{
+          "key": "福利天堂",
+          "name": "🐬福利天堂.py🔞[成人]",
+          "type": 3,
+          "api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/福利天堂.py"
+        },
+		{
+          "key": "hanime1",
+          "name": "🐬hanime1动漫.py🔞[成人动漫]",
+          "type": 3,
+          "api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/hanime1.py"
+        },
+		{
+			"key": "麻豆",
+			"name": "🐬麻豆.js｜🔞[成人]",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/jar_js/麻豆.js",
+			"changeable": 0
+		},
+		{
+          "key": "亚色影库",
+          "name": "🐬亚色影库.py🔞[成人]",
+          "type": 3,
+          "api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/亚色影库.py"
+        },
+		{
+			"key": "MoTV",
+			"name": "🐬MoTV.py｜🔞[成人]",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/MoTV.py"
+		},
+		{
+			"key": "真实人妻",
+			"name": "🐬真实人妻.py｜🔞[成人]",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/真实人妻.py"
+		},
+		{
+			"key": "猫咪TV",
+			"name": "🐬猫咪TV.py｜🔞[成人]",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/猫咪TV.py"
+		},
+		{
+			"key": "BadNews",
+			"name": "🐬BadNews.py｜🔞[成人](挂梯)",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/BadNews.py"
+		},
+		{
+			"key": "樱花传媒",
+			"name": "🐬樱花传媒.py｜🔞[成人]",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/樱花传媒.py"
+		},
+		{
+			"key": "麻豆社",
+			"name": "🐬麻豆社.py｜🔞[成人]",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/麻豆社.py"
+		},
+		{
+			"key": "prsd",
+			"name": "🐬怦然心动.py｜🔞[成人]",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/怦然心动.py"
+		},
+		{
+			"key": "hsck",
+			"name": "🐬黄色仓库.py｜🔞[成人]",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/黄色仓库.py"
+		},
+		{
+			"key": "黄色仓库动态版",
+			"name": "🐬黄色仓库动态版.py｜🔞[成人]",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/黄色仓库动态版.py"
+		},
+		{
+			"key": "wyt",
+			"name": "🐬五月天.py｜🔞[成人]",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/五月天.py"
+		},
+		{
+			"key": "jptt",
+			"name": "🐬禁片天堂.py｜🔞[成人]",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/禁片天堂.py"
+		},
+		{
+			"key": "hgsq",
+			"name": "🐬韩国色情电影.py｜🔞[成人]",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/韩国色情电影.py"
+		},
+		{
+			"key": "smvm",
+			"name": "🐬神秘电影.py｜🔞[成人]",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/神秘电影.py"
+		},
+		{
+			"key": "xj",
+			"name": "🐬香蕉视频.py(关梯)｜🔞[成人]",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/香蕉视频.py"
+		},
+		{
+			"key": "dj",
+			"name": "🐬妲己高清视频.py(关梯)｜🔞[成人]",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/妲己.py"
+		},
+		{
+			"key": "xmvm",
+			"name": "🐬熊猫视频.py｜🔞[成人]",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/熊猫视频.py"
+		},
+		{
+			"key": "shvm",
+			"name": "🐬四虎视频.py｜🔞[成人]",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/四虎视频.py"
+		},
+		{
+			"key": "lyt",
+			"name": "🐬撸一天.py｜🔞[成人]",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/撸一天.py"
+		},
+		{
+			"key": "scpd",
+			"name": "🐬香肠派对.py｜🔞[成人]",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/香肠派对.py"
+		},
+		{
+			"key": "llav",
+			"name": "🐬萝莉AV.py｜🔞[成人]",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/萝莉AV.py"
+		},
+		{
+			"key": "clspq",
+			"name": "🐬草榴视频区.py｜🔞[成人]",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/草榴视频区.py"
+		},
+		{
+			"key": "123av",
+			"name": "🐬123AV.py｜🔞[成人]",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/123AV.py"
+		},
+		{
+			"key": "18av",
+			"name": "🐬18AV.py｜🔞(关梯)[成人]",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/18AV.py"
+		},
+		{
+			"key": "8X8X",
+			"name": "🐬8X8X.py｜🔞[成人]",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/8X8X.py"
+		},
+		{
+			"key": "Jable",
+			"name": "🐬Jable.py｜🔞[成人]",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/Jable.py"
+		},
+		{
+			"key": "AdultpornaAV",
+			"name": "🐬AdultpornaAV.py｜🔞[成人]",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/AdultpornaAV.py"
+		},
+		{
+			"key": "Xvideos",
+			"name": "🐬Xvideos.py｜🔞[成人]",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/Xvideos.py"
+		},
+		{
+			"key": "Pornhub",
+			"name": "🐬Pornhub.py｜🔞[成人]",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/Pornhub.py"
+		},
+		{
+			"key": "xhamster",
+			"name": "🐬xhamster.py｜🔞[成人]",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/xhamster.py"
+		},
+		{
+			"key": "eporner",
+			"name": "🐬EPORNER.py｜🔞[成人]",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/EPORNER.py"
+		},
+		{
+			"key": "91porn",
+			"name": "🐬91porn.py｜🔞[成人]",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/91porn.py"
+		},
+		{
+			"key": "fullhd",
+			"name": "🐬FullHD.py｜🔞[成人]",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/FullHD.py"
+		},
+		{
+			"key": "JAV36",
+			"name": "🐬JAV36.py｜🔞[成人]",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/JAV36.py"
+		},
+		{
+			"key": "ggsp",
+			"name": "🐬久久視頻.py｜🔞[成人]",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/久久視頻.py"
+		},
+		{
+			"key": "TOPTV",
+			"name": "🐬TOPTV.py｜🔞[成人]",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/TOPTV.py"
+		},
+		{
+			"key": "VHUB",
+			"name": "🐬VHUB.py｜🔞[成人]",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/VHUB[成人].py"
+		},
+		{
+			"key": "MD",
+			"name": "🐬麻豆免费在线播放.py｜🔞[成人]",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/麻豆免费在线播放.py"
+		},
+		{
+            "key":"missav",
+            "name":"🐬missav｜🔞[成人][html]",
+            "type":3,
+            "api":"csp_wbbb",
+            "homePage":"https://fgblh.github.io/uhuj.github.io/missav.html"
+        },
+		{
+            "key":"javdb.",
+            "name":"🐬javdb｜🔞[成人][磁力][html]",
+            "type":3,
+            "api":"csp_wbbb",
+            "homePage":"https://fgblh.github.io/uhuj.github.io/javdb.html"
+        },
+		{
+            "key":"WhoStv.",
+            "name":"🐬WhoStv｜🔞[成人][html]",
+            "type":3,
+            "api":"csp_wbbb",
+            "homePage":"https://fgblh.github.io/uhuj.github.io/WhoStv.html"
+        },
+		{
+			"key": "采集聚合成人",
+			"name": "🐬采集聚合成人.py｜🔞[采集成人]",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/采集聚合成人.py"
+		},
+	{
+      "key": "大地采集",
+      "name": "🐬大地av｜🔞[采集成人]",
+      "type": 0,
+      "api": "https://dadiapi.com/apple_m3u8.php",
+      "playUrl": "https://play.dadiapi.com/watch?url=",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0
+    },
+        {
+            "key": "push_agent",
+            "name": "手机｜推送",
+            "type": 3,
+            "api": "csp_Push",
+            "searchable": 0,
+            "filterable": 0,
+            "changeable": 0
+        }
+    ],
+    "lives": [
+        {
+            "name": "🐬易发源 有🔞",
+            "type": 0,
+            "ua": "okhttp",
+            "url": "https://gh-proxy.org/https://raw.githubusercontent.com/fafa002/yf2025/refs/heads/main/yiyifafa.txt"
+        },
+        {
+            "name": "🐬安博(梯子)卡顿 有🔞",
+            "type": 0,
+            "ua": "okhttp",
+            "url": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/安博.txt"
+        },
+		{
+           "name": "🐬海豚佬🔞午夜剧场(挂梯)",
+           "type": 0,
+           "playerType": 2,
+           "epg": "https://epg.112114.xyz/?ch={name}&date={date}",
+           "logo": "https://epg.112114.xyz/logo/{name}.png",
+           "url": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/午夜剧场.txt",
+           "header": {
+            "X-Api-key": "8692bd33270440d4d2941b814b81a25a1eb84a7205532971714c4299c57449e0..0..1738210005..5cf2c4ad-043b-4234-83a2-e84ae917"
+		   }
+        },
+	    {
+            "name": "🐬海豚佬xxx视频资源🔞",
+            "type": 0,
+            "ua": "okhttp",
+            "url": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/xxx视频资源.txt"
+        },
+		{
+            "name": "🐬至尊🔞",
+            "type": 0,
+            "ua": "okhttp",
+            "url": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/至尊.m3u"
+        },
+        {
+            "name": "🐬欧美大片🔞",
+            "type": 0,
+            "ua": "okhttp",
+            "url": "http://xtvantsc.xyz/欧美2160.m3u"
+        },
+		 {
+            "name": "🐬欧美主播直播🔞",
+            "type": 0,
+            "ua": "okhttp",
+            "url": "https://chaturbate.xvideos4.tk/api5.php?m3u&all"
+        },
+		 {
+            "name": "🐬亚洲主播直播🔞",
+            "type": 0,
+            "ua": "okhttp",
+            "url": "https://chaturbate.xvideos4.tk/api6.php?m3u"
+        },
+	    {
+            "name": "🐬EVILANGEL🔞",
+            "type": 0,
+            "ua": "okhttp",
+            "url": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/EVILANGEL.m3u"
+        },
+	    {
+            "name": "🐬FC2-PPV1🔞",
+            "type": 0,
+            "ua": "okhttp",
+            "url": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/fgrjk/refs/heads/main/FC2-PPV1.m3u"
+        },
+         {
+            "name": "🐬日本女优1🔞",
+            "type": 0,
+            "ua": "okhttp",
+            "url": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/fgrjk/refs/heads/main/日本女优1.m3u"
+        },
+        {
+            "name": "🐬日本女优2🔞",
+            "type": 0,
+            "ua": "okhttp",
+            "url": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/fgrjk/refs/heads/main/日本女优2.m3u"
+        },
+        {
+            "name": "🐬日本女优3🔞",
+            "type": 0,
+            "ua": "okhttp",
+            "url": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/fgrjk/refs/heads/main/日本女优3.m3u"
+        },
+        {
+            "name": "🐬日本女优4🔞",
+            "type": 0,
+            "ua": "okhttp",
+            "url": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/fgrjk/refs/heads/main/日本女优4.m3u"
+        },
+        {
+            "name": "🐬日本女优5🔞",
+            "type": 0,
+            "ua": "okhttp",
+            "url": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/fgrjk/refs/heads/main/日本女优5.m3u"
+        },
+        {
+            "name": "🐬日本女优6🔞",
+            "type": 0,
+            "ua": "okhttp",
+            "url": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/fgrjk/refs/heads/main/日本女优6.m3u"
+        },
+        {
+            "name": "🐬日本女优7🔞",
+            "type": 0,
+            "ua": "okhttp",
+            "url": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/fgrjk/refs/heads/main/日本女优7.m3u"
+        },
+         {
+            "name": "🐬日本女优8🔞",
+            "type": 0,
+            "ua": "okhttp",
+            "url": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/fgrjk/refs/heads/main/日本女优8.m3u"
+        },
+         {
+            "name": "🐬日本女优9🔞",
+            "type": 0,
+            "ua": "okhttp",
+            "url": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/fgrjk/refs/heads/main/日本女优9.m3u"
+        },
+         {
+            "name": "🐬日本女优10🔞",
+            "type": 0,
+            "ua": "okhttp",
+            "url": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/fgrjk/refs/heads/main/日本女优10.m3u"
+        },
+        {
+            "name": "develop202",
+            "type": 0,
+            "url": "https://gh.927223.xyz/https://raw.githubusercontent.com/develop202/migu_video/refs/heads/main/interface.txt",
+            "playerType": 2,
+            "epg": "http://diyp5.112114.xyz/?ch={name}&date={date}",
+            "logo": "https://epg.112114.xyz/logo/{name}.png"
+        },
+        {
+            "name": "Kimentanm",
+            "type": 0,
+            "url": "https://gh.927223.xyz/https://raw.githubusercontent.com/Kimentanm/aptv/master/m3u/iptv.m3u",
+            "playerType": 2
+        },
+        {
+            "name": "虎牙一起看",
+            "type": 0,
+            "url": "https://sub.ottiptv.cc/huyayqk.m3u",
+            "playerType": 2,
+            "timeout": 10,
+            "ua": "okHttp/Mod-1.5.0.0"
+        },
+        {
+            "name": "斗鱼一起看",
+            "type": 0,
+            "url": "http://nn.7x9d.cn/xz/斗鱼.php",
+            "playerType": 2,
+            "timeout": 10,
+            "ua": "okHttp/Mod-1.5.0.0"
+        },
+        {
+            "name": "B站直播",
+            "type": 0,
+            "url": "https://sub.ottiptv.cc/bililive.m3u",
+            "playerType": 2,
+            "timeout": 10,
+            "ua": "okHttp/Mod-1.5.0.0"
+        },
+        {
+            "name": "YY轮播",
+            "type": 0,
+            "url": "https://sub.ottiptv.cc/yylunbo.m3u",
+            "playerType": 2,
+            "timeout": 10,
+            "ua": "okHttp/Mod-1.5.0.0"
+        }
+    ],
+    "parses": [
+        {
+            "name": "聚合",
+            "type": 3,
+            "url": "Web"
+        },
+       {
+            "name": "盘古解析",
+            "type": 0,
+            "url": "https://www.playm3u8.cn/jiexi.php?url=",
+            "ext": {
+                "header": {
+                    "user-agent": "Mozilla/5.0 (Linux; Android 13; V2049A Build/TP1A.220624.014; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/116.0.0.0 Mobile Safari/537.36"
+                }
+            }
+        },
+		{
+           "name": "789解析1",
+           "type": 0,
+           "url": "https://jiexi.789jiexi.icu:4433/?url="
+        },
+		{
+           "name": "789解析2",
+           "type": 0,
+           "url": "https://jiexi.789jiexi.com/?url="
+        },
+		{
+            "name": "虾米解析",
+            "type": 0,
+            "url": "https://jx.xmflv.com/?url="
+        },
+		{
+            "name": "淘片解析",
+            "type": 0,
+            "url": "https://jx.yparse.com/index.php?url="
+        },
+     {
+      "name": "解析1",
+      "type": 0,
+      "url": "https://huayong.net/999/?v="
+    },
+    {
+      "name": "解析2",
+      "type": 0,
+      "url": "https://jx.m3u8.tv/jiexi/?url="
+    },
+    {
+      "name": "解析3",
+      "type": 0,
+      "url": "https://t2.qlplayer.cyou/player/analysis.php?v="
+    },
+		
+	{
+      "name": "解析4",
+      "type": 0,
+      "url": "https://www.ckplayer.vip/jiexi/?url="
+    },
+    {
+      "name": "解析5",
+      "type": 0,
+      "url": "https://nm.xxxc137.top/static/player/artplayer.html?url="
+    },
+      {
+      "name": "解析6",
+      "type": 0,
+      "url": "https://www.yemu.xyz/?url="
+        },
+		{
+      "name": "解析7",
+      "type": 0,
+      "url": "http://rihou.cc:88/demo.php?url="
+        },
+        {
+            "name": "冰豆",
+            "type": 0,
+            "url": "https://bd.jx.cn/?url=",
+            "ext": {
+                "header": {
+                    "user-agent": "Mozilla/5.0 (Linux; Android 13; V2049A Build/TP1A.220624.014; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/116.0.0.0 Mobile Safari/537.36"
+                }
+            }
+        },
+        {
+            "name": "七七",
+            "type": 0,
+            "url": "https://jx.77flv.cc/?url=",
+            "ext": {
+                "header": {
+                    "user-agent": "Mozilla/5.0 (Linux; Android 13; V2049A Build/TP1A.220624.014; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/116.0.0.0 Mobile Safari/537.36"
+                }
+            }
+        },
+        {
+            "name": "夜幕",
+            "type": 0,
+            "url": "https://yemu.xyz/?url=",
+            "ext": {
+                "header": {
+                    "user-agent": "Mozilla/5.0 (Linux; Android 13; V2049A Build/TP1A.220624.014; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/116.0.0.0 Mobile Safari/537.36"
+                }
+            }
+        }
+    ],
+    "rules": [
+        {
+            "name": "农民",
+            "hosts": [
+                "toutiaovod.com"
+            ],
+            "regex": [
+                "video/tos/cn"
+            ]
+        },
+        {
+            "name": "火山",
+            "hosts": [
+                "huoshan.com"
+            ],
+            "regex": [
+                "item_id="
+            ]
+        },
+        {
+            "name": "抖音",
+            "hosts": [
+                "douyin.com"
+            ],
+            "regex": [
+                "is_play_url="
+            ]
+        },
+        {
+            "name": "磁力广告",
+            "hosts": [
+                "magnet"
+            ],
+            "regex": [
+                "更多",
+                "请访问",
+                "example",
+                "社 區",
+                "x u u",
+                "直 播",
+                "更 新",
+                "社 区",
+                "有趣",
+                "有 趣",
+                "英皇体育",
+                "全中文AV在线",
+                "澳门皇冠赌场",
+                "哥哥快来",
+                "美女荷官",
+                "裸聊",
+                "新片首发",
+                "UUE29"
+            ]
+        },
+        {
+            "name": "饭团点击",
+            "hosts": [
+                "dadagui",
+                "freeok",
+                "dadagui"
+            ],
+            "script": [
+                "document.querySelector(\"#playleftiframe\").contentWindow.document.querySelector(\"#start\").click();"
+            ]
+        },
+        {
+            "name": "毛驴点击",
+            "hosts": [
+                "www.maolvys.com"
+            ],
+            "script": [
+                "document.getElementsByClassName('swal-buttonswal-button--confirm')[0].click()"
+            ]
+        }
+    ],
+    "doh": [
+		{
+            "name": "Google",
+            "url": "https://dns.google/dns-query",
+            "ips": [
+                "8.8.4.4",
+                "8.8.8.8"
+            ]
+        },
+        {
+            "name": "Cloudflare",
+            "url": "https://cloudflare-dns.com/dns-query",
+            "ips": [
+                "1.1.1.1",
+                "1.0.0.1",
+                "2606:4700:4700::1111",
+                "2606:4700:4700::1001"
+            ]
+        },
+        {
+            "name": "AdGuard",
+            "url": "https://dns.adguard.com/dns-query",
+            "ips": [
+                "94.140.14.140",
+                "94.140.14.141"
+            ]
+        },
+        {
+            "name": "DNSWatch",
+            "url": "https://resolver2.dns.watch/dns-query",
+            "ips": [
+                "84.200.69.80",
+                "84.200.70.40"
+            ]
+        },
+        {
+            "name": "Quad9",
+            "url": "https://dns.quad9.net/dns-quer",
+            "ips": [
+                "9.9.9.9",
+                "149.112.112.112"
+            ]
+        }
+    ],
+    "flags": [
+        "youku",
+        "优酷",
+        "优 酷",
+        "优酷视频",
+        "qq",
+        "腾讯",
+        "腾 讯",
+        "腾讯视频",
+        "iqiyi",
+        "qiyi",
+        "奇艺",
+        "爱奇艺",
+        "爱 奇 艺",
+        "m1905",
+        "xigua",
+        "letv",
+        "leshi",
+        "乐视",
+        "乐 视",
+        "sohu",
+        "搜狐",
+        "搜 狐",
+        "搜狐视频",
+        "tudou",
+        "pptv",
+        "mgtv",
+        "芒果",
+        "imgo",
+        "芒果TV",
+        "芒 果 T V",
+        "bilibili",
+        "哔 哩",
+        "哔 哩 哔 哩"
+    ],
+    "ijk": [
+        {
+            "group": "软解码",
+            "options": [
+                {
+                    "category": 4,
+                    "name": "opensles",
+                    "value": "0"
+                },
+                {
+                    "category": 4,
+                    "name": "overlay-format",
+                    "value": "842225234"
+                },
+                {
+                    "category": 4,
+                    "name": "framedrop",
+                    "value": "1"
+                },
+                {
+                    "category": 4,
+                    "name": "soundtouch",
+                    "value": "1"
+                },
+                {
+                    "category": 4,
+                    "name": "start-on-prepared",
+                    "value": "1"
+                },
+                {
+                    "category": 1,
+                    "name": "http-detect-range-support",
+                    "value": "0"
+                },
+                {
+                    "category": 1,
+                    "name": "fflags",
+                    "value": "fastseek"
+                },
+                {
+                    "category": 2,
+                    "name": "skip_loop_filter",
+                    "value": "48"
+                },
+                {
+                    "category": 4,
+                    "name": "reconnect",
+                    "value": "1"
+                },
+                {
+                    "category": 4,
+                    "name": "enable-accurate-seek",
+                    "value": "0"
+                },
+                {
+                    "category": 4,
+                    "name": "mediacodec",
+                    "value": "0"
+                },
+                {
+                    "category": 4,
+                    "name": "mediacodec-auto-rotate",
+                    "value": "0"
+                },
+                {
+                    "category": 4,
+                    "name": "mediacodec-handle-resolution-change",
+                    "value": "0"
+                },
+                {
+                    "category": 4,
+                    "name": "mediacodec-hevc",
+                    "value": "0"
+                },
+                {
+                    "category": 1,
+                    "name": "dns_cache_timeout",
+                    "value": "600000000"
+                }
+            ]
+        },
+        {
+            "group": "硬解码",
+            "options": [
+                {
+                    "category": 4,
+                    "name": "opensles",
+                    "value": "0"
+                },
+                {
+                    "category": 4,
+                    "name": "overlay-format",
+                    "value": "842225234"
+                },
+                {
+                    "category": 4,
+                    "name": "framedrop",
+                    "value": "1"
+                },
+                {
+                    "category": 4,
+                    "name": "soundtouch",
+                    "value": "1"
+                },
+                {
+                    "category": 4,
+                    "name": "start-on-prepared",
+                    "value": "1"
+                },
+                {
+                    "category": 1,
+                    "name": "http-detect-range-support",
+                    "value": "0"
+                },
+                {
+                    "category": 1,
+                    "name": "fflags",
+                    "value": "fastseek"
+                },
+                {
+                    "category": 2,
+                    "name": "skip_loop_filter",
+                    "value": "48"
+                },
+                {
+                    "category": 4,
+                    "name": "reconnect",
+                    "value": "1"
+                },
+                {
+                    "category": 4,
+                    "name": "enable-accurate-seek",
+                    "value": "0"
+                },
+                {
+                    "category": 4,
+                    "name": "mediacodec",
+                    "value": "1"
+                },
+                {
+                    "category": 4,
+                    "name": "mediacodec-auto-rotate",
+                    "value": "1"
+                },
+                {
+                    "category": 4,
+                    "name": "mediacodec-handle-resolution-change",
+                    "value": "1"
+                },
+                {
+                    "category": 4,
+                    "name": "mediacodec-hevc",
+                    "value": "1"
+                },
+                {
+                    "category": 1,
+                    "name": "dns_cache_timeout",
+                    "value": "600000000"
+                }
+            ]
+        }
+    ],
+    "ads": [
+        "static-mozai.4gtv.tv"
+    ]
+}
