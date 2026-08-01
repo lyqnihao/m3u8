@@ -22,12 +22,12 @@ class Spider(Spider):
 
     # 🔒 锁定在 sites 第 0、1 位的配置，无论扫描结果如何始终存在
     _LOCKED_SITES = [
-        {
-          "key": "自动加载",
-          "name": "🐬自动加载 海豚影视完全免费，如有收费的都是骗子",
-          "type": 3,
-          "api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/自动加载.py"
-       },
+		{
+            "name": "🐬自动加载 海豚影视交流群 TG：@hshsjk9",
+            "key": "自动加载",
+            "type": 3,
+            "api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/自动加载.py"
+         },
 		{
             "name": "🐬弹幕 海豚影视交流群 TG：@hshsjk9",
             "key": "弹幕豆瓣",
