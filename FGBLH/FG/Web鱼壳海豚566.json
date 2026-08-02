@@ -119,6 +119,12 @@
 			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/油管直播.py"
 		},
 		{
+			"key": "奈非工厂",
+			"name": "🐬奈非工厂.py[追剧]",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/奈非工厂.py"
+		},
+		{
 			"key": "视觉影院",
 			"name": "🐬视觉影院.py[追剧]",
 			"type": 3,

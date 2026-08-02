@@ -6,13 +6,13 @@
     "sites": [
 		{
           "key": "MGtv",
-          "name": "🐬芒果TV.py 海豚影视交流群 TG：@hshsjk9",
+          "name": "🐬芒果TV.py 海豚影视接口完全免费，请勿上当受骗",
           "type": 3,
           "api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/芒果TV.py"
         },
 		{
           "key": "txvm",
-          "name": "🐬腾讯视频.py",
+          "name": "🐬腾讯视频.py 海豚影视交流群 TG：@hshsjk9",
           "type": 3,
           "api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/腾讯视频.py"
         },
@@ -44,6 +44,12 @@
             "name":"🐬油管.py",
 			"type": 3,
 			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/油管.py"
+		},
+		{
+			"key": "奈非工厂",
+			"name": "🐬[追剧]奈非工厂.py",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/奈非工厂.py"
 		},
 		{
 			"key": "视觉影院",
@@ -593,6 +599,12 @@
 			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/黑料网.py"
 		},
 		{
+			"key": "艾旦影视",
+			"name": "🐬艾旦影视.py｜🔞",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/艾旦影视🔞.py"
+		},
+		{
 			"key": "mtvm",
 			"name": "🐬蜜桃视频.py(羊壳观看)｜🔞",
 			"type": 3,
@@ -603,6 +615,42 @@
 			"name": "🐬午夜福利.py(羊壳观看)｜🔞",
 			"type": 3,
 			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/午夜福利羊壳版.py"
+		},
+		{
+			"key": "花都影视",
+			"name": "🐬花都影视.py(关梯)｜🔞",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/花都影视🔞.py"
+		},
+		{
+			"key": "四色",
+			"name": "🐬四色.py(关梯)｜🔞",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/四色🔞.py"
+		},
+		{
+			"key": "奶糖视频",
+			"name": "🐬奶糖视频.py｜🔞",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/奶糖视频🔞.py"
+		},
+		{
+			"key": "撸王宝典",
+			"name": "🐬撸王宝典.py｜🔞",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/撸王宝典🔞.py"
+		},
+		{
+			"key": "性运机场",
+			"name": "🐬性运机场.py(关梯)｜🔞",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/性运机场🔞.py"
+		},
+		{
+			"key": "手鸡助手",
+			"name": "🐬手鸡助手.py｜🔞",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/手鸡助手🔞.py"
 		},
 		{
 			"key": "大屌视频",

@@ -12,23 +12,29 @@
         },
 		{
 			"key": "UVOD",
-			"name": "🐬优视频.py 有🔞[追剧]",
+			"name": "🐬优视频.py 有🔞[成人]",
 			"type": 3,
 			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/优视频.py"
 		},
 		{
            "key": "xyzkk",
-           "name": "🐬小鸭子看看.py 有🔞[追剧]",
+           "name": "🐬小鸭子看看.py 有🔞[伦理]",
            "type": 3,
            "api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/小鸭子看看.py"
         },
-		{"key": "aidan", "name": "🐬艾旦影视┃伦理🔞[追剧]", "type": 1, "api": "https://lovedan.net/api.php/provide/vod/", "searchable": 1, "quickSearch": 1, "filterable": 1},
-        {"key": "U酷資源", "name": "🐬U酷資源┃伦理🔞[追剧]", "type": 1, "api": "https://api.ukuapi.com/api.php/provide/vod/", "searchable": 1, "quickSearch": 1, "filterable": 1},
-		{"key": "虎牙资源", "name": "🐬虎牙资源┃伦理🔞[追剧]", "type": 1, "api": "https://www.huyaapi.com/api.php/provide/vod/", "searchable": 1, "quickSearch": 1, "filterable": 1},
-		{"key": "ttzy", "name": "🐬天天影视┃伦理🔞[追剧]", "type": 1, "api": "https://api.1080zyku.com/inc/apijson.php", "searchable": 1, "quickSearch": 1, "filterable": 1},
+		{
+			"key": "艾旦影视",
+			"name": "🐬艾旦影视.py｜🔞[伦理]",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/艾旦影视🔞.py"
+		},
+		{"key": "aidan", "name": "🐬艾旦影视采集[伦理]", "type": 1, "api": "https://lovedan.net/api.php/provide/vod/", "searchable": 1, "quickSearch": 1, "filterable": 1},
+        {"key": "U酷資源", "name": "🐬U酷資源🔞[伦理]", "type": 1, "api": "https://api.ukuapi.com/api.php/provide/vod/", "searchable": 1, "quickSearch": 1, "filterable": 1},
+		{"key": "虎牙资源", "name": "🐬虎牙资源🔞[伦理]", "type": 1, "api": "https://www.huyaapi.com/api.php/provide/vod/", "searchable": 1, "quickSearch": 1, "filterable": 1},
+		{"key": "ttzy", "name": "🐬天天影视🔞[伦理]", "type": 1, "api": "https://api.1080zyku.com/inc/apijson.php", "searchable": 1, "quickSearch": 1, "filterable": 1},
 	{
       "key": "天涯资源",
-      "name": "🐬天涯资源┃伦理🔞[追剧]",
+      "name": "🐬天涯资源🔞[伦理]",
       "type": 0,
       "api": "https://tyyszyapi.com/api.php/provide/vod/at/xml/?ac=list",
       "searchable": 1,
@@ -36,7 +42,7 @@
     },
 	{
       "key": "iKun资源",
-      "name": "🐬iKun资源┃伦理🔞[追剧]",
+      "name": "🐬iKun资源🔞[伦理]",
       "type": 0,
       "api": "https://ikunzyapi.com/api.php/provide/vod/at/xml",
       "searchable": 1,
@@ -44,7 +50,7 @@
     },
 		{
 			"key": "wddj",
-			"name": "🐬黄豆短剧.py 有🔞[短剧]",
+			"name": "🐬黄豆短剧.py 有🔞[成人短剧]",
 			"type": 3,
 			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/黄豆短剧.py"
 		},
@@ -155,6 +161,42 @@
 			"name": "🐬黑料网.py｜🔞[吃瓜]",
 			"type": 3,
 			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/黑料网.py"
+		},
+		{
+			"key": "花都影视",
+			"name": "🐬花都影视.py(关梯)[成人]｜🔞",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/花都影视🔞.py"
+		},
+		{
+			"key": "四色",
+			"name": "🐬四色.py(关梯)[成人]｜🔞",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/四色🔞.py"
+		},
+		{
+			"key": "奶糖视频",
+			"name": "🐬奶糖视频.py[成人]｜🔞",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/奶糖视频🔞.py"
+		},
+		{
+			"key": "撸王宝典",
+			"name": "🐬撸王宝典.py[成人]｜🔞",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/撸王宝典🔞.py"
+		},
+		{
+			"key": "性运机场",
+			"name": "🐬性运机场.py(关梯)[成人]｜🔞",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/性运机场🔞.py"
+		},
+		{
+			"key": "手鸡助手",
+			"name": "🐬手鸡助手.py｜🔞[成人]",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/手鸡助手🔞.py"
 		},
 		{
           "key": "catemby",
