@@ -156,6 +156,13 @@
 			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/可可影视.py"
 		},
 		{
+			"key": "西瓜影视",
+			"name": "🐬西瓜影视.js[追剧]",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/jar_js/西瓜影视.js",
+			"changeable": 0
+		},
+		{
 			"key": "拾光影视",
 			"name": "🐬拾光影视.js[追剧]",
 			"type": 3,

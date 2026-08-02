@@ -1,0 +1,29 @@
+{
+  "plugins": [
+    {
+      "name": "网易",
+      "url": "https://13413.kstore.vip/yuanli/wy.js",
+      "version": "1.2.0"
+    },
+    {
+      "name": "酷我",
+      "url": "https://13413.kstore.vip/yuanli/kw.js",
+      "version": "1.2.0"
+    },
+    {
+      "name": "酷狗",
+      "url": "https://13413.kstore.vip/yuanli/kg.js",
+      "version": "1.2.0"
+    },
+    {
+      "name": "QQ音乐",
+      "url": "https://13413.kstore.vip/yuanli/qq.js",
+      "version": "1.2.0"
+    },
+    {
+      "name": "mg",
+      "url": "https://13413.kstore.vip/yuanli/xiaomi.js",
+      "version": "1.2.0"
+    }
+  ]
+}
