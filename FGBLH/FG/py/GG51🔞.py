@@ -33,30 +33,95 @@ class Spider(Spider):
 
     def homeContent(self, filter):
         classes = [
-            {"type_id": "7", "type_name": "大厂原创"},
-            {"type_id": "8", "type_name": "重磅泄密"},
-            {"type_id": "5", "type_name": "自拍偷拍"},
-            {"type_id": "6", "type_name": "绿帽偷情"},
-            {"type_id": "11", "type_name": "中文字幕"},
-            {"type_id": "14", "type_name": "强奸迷奸"},
-            {"type_id": "12", "type_name": "高清无码"},
-            {"type_id": "13", "type_name": "熟女人妻"},
-            {"type_id": "15", "type_name": "剧情大片"},
-            {"type_id": "16", "type_name": "黑白配"},
-            {"type_id": "18", "type_name": "美颜巨乳"},
-            {"type_id": "48", "type_name": "欧美少妇"},
-            {"type_id": "19", "type_name": "动漫3D"},
-            {"type_id": "21", "type_name": "网红主播"},
-            {"type_id": "22", "type_name": "AI换脸"}
+            {'type_name': '国产', 'type_id': 'guochan'},
+            {'type_name': '日韩', 'type_id': 'rihan'},
+            {'type_name': '欧美', 'type_id': 'oumei'},
+            {'type_name': '其他', 'type_id': 'qita'},
         ]
-        return {"class": classes, "filters": {}}
+        filters = {
+            'guochan': [
+                {'key': 'sub', 'name': '子分类', 'value': [                   
+                    {'n': '中文字幕', 'v': ''},
+                    {'n': '重磅泄密', 'v': '8'},
+                    {'n': '偷拍自拍', 'v': '5'},
+                    {'n': '绿帽偷情', 'v': '6'},                   
+                    {'n': '网红明星', 'v': '24'},
+                    {'n': '国产主播', 'v': '47'},                    
+                    {'n': '推特网红', 'v': '26'},
+                    {'n': '萝莉学生', 'v': '27'},                                      
+                    {'n': '热门校园', 'v': '31'},
+                    {'n': '家庭乱伦', 'v': '32'},
+                    {'n': '经典三级', 'v': '29'}, 
+                    {'n': '国产剧情', 'v': '25'},                                        
+                    {'n': '其他剧情', 'v': '45'},
+                ]},
+                {'key': 'sub', 'name': '子分类', 'value': [
+                    {'n': '大厂原创', 'v': '7'},
+                    {'n': '果冻传媒', 'v': '36'},
+                    {'n': '天美传媒', 'v': '38'},
+                    {'n': '猫爪影像', 'v': '39'},
+                    {'n': '精东影业', 'v': '40'},
+                    {'n': '星空传媒', 'v': '41'},
+                    {'n': '起点传媒', 'v': '42'},                   
+                    {'n': '蜜桃影像', 'v': '44'},
+                    {'n': 'SA国际', 'v': '43'},
+                ]},
+            ],
+            'rihan': [
+                {'key': 'sub', 'name': '子分类', 'value': [
+                    {'n': '中文字幕', 'v': ''},
+                    {'n': '强奸迷奸', 'v': '14'},
+                    {'n': '高清无码', 'v': '12'},
+                    {'n': '熟女人妻', 'v': '13'},
+                    {'n': '韩国主播', 'v': '46'},
+                ]},
+            ],
+            'oumei': [
+                {'key': 'sub', 'name': '子分类', 'value': [
+                    {'n': '剧情大片', 'v': ''},
+                    {'n': '黑白配',   'v': '16'},
+                    {'n': '美颜巨乳', 'v': '18'},
+                    {'n': '欧美少妇', 'v': '48'},
+                ]},
+            ],
+            'qita': [
+                {'key': 'sub', 'name': '子分类', 'value': [
+                    {'n': '动漫3D',   'v': ''},
+                    {'n': 'SM', 'v': '30'},                                                           
+                    {'n': 'AI换脸',   'v': '22'},
+                    {'n': '女同男同', 'v': '20'},
+                    {'n': '蕾丝之恋', 'v': '34'},
+                    {'n': '龙阳之好', 'v': '35'},
+                ]},
+            ],
+        }
+        data = []
+        for h in self.findHosts():
+            h = h.rstrip("/")
+            html = self.get(h + "/")
+            lst = self.parseList(html)
+            if lst:
+                self.host = h
+                data = lst
+                break
+        return {"class": classes, "filters": filters, "list": data, "type": '影视'}
 
     def homeVideoContent(self):
-        return {"list": []}
+        pass
+
+    _PARENT_DEFAULT = {
+        'guochan': '23',
+        'rihan': '11',
+        'oumei': '15',
+        'qita': '19',
+    }
 
     def categoryContent(self, tid, pg, filter, extend):
-        data = self.apiList(str(tid), str(pg))
-        if str(tid) == "21" and not data:
+        extend = extend or {}
+        sub = extend.get('sub', '')
+        real_tid = sub if sub else self._PARENT_DEFAULT.get(tid, tid)
+        data = self.apiList(str(real_tid), str(pg))
+        if str(real_tid) == "21" and not data:
             data = self.mergeCategory(["23", "24", "25", "27"], pg)
         return {
             "page": int(pg),
@@ -78,12 +143,6 @@ class Spider(Spider):
                 "vod_id": sid,
                 "vod_name": name,
                 "vod_pic": pic,
-                "type_name": "",
-                "vod_year": "",
-                "vod_area": "",
-                "vod_remarks": "",
-                "vod_actor": "",
-                "vod_director": "",
                 "vod_content": name,
                 "vod_play_from": "GG51",
                 "vod_play_url": name + "$" + play
@@ -98,12 +157,6 @@ class Spider(Spider):
             "vod_id": sid,
             "vod_name": title,
             "vod_pic": pic,
-            "type_name": "",
-            "vod_year": "",
-            "vod_area": "",
-            "vod_remarks": "",
-            "vod_actor": "",
-            "vod_director": "",
             "vod_content": title,
             "vod_play_from": "GG51",
             "vod_play_url": title + "$" + (play or sid)
@@ -214,6 +267,23 @@ class Spider(Spider):
             res.append(item)
         return res
 
+    def format_duration(self, val):
+        if not val:
+            return ""
+        s = str(val).strip()
+        if ":" in s:
+            return s
+        try:
+            seconds = int(float(s))
+            h = seconds // 3600
+            m = (seconds % 3600) // 60
+            s = seconds % 60
+            if h > 0:
+                return f"{h:02d}:{m:02d}:{s:02d}"
+            return f"{m:02d}:{s:02d}"
+        except (ValueError, TypeError):
+            return s
+
     def parseApiList(self, arr):
         res = []
         for item in arr or []:
@@ -221,7 +291,12 @@ class Spider(Spider):
             name = self.clean(str(item.get("title") or item.get("name") or item.get("vod_name") or ""))
             pic = self.fix(str(item.get("poster") or item.get("pic") or item.get("vod_pic") or ""))
             play = str(item.get("play_url") or item.get("url") or item.get("vod_play_url") or "")
-            remark = str(item.get("duration") or item.get("vod_remarks") or item.get("display_heat") or item.get("hits") or "")
+            remark = self.format_duration(
+            item.get("duration")
+            or item.get("vod_remarks")
+            or item.get("display_heat")
+            or item.get("hits")
+        )
             if not vid and play:
                 vid = play
             if not vid or not name:
@@ -305,7 +380,7 @@ class Spider(Spider):
     def decodeShell(self, html):
         old = ""
         cur = html or ""
-        for i in range(3):
+        for i in range(8):
             if cur == old:
                 break
             old = cur
@@ -315,6 +390,17 @@ class Spider(Spider):
     def decodeShellOnce(self, html):
         if not html:
             return ""
+        # 纯base64字符串（无atob包裹，整个页面是base64编码的HTML）
+        stripped = (html or "").strip()
+        if re.match(r'^[A-Za-z0-9+/=]{100,}$', stripped):
+            s = self.b64(stripped)
+            if len(s) > 100:
+                return s
+        # 整个页面是URL编码的HTML（%3C!DOCTYPE%20html...）
+        if len(html) > 100 and html.count('%') > 20 and '%3C' in html[:200]:
+            s = self.decodeUri(html)
+            if s != html and '<' in s:
+                return s
         for p in [
             r"atob\([\"']([A-Za-z0-9+/=]+)[\"']\)",
             r"window\.atob\([\"']([A-Za-z0-9+/=]+)[\"']\)",
@@ -384,19 +470,27 @@ class Spider(Spider):
         res = []
         if not html:
             return res
-        cards = re.findall(r'<a[^>]+href=["\']([^"\']*/view/([^"\']+))["\'][\s\S]{0,800}?</a>', html, re.I)
-        for href, vid in cards:
-            block = self.match(html, r'<a[^>]+href=["\'][^"\']*/view/' + re.escape(vid) + r'["\'][\s\S]{0,800}?</a>')
-            name = self.match(block, r'alt=["\']([^"\']+)') or self.match(block, r'title=["\']([^"\']+)') or self.clean(re.sub(r"<[^>]+>", " ", block))
-            pic = self.match(block, r'(?:data-original|data-src|src)=["\']([^"\']+\.(?:jpg|jpeg|png|webp)[^"\']*)')
-            remark = self.match(block, r'<span[^>]*>(.*?)</span>')
-            if vid and name:
-                res.append({
-                    "vod_id": vid,
-                    "vod_name": self.clean(name),
-                    "vod_pic": self.fix(pic),
-                    "vod_remarks": self.clean(remark)
-                })
+        for m in re.finditer(r'<a[^>]+href=["\']([^"\']*/view/([a-f0-9]{16})[^"\']*)["\']', html, re.I):
+            href, vid = m.group(1), m.group(2)
+            pos = m.end()
+            block = html[m.start():pos + 8000]
+            name = (self.match(block, r'alt=["\']([^"\']{2,})')
+                 or self.match(block, r'title=["\']([^"\']{2,})')
+                 or self.match(block, r'<span[^>]*class="[^"]*title[^"]*"[^>]*>([^<]+)')
+                 or self.match(block, r'<div[^>]*class="[^"]*info[^"]*"[^>]*>([^<]+)')
+                 or self.clean(re.sub(r"<[^>]+>", " ", block[:1000])))
+            if not name or len(name) < 2:
+                continue
+            pic = self.match(block, r'(?:data-original|data-src|src)=["\']([^"\']+\.(?:jpg|jpeg|png|webp|js)[^"\']*)')
+            remark = self.match(block, r'<div[^>]*class="[^"]*info[^"]*"[^>]*>.*?<span[^>]*>.*?</span>\s*<span[^>]*>([^<]+)</span>')
+            if not remark:
+                remark = self.match(block, r'<span[^>]*>(\d{1,2}:\d{2})</span>')
+            res.append({
+                "vod_id": vid,
+                "vod_name": self.clean(name),
+                "vod_pic": self.fix(pic),
+                "vod_remarks": self.clean(remark)
+            })
         return self.uniqueList(res)
 
     def match(self, text, pat):

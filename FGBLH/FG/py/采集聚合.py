@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 # 专属全网聚合 Python版
-# 适配常见 Cat/TVBox Python Spider
-#本地py适配  😂  
+# 适配常见 TVBox ok影视 鱼壳影视 羊壳PeekPro
 
 import json
 import requests

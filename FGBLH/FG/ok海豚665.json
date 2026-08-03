@@ -140,11 +140,24 @@
 			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/可可影视.py"
 		},
 		{
+			"key": "豆花影视",
+			"name": "🐬[追剧]豆花影视.py",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/豆花影视.py"
+		},
+		{
 			"key": "拾光影视",
 			"name": "🐬[追剧]拾光影视.js",
 			"type": 3,
 			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/jar_js/拾光影视.js",
 			 "changeable": 0
+		},
+		{
+			"key": "开心影院",
+			"name": "🐬[追剧]开心影院.js",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/jar_js/开心影院.js",
+			"changeable": 0
 		},
 		{
 			"key": "西瓜影视",
