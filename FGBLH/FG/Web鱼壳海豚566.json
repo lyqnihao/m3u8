@@ -595,6 +595,12 @@
          }, 
 		{
 			"key": "MiFun",
+			"name": "🐬[动漫]动漫啦.py(羊壳观看)[动漫]",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/动漫啦.py"
+		},
+		{
+			"key": "MiFun",
 			"name": "🐬MiFun动漫.py[动漫]",
 			"type": 3,
 			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/MiFun动漫.py"

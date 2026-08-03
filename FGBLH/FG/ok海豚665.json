@@ -536,6 +536,12 @@
 		},
 		{
 			"key": "MiFun",
+			"name": "🐬[动漫]动漫啦.py(羊壳观看)",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/动漫啦.py"
+		},
+		{
+			"key": "MiFun",
 			"name": "🐬[动漫]MiFun动漫.py",
 			"type": 3,
 			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/MiFun动漫.py"
@@ -600,6 +606,12 @@
 			"name": "🐬[听书]275听书.py",
 			"type": 3,
 			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/275听书.py"
+		},
+		{
+			"key": "枫叶音乐",
+			"name": "🐬[音乐]枫叶音乐.py",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/枫叶音乐.py"
 		},
 		{
 			"key": "kwms",
