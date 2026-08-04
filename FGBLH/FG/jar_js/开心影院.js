@@ -1,10 +1,6 @@
-
-
-
 // 从fongmi/ok壳子内置目录加载cheerio 或者本地自备
 import cheerio from 'assets://js/lib/cheerio.min.js';
 // import cheerio from '../lib/cheerio.min.js';
-
 
 const sites = [
     'https://www.kxyy1.cc',
@@ -39,15 +35,14 @@ async function myFetch(url, options = {}) {
     }
 }
 
-
 const OrderByFilter = {
     "key": "orderby",
     "name": "排序",
     "value": [
         { "n": "默认排序", "v": "" },
         { "n": "更新时间", "v": "time" },
-        { "n": "近期热门", "v": "hits week" },
-        { "n": "豆瓣评分", "v": "douban score" }
+        { "n": "近期热门", "v": "hits_week" },
+        { "n": "豆瓣评分", "v": "douban_score" }
     ]
 }
 function getFilter() {
@@ -55,9 +50,9 @@ function getFilter() {
         "1": [
             {
                 "key": "type",
-                "name": "类型",
+                "name": "类别",
                 "value": [
-                    { "n": "不限", "v": "" },
+                    { "n": "默认类别", "v": "" },
                     { "n": "科幻", "v": "科幻" },
                     { "n": "剧情", "v": "剧情" },
                     { "n": "惊悚", "v": "惊悚" },
@@ -157,7 +152,6 @@ function getFilter() {
     }
 }
 
-
 function mylog() {
     const TAG = "开心影院js";
     console.log(TAG, ...arguments)
@@ -218,11 +212,10 @@ async function home(isUseFilter) {
 }
 async function category(tid, pg, filter, ext) {
     // 
-    tid = ext?.type || tid
     let by = ext?.orderby || 'hits_week'
     let type = ext?.type || filter?.type || ''
     let page = pg || 1
-
+    // vodshow/1--hits_week-剧情-----2---.html
     const url = baseUrl + `/vodshow/${tid}--${by}-${type}-----${page}---.html`
     mylog('category url', url)
     return await _parseVodList(url)
