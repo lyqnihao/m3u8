@@ -78,6 +78,18 @@
 			"type": 3,
 			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/油管.py"
 		},
+        {
+			"key": "初见影视",
+			"name": "🐬[追剧]初见影视.py",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/初见影视.py"
+		},
+        {
+			"key": "好剧屋",
+			"name": "🐬[追剧]好剧屋.py",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/好剧屋.py"
+		},
 		{
 			"key": "奈非工厂",
 			"name": "🐬[追剧]奈非工厂.py",
@@ -548,7 +560,7 @@
 			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/油管直播.py"
 		},
 		{
-			"key": "MiFun",
+			"key": "动漫啦",
 			"name": "🐬[动漫]动漫啦.py(羊壳观看)",
 			"type": 3,
 			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/动漫啦.py"
@@ -558,6 +570,18 @@
 			"name": "🐬[动漫]MiFun动漫.py",
 			"type": 3,
 			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/MiFun动漫.py"
+		},
+        {
+			"key": "动漫巴士",
+			"name": "🐬[动漫]动漫巴士.py",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/动漫巴士.py"
+		},
+		{
+			"key": "短剧巴士",
+			"name": "🐬[短剧]短剧巴士.py",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/短剧巴士.py"
 		},
         {
       "key": "cj_360资源",
