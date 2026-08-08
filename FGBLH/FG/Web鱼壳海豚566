@@ -119,6 +119,18 @@
 			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/油管直播.py"
 		},
         {
+			"key": "FreeOK",
+			"name": "🐬FreeOK.py(关梯)[追剧]",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/FreeOK.py"
+		},
+        {
+			"key": "真狼影视",
+			"name": "🐬真狼影视.py(关梯)[追剧]",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/真狼影视.py"
+		},
+        {
 			"key": "初见影视",
 			"name": "🐬初见影视.py[追剧]",
 			"type": 3,
