@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-@猪猪
+# -*- coding: utf-8 -*-
 """
 爱优腾芒哔哩聚合 —— 影视聚合 Python 源（OK影视 / 蜂蜜影视 / TVBox 通用）
 =====================================================================
@@ -57,7 +57,7 @@ class Spider(_BaseSpider):
     # 生命周期
     # ------------------------------------------------------------------
     def init(self, extend=""):
-        """初始化：创建带 UA 的会话。extend 为壳子传入的扩展参数。"""
+        """初始化：创建带 UA 的会话。extend 可传自定义解析站（JSON 或裸 URL）。"""
         _log("init ->", extend)
         self.host = "http://cj.tianwe.cn"
         self.header = {
@@ -65,11 +65,41 @@ class Spider(_BaseSpider):
                            "AppleWebKit/537.36 (KHTML, like Gecko) "
                            "Chrome/150.0.0.0 Safari/537.36"),
         }
+        # 直链解析站（kptv 后端已不稳定，仅作快速尝试；命中即直链播放）
         self.parse_api = "https://jx.kptv.us/?url="
-        self.timeout = 15
+        # WebView 解析站列表：壳子用内置浏览器打开这些页面完成解析播放。
+        # （2026 年主流解析站已全部转浏览器端 JS 解析，纯 HTTP 无法取直链，
+        #   由壳子 WebView 打开解析站播放页是当前唯一通用方案）
+        self.parse_sites = [
+            "https://jx.xmflv.com/?url=",
+            "https://jx.playerjy.com/?url=",
+            "https://jx.2s0.cn/?url=",
+            "https://jx.m3u8.tv/jiexi/?url=",
+            "https://www.daga.cc/vip1/?url=",
+            "https://jx.xmflv.cc/?url=",
+        ]
+        # 用户自定义解析站（extend 传入时优先使用）
+        self.custom_jx = self._parse_extend(extend)
+        self.timeout = 10
         if _HAS_REQUESTS:
             self.session = _requests.Session()
             self.session.headers.update(self.header)
+
+    @staticmethod
+    def _parse_extend(extend):
+        """从 extend 解析自定义解析站前缀。支持 JSON 字典或裸字符串。"""
+        if not extend:
+            return ""
+        s = str(extend).strip()
+        try:
+            d = json.loads(s)
+            if isinstance(d, dict):
+                return str(d.get("parse", "") or d.get("jx", "")).strip()
+        except Exception:  # noqa: BLE001
+            pass
+        if "url=" in s or "?" in s:
+            return s
+        return ""
 
     def getName(self):
         return self.name
@@ -311,19 +341,41 @@ class Spider(_BaseSpider):
     # 播放解析
     # ------------------------------------------------------------------
     def playerContent(self, flag, id, vipFlags):
-        """播放：直链直接返回；否则走解析源。"""
+        """播放：直链直接返回；自定义解析站优先；否则直链尝试 + WebView 兜底。"""
         _log("开始获取播放地址: ", id)
         try:
             if self._is_direct(id):
                 return {"parse": 0, "url": id, "header": dict(self.header),
                         "playUrl": ""}
+
+            # 1) 用户自定义解析站（extend 配置），壳子 WebView 打开解析
+            if getattr(self, "custom_jx", ""):
+                _log("使用自定义解析:", self.custom_jx + id)
+                return {"parse": 1, "url": self.custom_jx + id,
+                        "header": dict(self.header), "playUrl": ""}
+
+            # 2) 尝试直链解析（kptv，快速失败；命中即直链播放体验最佳）
             play_url = self._parse_video_url(id)
-            return {"parse": 0, "url": play_url, "header": dict(self.header),
-                    "playUrl": ""}
+            if play_url:
+                return {"parse": 0, "url": play_url,
+                        "header": dict(self.header), "playUrl": ""}
+
+            # 3) WebView 解析站兜底：壳子用内置浏览器打开解析站播放
+            web_url = self._webview_jx(id)
+            if web_url:
+                return {"parse": 1, "url": web_url,
+                        "header": dict(self.header), "playUrl": ""}
         except Exception as exc:  # noqa: BLE001
             _log("play失败: ", exc)
-            return {"parse": 1, "url": id, "header": dict(self.header),
-                    "playUrl": ""}
+        return {"parse": 1, "url": id, "header": dict(self.header),
+                "playUrl": ""}
+
+    def _webview_jx(self, video_url):
+        """取第一个可用的 WebView 解析站地址。"""
+        for site in (getattr(self, "parse_sites", None) or []):
+            if site:
+                return site + video_url
+        return ""
 
     def _is_direct(self, url):
         s = str(url)
