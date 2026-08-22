@@ -1,0 +1,29 @@
+{
+  "plugins": [
+    {
+      "name": "网易",
+      "url": "https://music.nairocy.com/file/%E7%BD%91%E6%98%93%E9%9F%B3%E4%B9%90.js",
+      "version": "v2025.09.14"
+    },
+    {
+      "name": "酷我",
+      "url": "https://gitee.com/nainoz_naa/music/raw/master/%E7%A2%B3%E9%85%B8%E9%85%B7%E6%88%91.js",
+      "version": "0.1.6"
+    },
+    {
+      "name": "酷狗",
+      "url": "https://music.nairocy.com/file/%E9%85%B7%E7%8B%97Thomas.js",
+      "version": "0.0.1"
+    },
+    {
+      "name": "QQ音乐",
+      "url": "https://raw.gitcode.com/Crystim/mfp/raw/main/%E5%BC%A5%E9%9F%B3QQ.js",
+      "version": "v1"
+    },
+    {
+      "name": "汽水音乐",
+      "url": "https://gitee.com/hongmengv5/musicfree/raw/master/qishui.js",
+      "version": "0.1.5"
+    }
+  ]
+}
