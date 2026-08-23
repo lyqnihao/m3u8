@@ -1,19 +1,19 @@
 {
   "plugins": [
     {
-      "name": "网易",
+      "name": "网易云",
       "url": "https://music.nairocy.com/file/%E7%BD%91%E6%98%93%E9%9F%B3%E4%B9%90.js",
       "version": "v2025.09.14"
     },
     {
       "name": "酷我",
-      "url": "https://gitee.com/nainoz_naa/music/raw/master/%E7%A2%B3%E9%85%B8%E9%85%B7%E6%88%91.js",
-      "version": "0.1.6"
+      "url": "https://raw.gitcode.com/Crystim/mfp/raw/main/%E9%85%B7%E6%88%91_%E5%BF%B5%E5%BF%83.js",
+      "version": "1.0.0"
     },
     {
       "name": "酷狗",
-      "url": "https://music.nairocy.com/file/%E9%85%B7%E7%8B%97Thomas.js",
-      "version": "0.0.1"
+      "url": "https://js.258008.xyz/nian/kg.js",
+      "version": ".0.0.1"
     },
     {
       "name": "QQ音乐",
@@ -21,9 +21,9 @@
       "version": "v1"
     },
     {
-      "name": "汽水音乐",
-      "url": "https://gitee.com/hongmengv5/musicfree/raw/master/qishui.js",
-      "version": "0.1.5"
+      "name": "千千音乐",
+      "url": "https://gitee.com/nainoz_naa/other/raw/master/%E5%8D%83%E5%8D%83.js",
+      "version": "0.1.3"
     }
   ]
 }
