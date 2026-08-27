@@ -43,7 +43,7 @@ class Spider(Spider):
     self.host = self.dynamic_urls[0]
     self._update_headers_for_host(self.host)
 
-    self.stripchat_preferredVideoCodec = "H264"  # 可选H264或AV1
+    self.stripchat_preferredVideoCodec = "H264"
     self.stripchat_key = "YzWScuyQRGAGcxx1KIJmiQ7BY9Vi35ftwLqUOVO8uoo="
     self.stripchat_pkey = "Fq6m2TO2ZeBkRPm9"
     self.stripchat_play = "0 0"
@@ -142,8 +142,8 @@ class Spider(Spider):
         {'type_name': '跨性别', 'type_id': 'trans'},
     ]
     VALUE = [
+        {'n': '新主播', 'v': 'autoTagNew'},
         {'n': '推荐', 'v': 'recommended'},
-		{'n': '新主播', 'v': 'autoTagNew'},
         {'n': '亚洲人', 'v': 'ethnicityAsian'},
         {'n': '🇨🇳中国', 'v': 'tagLanguageChinese'},
         {'n': '🇯🇵日本', 'v': 'tagLanguageJapanese'},
@@ -208,7 +208,7 @@ class Spider(Spider):
 
   def _parse_status_remark(self, is_live, status, viewers=0):
     if not is_live or status == 'off':
-      status_text = '⚫ 已下播'
+      status_text = '已下播'
     elif status == 'public':
       status_text = '直播中'
     else:
@@ -323,13 +323,13 @@ class Spider(Spider):
         self.stripchat_play = f'0 {timestp} {model_id}'
       flag = self.country_code_to_flag(str(user.get('country', '')).strip())
 
-      remark = '直播中' if isLive else '⚫ 已下播'
+      remark = '直播中' if isLive else '已下播'
       show = info.get('show') or info.get('groupShowAnnouncement')
       if show:
         startAt = show.get('createdAt') or show.get('startAt')
         if startAt:
           remark = (
-              f"🎫 购票表演始于 {self.datetime_utc8(startAt, '%m月%d日 %H:%M')}"
+              f"🎫购票表演始于 {self.datetime_utc8(startAt, '%m月%d日 %H:%M')}"
           )
 
       director = f'{flag}{username if username else model_id}'
@@ -341,7 +341,7 @@ class Spider(Spider):
         self.log(f'详情预取弹幕失败: {e}')
       desc = self.get_danmaku_desc(uid)
 
-      vod_play_from = '飞鱼高清$$$标清线路二$$$标清线路三'
+      vod_play_from = '高清$$$标清线路二$$$标清线路三'
       vod_play_url = (
           f'主线路${uid}$$$备用线路$lemon_{uid}$$$备用线路三$sacf_{uid}'
       )
@@ -376,6 +376,34 @@ class Spider(Spider):
         ]
     }
 
+  PSCH_PATTERN = re.compile(r'#EXT-X-MOUFLON:PSCH:v2:(\S+)')
+
+  def _extract_psch_keys(self, master_text):
+    return self.PSCH_PATTERN.findall(master_text or '')
+
+  def _pick_pkey(self, master_text):
+    keys = self._extract_psch_keys(master_text)
+    if not keys:
+      return self.stripchat_pkey
+    if self.stripchat_pkey in keys:
+      return self.stripchat_pkey
+    self.log(f'[PKEY] 内置密钥已失效，轮换为: {keys[0]}')
+    self.stripchat_pkey = keys[0]
+    return keys[0]
+
+  def _with_auth(self, variant_url, pkey):
+    u = re.sub(r'&?(psch|pkey|preferredVideoCodec)=[^&]*', '', variant_url)
+    sep = '&' if '?' in u else '?'
+    return (
+        f'{u}{sep}psch=v2&pkey={pkey}'
+        f'&preferredVideoCodec={self.stripchat_preferredVideoCodec}'
+    )
+
+  def _get_master(self, master_url):
+    text = self.session_get(master_url, timeout=(5, 10)).text
+    pkey = self._pick_pkey(text)
+    return text, pkey
+
   def playerContent(self, flag, id, vipFlags):
     urls = []
     try:
@@ -388,45 +416,43 @@ class Spider(Spider):
           'Referer': f'{self.host}/',
       }
 
-      # --- 线路2: stripchat.global ---
+      # --- 线路2: stripchat.global（直连播放，不带鉴权参数） ---
       if id.startswith('lemon'):
         rsp = self.session_get(
-            f'https://edge-hls.growcdnssedge.com/hls/{sid}/master/{sid}_auto.m3u8?playlistType=standard'
+            f'https://edge-hls.growcdnssedge.com/hls/{sid}/master/{sid}_auto.m3u8?playlistType=standard',
+            timeout=(5, 10),
         ).text
         lines = rsp.strip().split('\n')
         for i, line in enumerate(lines):
           if '#EXT-X-STREAM-INF' in line:
             qn_start = line.find('NAME="') + 6
             qn = line[qn_start : line.find('"', qn_start)]
-            url = lines[i + 1]
-            urls.extend([qn, url])
+            urls.extend([qn, lines[i + 1]])
 
-      # --- 线路3: StripOl ---
+      # --- 线路3: StripOl（直连播放，不带鉴权参数） ---
       elif id.startswith('sacf'):
         rsp = self.session_get(
-            f'https://edge-hls.sacfedge.com/hls/{sid}/master/{sid}_auto.m3u8?playlistType=standard'
+            f'https://edge-hls.sacfedge.com/hls/{sid}/master/{sid}_auto.m3u8?playlistType=standard',
+            timeout=(5, 10),
         ).text
         lines = rsp.strip().split('\n')
-        psch, pkey = 'v2', self.stripchat_pkey
         for i, line in enumerate(lines):
           if '#EXT-X-STREAM-INF' in line:
             qn_start = line.find('NAME="') + 6
             qn = line[qn_start : line.find('"', qn_start)]
-            full_url = f'{lines[i+1]}&psch={psch}&pkey={pkey}&preferredVideoCodec={self.stripchat_preferredVideoCodec}'
-            urls.extend([qn, f'{self.getProxyUrl()}&url={quote(full_url)}'])
+            urls.extend([qn, lines[i + 1]])
 
       # --- 线路1: StripChat (主线路) ---
       else:
-        rsp = self.session_get(
+        rsp, pkey = self._get_master(
             f'https://edge-hls.{self.Doppiocdn}/hls/{sid}/master/{sid}_auto.m3u8?playlistType=standard'
-        ).text
+        )
         lines = rsp.strip().split('\n')
-        psch, pkey = 'v2', self.stripchat_pkey
         for i, line in enumerate(lines):
           if '#EXT-X-STREAM-INF' in line:
             qn_start = line.find('NAME="') + 6
             qn = line[qn_start : line.find('"', qn_start)]
-            full_url = f'{lines[i+1]}&psch={psch}&pkey={pkey}&preferredVideoCodec={self.stripchat_preferredVideoCodec}'
+            full_url = self._with_auth(lines[i + 1], pkey)
             urls.extend([qn, f'{self.getProxyUrl()}&url={quote(full_url)}'])
 
       # 关联弹幕请求接口
@@ -444,8 +470,18 @@ class Spider(Spider):
   def update_vod(self, username):
     try:
       content_data = self.detailContent([username]).get('list')[0]
+      content_data.pop('vod_play_from', None)
+      content_data.pop('vod_play_url', None)
       payload = {'json': json.dumps(content_data, ensure_ascii=False)}
-      self.post('http://127.0.0.1:9978/action?do=refresh&type=vod', data=payload)
+      for base in (
+          [self.base_url] if self.base_url else self.get_action_bases()
+      ):
+        try:
+          self.post(base + '/action?do=refresh&type=vod', data=payload)
+          self.base_url = base
+          break
+        except Exception:
+          continue
     except Exception as e:
       self.log(f'刷新详情失败: {e}')
 
@@ -516,14 +552,17 @@ class Spider(Spider):
     rsp = self.session_get(url)
     oldCode, oldtmp, username = self.stripchat_play.rsplit(' ')
     timestp = int(time.time())
-    is_time_up = (timestp - 10) > int(oldtmp)
+    is_time_up = (timestp - 30) > int(oldtmp)
     is_code_changed = int(oldCode) != 0 and rsp.status_code != int(oldCode)
     if is_time_up or is_code_changed:
       self.stripchat_play = f'{rsp.status_code} {timestp} {username}'
-      self.log('计划更新')
-      threading.Thread(
-          target=self.update_vod, args=(username,), daemon=True
-      ).start()
+      if username and (
+          not self.danmu_active_room or username == str(self.danmu_active_room)
+      ):
+        self.log('计划更新')
+        threading.Thread(
+            target=self.update_vod, args=(username,), daemon=True
+        ).start()
       if is_code_changed:
         self.log('code变更')
         try:
@@ -538,12 +577,66 @@ class Spider(Spider):
       )
     if rsp.status_code != 200:
       return [404, 'text/plain', '']
+    if self._is_advert_playlist(rsp.text):
+      self.log('[PKEY] 检测到占位播放列表，尝试轮换 pkey 重取')
+      fixed = self._retry_with_fresh_pkey(url)
+      if fixed is not None:
+        rsp = fixed
+
+    if rsp.status_code != 200:
+      return [404, 'text/plain', '']
     data = (
         self.process_m3u8(rsp.text)
         if '#EXT-X-MOUFLON:URI:' in rsp.text
         else rsp.text
     )
-    return [200, 'application/vnd.apple.mpegur', data]
+    return [200, 'application/vnd.apple.mpegurl', data]
+
+  def _is_advert_playlist(self, text):
+    if not text or '#EXTM3U' not in text:
+      return False
+    if '#EXT-X-MOUFLON:URI:' in text:
+      return False
+    return '#EXT-X-MOUFLON-ADVERT' in text or '#EXT-X-PLAYLIST-TYPE:VOD' in text
+
+  MODEL_ID_PATTERN = re.compile(r'/(\d{4,})[/_]')
+
+  def _retry_with_fresh_pkey(self, variant_url):
+    try:
+      m = self.MODEL_ID_PATTERN.search(urlparse(variant_url).path)
+      if not m:
+        return None
+      sid = m.group(1)
+      hosts = [
+          f'https://edge-hls.{self.Doppiocdn}',
+          'https://edge-hls.doppiocdn.com',
+          'https://edge-hls.doppiocdn.net',
+      ]
+      for h in hosts:
+        try:
+          master = self.session_get(
+              f'{h}/hls/{sid}/master/{sid}_auto.m3u8?playlistType=standard',
+              timeout=(5, 10),
+          ).text
+        except Exception:
+          continue
+        keys = self._extract_psch_keys(master)
+        for k in keys:
+          if k == self.stripchat_pkey:
+            continue
+          new_url = self._with_auth(variant_url, k)
+          try:
+            r = self.session_get(new_url, timeout=(5, 10))
+          except Exception:
+            continue
+          if r.status_code == 200 and not self._is_advert_playlist(r.text):
+            self.stripchat_pkey = k
+            self.log(f'[PKEY] 轮换成功: {k}')
+            return r
+      return None
+    except Exception as e:
+      self.log(f'[PKEY] 轮换失败: {e}')
+      return None
 
   URL_PATTERN = re.compile(
       r'https://media-hls\.doppiocdn\.\w+/b-hls-\d+/media\.mp4'
@@ -555,13 +648,17 @@ class Spider(Spider):
     lines = content.strip().split('\n')
     for i, line in enumerate(lines):
       if line.startswith('#EXT-X-MOUFLON:URI:') and 'media.mp4' in lines[i + 1]:
-        mouflon = line.split(':', 2)[2].strip()
-        encrypted = self.MOUFLON_TAIL_PATTERN.sub('', mouflon).rsplit('_', 2)[1]
-        new_url = mouflon.replace(
-            encrypted, self._decode(encrypted[::-1], self.stripchat_key)
-        )
-        proxy_url = f'{self.getProxyUrl()}&type=media&url={quote(new_url)}'
-        lines[i + 1] = self.URL_PATTERN.sub(proxy_url, lines[i + 1])
+        try:
+          mouflon = line.split(':', 2)[2].strip()
+          encrypted = self.MOUFLON_TAIL_PATTERN.sub('', mouflon).rsplit('_', 2)[1]
+          new_url = mouflon.replace(
+              encrypted, self._decode(encrypted[::-1], self.stripchat_key)
+          )
+          proxy_url = f'{self.getProxyUrl()}&type=media&url={quote(new_url)}'
+          lines[i + 1] = self.URL_PATTERN.sub(proxy_url, lines[i + 1])
+        except Exception as e:
+          self.log(f'分片解密跳过: {e}')
+          continue
       elif line.startswith('#EXT-X-MAP:URI'):
         match = self.MAP_URI_PATTERN.search(line)
         if match:
@@ -728,18 +825,31 @@ class Spider(Spider):
     now = int(time.time())
     if not force and (self._updating_desc or now - self._desc_refresh_ts < 15):
       return False
+    room_id = str(room_id)
+    # 只刷新当前正在播放的房间，房间已切换则直接放弃
+    if self.danmu_active_room and room_id != str(self.danmu_active_room):
+      return False
     self._updating_desc = True
     self._desc_refresh_ts = now
     try:
-      model_id = str(self.stripchat_play.rsplit(' ', 1)[-1])
-      content_data = self.detailContent([model_id]).get('list')[0]
+      desc = self.get_danmaku_desc(room_id)
+      if not desc:
+        return False
+      # 仅下发简介字段，绝不带 vod_play_from / vod_play_url，避免选集被追加
+      content_data = {
+          'vod_id': room_id,
+          'vod_content': desc,
+      }
       payload = {'json': json.dumps(content_data, ensure_ascii=False)}
       ok = False
-      for base in [self.base_url] if self.base_url else ['http://127.0.0.1:9978']:
+      for base in (
+          [self.base_url] if self.base_url else self.get_action_bases()
+      ):
         try:
-          r = self.fetch(base + '/action?do=refresh&type=vod', timeout=1)
-          r2 = self.post(base + '/action?do=refresh&type=vod', data=payload)
+          self.post(base + '/action?do=refresh&type=vod', data=payload)
+          self.base_url = base
           ok = True
+          break
         except Exception:
           continue
       self.log(f'简介弹幕刷新: {ok}')
