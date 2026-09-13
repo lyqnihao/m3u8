@@ -173,7 +173,7 @@
       {
             "id": "p2100.net",
             "name": "🎬飘零资源",
-            "baseUrl": "https://p2100.net/api.php/provide/vod",
+            "baseUrl": "https://pz.v88.qzz.io/?url=https://p2100.net/api.php/provide/vod",
             "searchPath": "",
             "detailPath": "",
             "enabled": true,
@@ -261,22 +261,13 @@
             "priority": 29
       },
       {
-            "id": "lbapiby.com",
-            "name": "🔞--AIvin-",
-            "baseUrl": "http://lbapiby.com/api.php/provide/vod",
-            "searchPath": "",
-            "detailPath": "",
-            "enabled": true,
-            "priority": 30
-      },
-      {
             "id": "155zy2.com",
             "name": "🔞155-资源",
             "baseUrl": "https://155api.com/api.php/provide/vod",
             "searchPath": "",
             "detailPath": "",
             "enabled": true,
-            "priority": 31
+            "priority": 30
       },
       {
             "id": "apiyutu.com",
@@ -285,7 +276,7 @@
             "searchPath": "",
             "detailPath": "",
             "enabled": true,
-            "priority": 32
+            "priority": 31
       },
       {
             "id": "fhapi9.com",
@@ -294,7 +285,7 @@
             "searchPath": "",
             "detailPath": "",
             "enabled": true,
-            "priority": 33
+            "priority": 32
       },
       {
             "id": "apilsbzy1.com",
@@ -303,7 +294,7 @@
             "searchPath": "",
             "detailPath": "",
             "enabled": true,
-            "priority": 34
+            "priority": 33
       },
       {
             "id": "xiaojizy.live",
@@ -312,7 +303,7 @@
             "searchPath": "",
             "detailPath": "",
             "enabled": true,
-            "priority": 35
+            "priority": 34
       },
       {
             "id": "hsckzy.xyz",
@@ -321,7 +312,7 @@
             "searchPath": "",
             "detailPath": "",
             "enabled": true,
-            "priority": 36
+            "priority": 35
       },
       {
             "id": "apidanaizi.com",
@@ -330,7 +321,7 @@
             "searchPath": "",
             "detailPath": "",
             "enabled": true,
-            "priority": 37
+            "priority": 36
       },
       {
             "id": "jkunzyapi.com",
@@ -339,7 +330,7 @@
             "searchPath": "",
             "detailPath": "",
             "enabled": true,
-            "priority": 38
+            "priority": 37
       },
       {
             "id": "lbapi9.com",
@@ -348,7 +339,7 @@
             "searchPath": "",
             "detailPath": "",
             "enabled": true,
-            "priority": 39
+            "priority": 38
       },
       {
             "id": "Naixxzy.com",
@@ -357,7 +348,7 @@
             "searchPath": "",
             "detailPath": "",
             "enabled": true,
-            "priority": 40
+            "priority": 39
       },
       {
             "id": "slapibf.com",
@@ -366,7 +357,7 @@
             "searchPath": "",
             "detailPath": "",
             "enabled": true,
-            "priority": 41
+            "priority": 40
       },
       {
             "id": "apilj.com",
@@ -375,7 +366,7 @@
             "searchPath": "",
             "detailPath": "",
             "enabled": true,
-            "priority": 42
+            "priority": 41
       },
       {
             "id": "shayuapi.com",
@@ -384,7 +375,7 @@
             "searchPath": "",
             "detailPath": "",
             "enabled": true,
-            "priority": 43
+            "priority": 42
       },
       {
             "id": "didizy.com",
@@ -393,7 +384,7 @@
             "searchPath": "",
             "detailPath": "",
             "enabled": true,
-            "priority": 44
+            "priority": 43
       },
       {
             "id": "heiliaozy.cc",
@@ -402,16 +393,7 @@
             "searchPath": "",
             "detailPath": "",
             "enabled": true,
-            "priority": 45
-      },
-      {
-            "id": "api.bwzym3u8.com",
-            "name": "🔞百万资源",
-            "baseUrl": "https://api.bwzyz.com/api.php/provide/vod",
-            "searchPath": "",
-            "detailPath": "",
-            "enabled": true,
-            "priority": 46
+            "priority": 44
       },
       {
             "id": "thzy8.me",
@@ -420,7 +402,7 @@
             "searchPath": "",
             "detailPath": "",
             "enabled": true,
-            "priority": 47
+            "priority": 45
       },
       {
             "id": "www.jingpinx.com",
@@ -429,7 +411,7 @@
             "searchPath": "",
             "detailPath": "",
             "enabled": true,
-            "priority": 48
+            "priority": 46
       },
       {
             "id": "souavzyw.com",
@@ -438,6 +420,6 @@
             "searchPath": "",
             "detailPath": "",
             "enabled": true,
-            "priority": 49
+            "priority": 47
       }
 ]
