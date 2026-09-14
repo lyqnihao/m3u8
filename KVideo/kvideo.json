@@ -173,7 +173,7 @@
       {
             "id": "p2100.net",
             "name": "🎬飘零资源",
-            "baseUrl": "https://pz.v88.qzz.io/?url=https://p2100.net/api.php/provide/vod",
+            "baseUrl": "https://p2100.net/api.php/provide/vod",
             "searchPath": "",
             "detailPath": "",
             "enabled": true,
