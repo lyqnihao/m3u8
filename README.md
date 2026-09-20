@@ -58,7 +58,9 @@ https://17nas.com/tvbox-config.php
 
 ### 3、LunaTV / KVideo
 
-- **每天0点随直播源 [hafrey1/LunaTV-config](https://github.com/hafrey1/LunaTV-config) 自动更新，适用于KVideo订阅：**<br> https://raw.githubusercontent.com/lyqnihao/m3u8/refs/heads/master/KVideo/kvideo.json
+- **每天0点随直播源 [hafrey1/LunaTV-config](https://github.com/hafrey1/LunaTV-config) 自动更新，适用于KVideo订阅：**<br>
+- https://raw.githubusercontent.com/hafrey1/LunaTV-config/refs/heads/main/LunaTV-config.json
+- https://raw.githubusercontent.com/lyqnihao/m3u8/refs/heads/master/KVideo/kvideo.json
 
 ### 4、NextTV
  - https://raw.githubusercontent.com/lyqnihao/m3u8/refs/heads/master/NextTV/NextTV.json
