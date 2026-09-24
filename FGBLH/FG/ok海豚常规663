@@ -102,6 +102,18 @@
             "type": 3,
             "api": "https://ghfast.top/https://raw.githubusercontent.com/phu889/kjh998/refs/heads/main/py/ASMR吧.py"
         },
+        {
+        	"key": "追影",
+            "name": "🐬[追剧]追影",
+            "type": 3,
+            "api": "https://ghfast.top/https://raw.githubusercontent.com/phu889/kjh998/refs/heads/main/py/追影.py"
+		},
+        {
+        	"key": "独播库",
+            "name": "🐬[追剧]独播库",
+            "type": 3,
+            "api": "https://ghfast.top/https://raw.githubusercontent.com/phu889/kjh998/refs/heads/main/py/独播库.py"
+		},
 		{
         	"key": "网飞猫影视",
             "name": "🐬[追剧]网飞猫影视(关梯)",

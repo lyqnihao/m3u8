@@ -124,6 +124,12 @@
 			"type": 3,
 			"api": "https://ghfast.top/https://raw.githubusercontent.com/phu889/kjh998/refs/heads/main/py/油管.py"
 		},
+        {
+            "key":"youtube3",
+            "name":"🐬油管直播.py[直播]",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/phu889/kjh998/refs/heads/main/py/油管直播.py"
+		},
 		{
             "key": "星梦Asmr",
             "name": "🐬星梦Asmr.py[其他]",
@@ -136,11 +142,17 @@
             "type": 3,
             "api": "https://ghfast.top/https://raw.githubusercontent.com/phu889/kjh998/refs/heads/main/py/ASMR吧.py"
         },
-		{
-            "key":"youtube3",
-            "name":"🐬油管直播.py[直播]",
-			"type": 3,
-			"api": "https://ghfast.top/https://raw.githubusercontent.com/phu889/kjh998/refs/heads/main/py/油管直播.py"
+        {
+        	"key": "追影",
+            "name": "🐬追影[追剧]",
+            "type": 3,
+            "api": "https://ghfast.top/https://raw.githubusercontent.com/phu889/kjh998/refs/heads/main/py/追影.py"
+		},
+        {
+        	"key": "独播库",
+            "name": "🐬独播库[追剧]",
+            "type": 3,
+            "api": "https://ghfast.top/https://raw.githubusercontent.com/phu889/kjh998/refs/heads/main/py/独播库.py"
 		},
 		{
         	"key": "网飞猫影视",
