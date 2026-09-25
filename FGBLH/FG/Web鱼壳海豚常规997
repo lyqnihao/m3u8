@@ -142,6 +142,24 @@
             "type": 3,
             "api": "https://ghfast.top/https://raw.githubusercontent.com/phu889/kjh998/refs/heads/main/py/ASMR吧.py"
         },
+         {
+        	"key": "飞牛影视",
+            "name": "🐬飞牛影视(关梯)[追剧]",
+            "type": 3,
+            "api": "https://ghfast.top/https://raw.githubusercontent.com/phu889/kjh998/refs/heads/main/py/飞牛影视.py"
+		},
+        {
+        	"key": "追剧达人",
+            "name": "🐬追剧达人[追剧]",
+            "type": 3,
+            "api": "https://ghfast.top/https://raw.githubusercontent.com/phu889/kjh998/refs/heads/main/py/追剧达人.py"
+		},
+        {
+        	"key": "未来影院",
+            "name": "🐬未来影院(关梯)[追剧]",
+            "type": 3,
+            "api": "https://ghfast.top/https://raw.githubusercontent.com/phu889/kjh998/refs/heads/main/py/未来影院(关梯).py"
+		},
         {
         	"key": "大白鲨影院",
             "name": "🐬大白鲨影院[追剧]",
@@ -1167,6 +1185,18 @@
       ]
     },
 		{
+			"key": "红豆短剧",
+			"name": "🐬红豆短剧.py[短剧]",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/phu889/kjh998/refs/heads/main/py/红豆短剧.py"
+		},
+        {
+			"key": "映刻短剧",
+			"name": "🐬映刻短剧.py[短剧]",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/phu889/kjh998/refs/heads/main/py/映刻短剧.py"
+		},
+        {
 			"key": "悟圣短剧",
 			"name": "🐬悟圣短剧.py[短剧]",
 			"type": 3,
