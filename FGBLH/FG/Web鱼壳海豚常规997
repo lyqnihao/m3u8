@@ -136,8 +136,32 @@
             "api": "https://ghfast.top/https://raw.githubusercontent.com/phu889/kjh998/refs/heads/main/py/ASMR吧.py"
         },
         {
+        	"key": "绿色影视",
+            "name": "🐬绿色影视[追剧]",
+            "type": 3,
+            "api": "https://ghfast.top/https://raw.githubusercontent.com/phu889/kjh998/refs/heads/main/py/绿色影视.py"
+		},
+        {
+        	"key": "极速追剧",
+            "name": "🐬极速追剧[追剧]",
+            "type": 3,
+            "api": "https://ghfast.top/https://raw.githubusercontent.com/phu889/kjh998/refs/heads/main/py/极速追剧.py"
+		},
+        {
+        	"key": "小宝影院",
+            "name": "🐬小宝影院[追剧]",
+            "type": 3,
+            "api": "https://ghfast.top/https://raw.githubusercontent.com/phu889/kjh998/refs/heads/main/py/小宝影院.py"
+		},
+        {
+        	"key": "达达兔影院",
+            "name": "🐬达达兔影院(关梯)[追剧]",
+            "type": 3,
+            "api": "https://ghfast.top/https://raw.githubusercontent.com/phu889/kjh998/refs/heads/main/py/达达兔影院(关梯).py"
+		},
+        {
         	"key": "懂片帝AI",
-            "name": "🐬[追剧]懂片帝AI",
+            "name": "🐬懂片帝AI[追剧]",
             "type": 3,
             "api": "https://ghfast.top/https://raw.githubusercontent.com/phu889/kjh998/refs/heads/main/py/懂片帝AI.py"
 		},
@@ -1139,6 +1163,18 @@
 			"type": 3,
 			"api": "https://ghfast.top/https://raw.githubusercontent.com/phu889/kjh998/refs/heads/main/py/动漫啦.py"
 		},
+        {
+			"key": "animexin",
+			"name": "🐬animexin.py[动漫]",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/phu889/kjh998/refs/heads/main/py/animexin.py"
+		},
+        {
+			"key": "路漫漫",
+			"name": "🐬路漫漫(关梯).py[动漫]",
+			"type": 3,
+			api": "https://ghfast.top/https://raw.githubusercontent.com/phu889/kjh998/refs/heads/main/py/路漫漫(关梯).py"
+        },
 		{
 			"key": "MiFun",
 			"name": "🐬MiFun动漫.py[动漫]",
