@@ -136,6 +136,12 @@
             "api": "https://ghfast.top/https://raw.githubusercontent.com/phu889/kjh998/refs/heads/main/py/ASMR吧.py"
         },
         {
+        	"key": "懂片帝AI",
+            "name": "🐬[追剧]懂片帝AI",
+            "type": 3,
+            "api": "https://ghfast.top/https://raw.githubusercontent.com/phu889/kjh998/refs/heads/main/py/懂片帝AI.py"
+		},
+        {
         	"key": "影巢movie",
             "name": "🐬影巢movie(关梯)[追剧]",
             "type": 3,
@@ -675,13 +681,6 @@
 			"type": 3,
 			"api": "https://ghfast.top/https://raw.githubusercontent.com/phu889/kjh998/refs/heads/main/py/袋鼠影视.py"
 		},
-		{
-           "key": "ppx",
-           "name": "🐬皮皮虾.py[追剧]",
-           "type": 3,
-           "api": "https://ghfast.top/https://raw.githubusercontent.com/phu889/kjh998/refs/heads/main/py/皮皮虾.py",
-           "ext": "http://43.248.117.123:4680"
-       },
 		{
 			"key": "ddvm",
 			"name": "🐬嘀嗒影视.py(关梯)[追剧]",
@@ -1243,12 +1242,6 @@
 			"type": 3,
 			"api": "https://ghfast.top/https://raw.githubusercontent.com/phu889/kjh998/refs/heads/main/py/短剧聚合.py"
 		},
-        {
-			"key": "糯米短剧",
-			"name": "🐬糯米短剧.py[短剧]",
-			"type": 3,
-			"api": "https://ghfast.top/https://raw.githubusercontent.com/phu889/kjh998/refs/heads/main/py/糯米短剧.py"
-		},
 		{
 			"key": "毒舌短剧",
 			"name": "🐬毒舌短剧.py(关梯)[短剧]",
@@ -1326,12 +1319,6 @@
 			"name": "🐬千千音乐.py[音乐]",
 			"type": 3,
 			"api": "https://ghfast.top/https://raw.githubusercontent.com/phu889/kjh998/refs/heads/main/py/千千音乐.py"
-		},
-		{
-			"key": "枫叶音乐",
-			"name": "🐬[音乐]枫叶音乐.py",
-			"type": 3,
-			"api": "https://ghfast.top/https://raw.githubusercontent.com/phu889/kjh998/refs/heads/main/py/枫叶音乐.py"
 		},
 		{
 			"key": "kwms",

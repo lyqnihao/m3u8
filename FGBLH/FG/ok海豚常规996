@@ -103,6 +103,12 @@
             "api": "https://ghfast.top/https://raw.githubusercontent.com/phu889/kjh998/refs/heads/main/py/ASMR吧.py"
         },
         {
+        	"key": "懂片帝AI",
+            "name": "🐬[追剧]懂片帝AI",
+            "type": 3,
+            "api": "https://ghfast.top/https://raw.githubusercontent.com/phu889/kjh998/refs/heads/main/py/懂片帝AI.py"
+		},
+        {
         	"key": "影巢movie",
             "name": "🐬[追剧]影巢movie(关梯)",
             "type": 3,
@@ -667,13 +673,6 @@
 			"api": "https://ghfast.top/https://raw.githubusercontent.com/phu889/kjh998/refs/heads/main/py/茶杯狐.py"
 		},
 		{
-      "key": "ppx",
-      "name": "🐬[追剧]皮皮虾.py",
-      "type": 3,
-      "api": "https://ghfast.top/https://raw.githubusercontent.com/phu889/kjh998/refs/heads/main/py/皮皮虾.py",
-      "ext": "http://43.248.117.123:4680"
-       },
-		{
 			"key": "ddvm",
 			"name": "🐬[追剧]嘀嗒影视.py(关梯)",
 			"type": 3,
@@ -1197,12 +1196,6 @@
 			"type": 3,
 			"api": "https://ghfast.top/https://raw.githubusercontent.com/phu889/kjh998/refs/heads/main/py/短剧聚合.py"
 		},
-        {
-			"key": "糯米短剧",
-			"name": "🐬[短剧]糯米短剧.py",
-			"type": 3,
-			"api": "https://ghfast.top/https://raw.githubusercontent.com/phu889/kjh998/refs/heads/main/py/糯米短剧.py"
-		},
 		{
 			"key": "毒舌短剧",
 			"name": "🐬[短剧]毒舌短剧.py(关梯)",
@@ -1240,12 +1233,6 @@
 			"api": "https://ghfast.top/https://raw.githubusercontent.com/phu889/kjh998/refs/heads/main/py/蚕驰短剧网.py"
 		},
 		{
-			"key": "听书网456",
-			"name": "🐬[听书]听书网456.py",
-			"type": 3,
-			"api": "https://ghfast.top/https://raw.githubusercontent.com/phu889/kjh998/refs/heads/main/py/听书网456.py"
-		},
-		{
 			"key": "ytb",
 			"name": "🐬[听书]悦听吧.py",
 			"type": 3,
@@ -1280,12 +1267,6 @@
 			"name": "🐬[音乐]千千音乐.py",
 			"type": 3,
 			"api": "https://ghfast.top/https://raw.githubusercontent.com/phu889/kjh998/refs/heads/main/py/千千音乐.py"
-		},
-		{
-			"key": "枫叶音乐",
-			"name": "🐬[音乐]枫叶音乐.py",
-			"type": 3,
-			"api": "https://ghfast.top/https://raw.githubusercontent.com/phu889/kjh998/refs/heads/main/py/枫叶音乐.py"
 		},
 		{
 			"key": "kwms",
