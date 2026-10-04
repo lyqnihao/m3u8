@@ -97,13 +97,11 @@
 			"api": "https://ghfast.top/https://raw.githubusercontent.com/phu889/kjh998/refs/heads/main/py/聚合直播.py"
 		},
 		{
-           "key": "央视网页",
-           "name": "🐬央视网页直播.js(关梯)[直播]",
-           "type": 3,
-           "jar": "https://ghfast.top/https://raw.githubusercontent.com/phu889/kjh998/refs/heads/main/jar_js/WvSpider.jar",
-           "api": "csp_WvSpider",
-           "ext": "https://ghfast.top/https://raw.githubusercontent.com/phu889/kjh998/refs/heads/main/jar_js/央视直播.js"
-        },
+            "key":"央视频",
+            "name":"🐬央视频(关梯)[直播]",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/phu889/kjh998/refs/heads/main/py/央视频.py"
+		},
 		{
         "key":"youtube",
         "name":"🐬油管[其他]",
@@ -1243,6 +1241,12 @@
       ]
     },
 		{
+			"key": "七星短剧",
+			"name": "🐬七星短剧[短剧]",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/phu889/kjh998/refs/heads/main/py/七星短剧.py"
+		},
+        {
 			"key": "开心短剧",
 			"name": "🐬开心短剧[短剧]",
 			"type": 3,
