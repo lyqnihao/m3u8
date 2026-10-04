@@ -136,6 +136,18 @@
             "api": "https://ghfast.top/https://raw.githubusercontent.com/phu889/kjh998/refs/heads/main/py/ASMR吧.py"
         },
         {
+        	"key": "洛雪TV",
+            "name": "🐬洛雪TV(关梯)[追剧]",
+            "type": 3,
+            "api": "https://ghfast.top/https://raw.githubusercontent.com/phu889/kjh998/refs/heads/main/py/洛雪TV.py"
+		},
+        {
+        	"key": "人人视频",
+            "name": "🐬人人视频(关梯)[追剧]",
+            "type": 3,
+            "api": "https://ghfast.top/https://raw.githubusercontent.com/phu889/kjh998/refs/heads/main/py/人人视频.py"
+		},
+        {
         	"key": "绿色影视",
             "name": "🐬绿色影视[追剧]",
             "type": 3,
@@ -1321,8 +1333,14 @@
 			"api": "https://ghfast.top/https://raw.githubusercontent.com/phu889/kjh998/refs/heads/main/py/红果短剧.py"
 		},
 		{
+			"key": "起点有声",
+			"name": "🐬起点有声(关梯)[听书]",
+			"type": 3,
+			"api": "https://ghfast.top/https://raw.githubusercontent.com/phu889/kjh998/refs/heads/main/py/起点有声.py"
+		},
+        {
 			"key": "ytb",
-			"name": "🐬悦听吧.py[听书]",
+			"name": "🐬悦听吧[听书]",
 			"type": 3,
 			"api": "https://ghfast.top/https://raw.githubusercontent.com/phu889/kjh998/refs/heads/main/py/悦听吧.py"
 		},
