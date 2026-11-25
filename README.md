@@ -1,12 +1,8 @@
 # 短剧APP
 
-## [短剧之家](https://github.com/jackherex)：
+## [短剧之家](https://jackherex.github.io/hongguo-releases/)：多端红果短剧第三方软件，界面设计好，功能不输官方，进度同步功能强大。安卓、TV、PC、iOS端全覆盖。
 
-### 手机端：https://github.com/jackherex/duanjuzhijia-down-phone
-
-### TV端
-
-### iOS端
+### 安卓端：https://github.com/jackherex/duanjuzhijia-down-phone
 
 # 直播点播列表
 
