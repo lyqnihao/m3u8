@@ -1,3 +1,13 @@
+# 短剧APP
+
+## [短剧之家](https://github.com/jackherex)：
+
+### 手机端：https://github.com/jackherex/duanjuzhijia-down-phone
+
+### TV端
+
+### iOS端
+
 # 直播点播列表
 
 ## 直播
